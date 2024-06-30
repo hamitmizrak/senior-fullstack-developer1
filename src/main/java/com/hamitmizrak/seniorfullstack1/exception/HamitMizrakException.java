@@ -6,6 +6,8 @@ package com.hamitmizrak.seniorfullstack1.exception;
 400–499 (Client Hata Kodları)
 500–599 (Server Hata Kodları)
 * */
+
+// My Special Exception
 public class HamitMizrakException extends RuntimeException{
 
     // Constructor (Parametreli)
