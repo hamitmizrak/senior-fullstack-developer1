@@ -1,9 +1,7 @@
 package com.hamitmizrak.seniorfullstack1.error;
-
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 import lombok.extern.log4j.Log4j2;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -57,6 +55,5 @@ public class ApiResult {
         Date date=new Date();
         return  dateFormat.format(date);
     } //end nowDate() method
-
 
 } //end class
