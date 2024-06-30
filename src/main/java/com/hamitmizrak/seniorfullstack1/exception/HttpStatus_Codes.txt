@@ -84,3 +84,53 @@ HTTP durum kodları ve açıklamaları:
 - **511 Network Authentication Required**: İstemci, ağa erişim sağlamak için kimlik doğrulaması yapmalıdır.
 
 Bu kodlar, istemcinin (örneğin, tarayıcı) ve sunucunun (örneğin, web sunucusu) iletişim kurmasını ve hataları tanımlamasını sağlar.
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+401 Unauthorized ve 403 Forbidden HTTP durum kodları arasındaki farklar, istemcinin yetkilendirme durumu ve sunucunun nasıl yanıt verdiği ile ilgilidir. İşte bu iki durum kodunun detaylı açıklamaları ve aralarındaki farklar:
+
+### 401 Unauthorized
+**Açıklama:**
+401 Unauthorized durum kodu, istemcinin kimlik doğrulama bilgilerinin eksik veya geçersiz olduğunu belirtir. Bu durumda sunucu, istemcinin erişmek istediği kaynağa erişim sağlaması için kimlik doğrulama bilgilerini (örneğin, kullanıcı adı ve şifre) göndermesini bekler.
+
+**Özellikler:**
+- **Kimlik Doğrulama Gerektirir:** 401 hatası, istemcinin geçerli kimlik doğrulama bilgileri sunması gerektiği anlamına gelir.
+- **WWW-Authenticate Başlığı:** Sunucu, istemcinin nasıl kimlik doğrulama yapacağını belirten `WWW-Authenticate` başlığı ile yanıt verir.
+- **Geçici:** İstemci doğru kimlik doğrulama bilgilerini sağladığında erişim sağlayabilir.
+
+**Örnek Durum:**
+Bir kullanıcı, `https://example.com/private` sayfasına erişmeye çalıştığında sunucu kimlik doğrulama gerektirir. Kullanıcı doğru kullanıcı adı ve şifreyi girdikten sonra erişim sağlayabilir.
+
+
+
+
+### 403 Forbidden
+**Açıklama:**
+403 Forbidden durum kodu, istemcinin kimlik doğrulama bilgilerine sahip olsa bile erişim yetkisinin olmadığını belirtir. Bu durumda, istemcinin kimlik doğrulaması başarılı olsa bile, sunucu bu kaynağa erişimi reddeder.
+
+**Özellikler:**
+- **Yetki Sorunu:** 403 hatası, istemcinin kaynağa erişim yetkisinin olmadığını gösterir.
+- **Kimlik Doğrulama Yeterli Değildir:** İstemci kimlik doğrulama bilgilerini sağlasa bile erişim izni verilmez.
+- **Kalıcı:** İstemcinin erişim izni olmadıkça bu hata devam eder.
+
+**Örnek Durum:**
+Bir kullanıcı, `https://example.com/admin` sayfasına erişmeye çalıştığında ve bu sayfa sadece yöneticilere açık olduğunda, kullanıcı doğru kimlik doğrulama bilgilerini sağlasa bile erişim reddedilir.
+
+### Farklar:
+
+1. **Kimlik Doğrulama Gerekliliği:**
+   - **401 Unauthorized:** İstemcinin kimlik doğrulama yapması gerekmektedir. Kimlik doğrulama yapılmadan veya geçersiz kimlik bilgileri ile erişim sağlanamaz.
+   - **403 Forbidden:** İstemcinin kimlik doğrulama bilgileri olsa bile, erişim yetkisi yoktur. Kimlik doğrulama yapılıp yapılmadığına bakılmaksızın erişim reddedilir.
+
+2. **Yanıt Başlığı:**
+   - **401 Unauthorized:** Sunucu, `WWW-Authenticate` başlığı ile istemcinin nasıl kimlik doğrulaması yapacağını belirtir.
+   - **403 Forbidden:** Sunucu, kimlik doğrulama başlığı döndürmez, çünkü istemcinin yetkisi olmadığı için erişim izni verilmez.
+
+3. **Hata Çözüm Yolu:**
+   - **401 Unauthorized:** İstemci, geçerli kimlik doğrulama bilgilerini sağlayarak erişim izni alabilir.
+   - **403 Forbidden:** İstemci, gerekli yetkilere sahip olmadıkça erişim izni alamaz. Bu, izinlerin değiştirilmesi veya yetki verilmesi gerektiği anlamına gelir.
+
+**Özetle:**
+- **401 Unauthorized:** Kimlik doğrulama gerekli ve doğru kimlik bilgileri sağlandığında erişim izni verilebilir.
+- **403 Forbidden:** Kimlik doğrulaması yapılsa bile, istemcinin erişim yetkisi yoktur ve erişim izni verilmez.
