@@ -1,0 +1,86 @@
+HTTP durum kodları ve açıklamaları:
+
+/*
+100–199 (Bilgi Kodları)
+200–299 (Başarı Kodları)
+300–399 (Yönlendirme Kodları)
+400–499 (Client Hata Kodları)
+500–599 (Server Hata Kodları)
+* */
+
+
+### 1xx: Bilgilendirici
+- **100 Continue**: İstemci, işleminin devam etmesini isteyebilir.
+- **101 Switching Protocols**: Sunucu, protokol değiştirme isteğini kabul etti.
+
+
+
+
+### 2xx: Başarılı
+- **200 OK**: İstek başarılı ve sunucu, istenen veriyi döndürüyor.
+- **201 Created**: İstek başarılı ve yeni bir kaynak oluşturuldu.
+- **202 Accepted**: İstek kabul edildi, ancak henüz işlenmedi.
+- **203 Non-Authoritative Information**: İstek başarılı, ancak döndürülen bilgi başka bir kaynaktan.
+- **204 No Content**: İstek başarılı, ancak döndürülecek içerik yok.
+- **205 Reset Content**: İstek başarılı, istemci içeriği sıfırlamalı.
+- **206 Partial Content**: Sunucu, yalnızca bir kısmını gönderdiği isteğe yanıt verdi.
+
+
+
+
+### 3xx: Yönlendirme Gerekiyor
+- **300 Multiple Choices**: Birden fazla seçenek mevcut.
+- **301 Moved Permanently**: İstenen kaynak kalıcı olarak yeni bir URL'ye taşındı.
+- **302 Found**: İstenen kaynak geçici olarak yeni bir URL'de bulunuyor.
+- **303 See Other**: İstek başka bir URL'ye yönlendirilmelidir.
+- **304 Not Modified**: Kaynak, son talep edilen tarihten bu yana değişmedi.
+- **305 Use Proxy**: İstenen kaynak yalnızca proxy aracılığıyla erişilebilir.
+- **307 Temporary Redirect**: İstenen kaynak geçici olarak yeni bir URL'de bulunuyor.
+
+
+
+
+###4xx: İstemci Hataları
+- **400 Bad Request**: İstemci hatalı bir istek gönderdi.
+- **401 Unauthorized**: İstemci kimlik doğrulaması yapmamış veya geçersiz.
+- **402 Payment Required**: Gelecekteki kullanım için rezerve edilmiş.
+- **403 Forbidden**: İstemcinin isteği geçerli ancak sunucu bu isteği gerçekleştirmeyi reddediyor.
+- **404 Not Found**: İstenen kaynak bulunamadı.
+- **405 Method Not Allowed**: İstek yöntemi, kaynağın desteklemediği bir yöntemdir.
+- **406 Not Acceptable**: İstenen kaynak, istemcinin kabul edilebilirlik kriterlerine uymuyor.
+- **407 Proxy Authentication Required**: İstemci, proxy'de kimlik doğrulaması yapmalıdır.
+- **408 Request Timeout**: Sunucu, istemcinin isteğini beklerken zaman aşımına uğradı.
+- **409 Conflict**: İstek, mevcut kaynak durumu ile çelişiyor.
+- **410 Gone**: İstenen kaynak artık sunucuda bulunmuyor.
+- **411 Length Required**: İstek, Content-Length başlığı içermelidir.
+- **412 Precondition Failed**: İstemcinin ön koşulu sunucu tarafından karşılanmadı.
+- **413 Payload Too Large**: İstek varlığı, sunucunun işleyebileceğinden daha büyük.
+- **414 URI Too Long**: İstek URI'si sunucunun işleyebileceğinden daha uzun.
+- **415 Unsupported Media Type**: İstek varlık tipi, sunucu tarafından desteklenmiyor.
+- **416 Range Not Satisfiable**: İstemcinin belirttiği aralık, kaynakta mevcut değil.
+- **417 Expectation Failed**: Sunucu, Expect başlığında belirtilen gereksinimi karşılayamadı.
+- **418 I'm a teapot**: Çaydanlık olarak çalışmayı reddediyorum (RFC 2324, bir şaka durumu kodu).
+- **422 Unprocessable Entity**: İstek iyi biçimlendirilmiş ancak anlam açısından hatalı.
+- **425 Too Early**: İstek erken ve tekrar gönderilmesi gerekiyor.
+- **426 Upgrade Required**: Sunucu, istemcinin farklı bir protokole geçmesini gerektiriyor.
+- **428 Precondition Required**: İstek, ön koşul başlığı içermelidir.
+- **429 Too Many Requests**: İstemci çok fazla istek gönderdi.
+- **431 Request Header Fields Too Large**: İstek başlık alanları çok büyük.
+- **451 Unavailable For Legal Reasons**: İstenen kaynak, yasal nedenlerle kullanılamaz.
+
+
+
+
+### 5xx: Sunucu Hataları
+- **500 Internal Server Error**: Sunucu, beklenmeyen bir durumla karşılaştı.
+- **501 Not Implemented**: Sunucu, isteği yerine getirmek için gerekli işlevselliğe sahip değil.
+- **502 Bad Gateway**: Sunucu, başka bir sunucudan geçersiz yanıt aldı.
+- **503 Service Unavailable**: Sunucu, şu anda isteği yerine getiremiyor.
+- **504 Gateway Timeout**: Sunucu, başka bir sunucudan yanıt almak için zaman aşımına uğradı.
+- **505 HTTP Version Not Supported**: Sunucu, istekte belirtilen HTTP sürümünü desteklemiyor.
+- **507 Insufficient Storage**: Sunucu, isteği yerine getirmek için yeterli depolama alanına sahip değil.
+- **508 Loop Detected**: Sunucu, bir döngü algıladı.
+- **510 Not Extended**: Sunucu, isteği işlemek için daha fazla uzantı gerektiriyor.
+- **511 Network Authentication Required**: İstemci, ağa erişim sağlamak için kimlik doğrulaması yapmalıdır.
+
+Bu kodlar, istemcinin (örneğin, tarayıcı) ve sunucunun (örneğin, web sunucusu) iletişim kurmasını ve hataları tanımlamasını sağlar.
