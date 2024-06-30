@@ -1,0 +1,5 @@
+
+jUniConv Unicode Characters to Java Entities Converter
+-----------------------------------------------------------
+https://itpro.cz/juniconv/
+
