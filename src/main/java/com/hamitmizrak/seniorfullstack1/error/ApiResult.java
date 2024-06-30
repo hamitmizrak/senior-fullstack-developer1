@@ -56,7 +56,7 @@ public class ApiResult {
         SimpleDateFormat dateFormat=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", locale);
         Date date=new Date();
         return  dateFormat.format(date);
-    }
+    } //end nowDate() method
 
 
 } //end class
