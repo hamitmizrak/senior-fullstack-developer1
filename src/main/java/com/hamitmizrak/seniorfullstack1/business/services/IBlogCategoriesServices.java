@@ -18,7 +18,6 @@ public interface IBlogCategoriesServices<D,E> {
     public String blogCategoryDeleteAllData();
 
     ////////////////////////////////////////////////////////////
-
     // CRUD
     // CREATE
     public D blogCategoryServiceCreate(D d);
