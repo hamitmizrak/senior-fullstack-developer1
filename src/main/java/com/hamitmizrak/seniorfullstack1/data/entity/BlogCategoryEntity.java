@@ -1,5 +1,6 @@
 package com.hamitmizrak.seniorfullstack1.data.entity;
 
+import com.hamitmizrak.seniorfullstack1.annotation.AUniqueBlogCategoryName;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
@@ -43,5 +44,6 @@ public class BlogCategoryEntity implements Serializable {
 
     // Category Name
     @Column(name = "category_name")
+    @AUniqueBlogCategoryName //Unique Blog Category Name
     private String categoryName;
 } // end BlogCategoryName
