@@ -53,7 +53,7 @@ public class BlogCategoryServicesImpl implements IBlogCategoriesServices<BlogCat
         }else {
             throw new HamitMizrakException("Speed Data oluşturulmadı");
         }
-        return "";
+        return data+" tane veri eklendi";
     }
 
     // DELETE ALL
