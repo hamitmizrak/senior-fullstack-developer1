@@ -23,16 +23,16 @@ import java.util.Map;
 public class ApiResult {
 
     // Field: s e m  p v c
-    private int status;
-    private String path;
-    private String message;
+    private Integer status;
     private String error;
+    private String message;
+    private String path;
     private Map<String, String> validationErrors;
     //private Date createdDate = new Date(System.currentTimeMillis());
     private String createdDate = nowDate();
 
     // Constructor (Parametreli) => s  m  p
-    public ApiResult(int status, String message, String path) {
+    public ApiResult(Integer status, String message, String path) {
         this.status = status;
         this.message = message;
         this.path = path;
@@ -40,7 +40,7 @@ public class ApiResult {
     }
 
     // Constructor (Parametreli) => s e m  p
-    public ApiResult(int status, String error, String message, String path) {
+    public ApiResult(Integer status, String error, String message, String path) {
         this.status = status;
         this.error = error;
         this.message = message;
