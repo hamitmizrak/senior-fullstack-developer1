@@ -5174,3 +5174,43 @@ Caused by: org.h2.mvstore.MVStoreException: The file is locked: E:/8-) Projeler 
 2024-07-07T12:59:55.896+03:00  WARN 3872 --- [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution [Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]] [n/a]
 2024-07-07T12:59:55.897+03:00  INFO 3872 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-07-07T12:59:55.902+03:00  INFO 3872 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-07T13:06:41.802+03:00  INFO 23040 --- [main] c.h.s.SeniorFullStack1ApplicationTests   : Starting SeniorFullStack1ApplicationTests using Java 21 with PID 23040 (started by Hamit-Mizrak in E:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-07-07T13:06:41.807+03:00  INFO 23040 --- [main] c.h.s.SeniorFullStack1ApplicationTests   : The following 1 profile is active: "frontend"
+2024-07-07T13:06:41.850+03:00 DEBUG 23040 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@64a896b0
+2024-07-07T13:06:43.300+03:00  INFO 23040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-07T13:06:43.372+03:00  INFO 23040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 1 JPA repository interfaces.
+2024-07-07T13:06:44.954+03:00  INFO 23040 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-07T13:06:45.013+03:00  INFO 23040 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-07T13:06:45.286+03:00  INFO 23040 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./memory_persist/blog user=SA
+2024-07-07T13:06:45.288+03:00  INFO 23040 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-07T13:06:46.236+03:00  INFO 23040 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-07T13:06:47.654+03:00  WARN 23040 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-07T13:06:47.849+03:00 DEBUG 23040 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-07-07T13:06:47.888+03:00  INFO 23040 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-07-07T13:06:48.020+03:00 DEBUG 23040 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 12 mappings in 'requestMappingHandlerMapping'
+2024-07-07T13:06:49.324+03:00 DEBUG 23040 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-07-07T13:06:49.346+03:00 DEBUG 23040 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-07-07T13:06:50.579+03:00  INFO 23040 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./memory_persist/blog'
+2024-07-07T13:06:50.635+03:00  INFO 23040 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+2024-07-07T13:06:50.758+03:00  INFO 23040 --- [main] c.h.s.SeniorFullStack1ApplicationTests   : Started SeniorFullStack1ApplicationTests in 9.366 seconds (process running for 10.774)
+2024-07-07T13:06:50.907+03:00  INFO 23040 --- [main] c.h.s.u.commandlinerunner.MainRunner     : Blog Categories
+2024-07-07T13:06:51.650+03:00  INFO 23040 --- [main] c.h.s.SeniorFullStack1ApplicationTests   : Blog Categories Creatten hemen önce
+2024-07-07T13:06:52.427+03:00  INFO 23040 --- [main] c.h.s.SeniorFullStack1ApplicationTests   : Blog Categories Creatten hemen önce
+2024-07-07T13:06:52.445+03:00  INFO 23040 --- [main] c.h.s.SeniorFullStack1ApplicationTests   : Blog Categories Creatten hemen önce
+2024-07-07T13:06:52.449+03:00  INFO 23040 --- [main] c.h.s.SeniorFullStack1ApplicationTests   : Blog Categories Creatten hemen önce
+2024-07-07T13:06:52.460+03:00  INFO 23040 --- [main] c.h.s.SeniorFullStack1ApplicationTests   : Blog Categories Creatten hemen önce
+2024-07-07T13:06:52.494+03:00  INFO 23040 --- [main] c.h.s.SeniorFullStack1ApplicationTests   : Blog Categories Creatten hemen önce
+2024-07-07T13:06:52.500+03:00  INFO 23040 --- [main] c.h.s.SeniorFullStack1ApplicationTests   : Blog Categories Creatten hemen önce
+2024-07-07T13:06:52.504+03:00  INFO 23040 --- [main] c.h.s.SeniorFullStack1ApplicationTests   : Blog Categories Creatten hemen önce
+2024-07-07T13:06:52.512+03:00  INFO 23040 --- [main] c.h.s.SeniorFullStack1ApplicationTests   : Blog Categories Creatten hemen önce
+2024-07-07T13:06:52.514+03:00  INFO 23040 --- [main] c.h.s.SeniorFullStack1ApplicationTests   : Blog Categories Creatten hemen önce
+2024-07-07T13:06:52.524+03:00  INFO 23040 --- [main] c.h.s.SeniorFullStack1ApplicationTests   : Blog Categories Creatten hemen önce
+2024-07-07T13:06:52.530+03:00  INFO 23040 --- [main] c.h.s.SeniorFullStack1ApplicationTests   : Blog Categories Creatten hemen önce
+2024-07-07T13:06:52.542+03:00  INFO 23040 --- [main] c.h.s.SeniorFullStack1ApplicationTests   : Blog Categories önce gelen
+2024-07-07T13:06:52.744+03:00 DEBUG 23040 --- [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@64a896b0, started on Sun Jul 07 15:36:41 IST 2024
+2024-07-07T13:06:52.751+03:00  INFO 23040 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-07T13:06:52.760+03:00 ERROR 23040 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2024-07-07T13:06:52.763+03:00 ERROR 23040 --- [SpringApplicationShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2024-07-07T13:06:52.764+03:00  WARN 23040 --- [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution [Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]] [n/a]
+2024-07-07T13:06:52.765+03:00  INFO 23040 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-07T13:06:52.768+03:00  INFO 23040 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
