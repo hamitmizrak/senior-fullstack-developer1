@@ -12,10 +12,10 @@ public interface IBlogCategoriesServices<D,E> {
 
     /////////////////////////////////////////////////////////////
     // SPEED DATA
-    public String blogCategorySpeedData(Integer data);
+    public String blogCategoryServiceSpeedData(Integer data);
 
     // DELETE ALL
-    public String blogCategoryDeleteAllData();
+    public String blogCategoryServiceDeleteAllData();
 
     ////////////////////////////////////////////////////////////
     // CRUD
