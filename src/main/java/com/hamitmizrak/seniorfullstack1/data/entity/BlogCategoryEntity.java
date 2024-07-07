@@ -44,6 +44,5 @@ public class BlogCategoryEntity implements Serializable {
 
     // Category Name
     @Column(name = "category_name")
-    @AUniqueBlogCategoryName //Unique Blog Category Name
     private String categoryName;
 } // end BlogCategoryName

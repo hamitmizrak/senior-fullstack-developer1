@@ -3,3 +3,8 @@ jUniConv Unicode Characters to Java Entities Converter
 -----------------------------------------------------------
 https://itpro.cz/juniconv/
 
+
+localhost:4444
+localhost:4444/h2-console
+localhost:4444/swagger-ui.html
+
