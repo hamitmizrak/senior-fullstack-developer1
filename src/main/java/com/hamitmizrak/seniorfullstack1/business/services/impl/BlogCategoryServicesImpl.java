@@ -43,6 +43,7 @@ public class BlogCategoryServicesImpl implements IBlogCategoriesServices<BlogCat
     /////////////////////////////////////////////////////////////
     // SPEED DATA
     @Override
+    @Transactional
     public String blogCategoryServiceSpeedData(Integer data) {
         if(data!=null){
             for (int i = 0; i <=data ; i++) {
@@ -60,7 +61,7 @@ public class BlogCategoryServicesImpl implements IBlogCategoriesServices<BlogCat
     @Override
     public String blogCategoryServiceDeleteAllData() {
         iBlogCategoryRepository.deleteAll();
-        return blogCategoryServiceList()+" tane veri silindi";
+        return blogCategoryServiceList().size()+" tane veri silindi";
     }
 
     ////////////////////////////////////////////////////////////
