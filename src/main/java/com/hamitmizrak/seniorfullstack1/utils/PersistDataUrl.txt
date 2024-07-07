@@ -6,5 +6,5 @@ https://itpro.cz/juniconv/
 
 localhost:4444
 localhost:4444/h2-console
-localhost:4444/swagger-ui.html
+http://localhost:4444/swagger-ui/index.html
 

@@ -1,6 +1,8 @@
 # Special
-log/
-memory_persist/
+/log/
+/memory_persist/
+
+*.log
 
 HELP.md
 target/
