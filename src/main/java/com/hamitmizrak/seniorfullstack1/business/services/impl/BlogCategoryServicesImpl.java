@@ -119,7 +119,7 @@ public class BlogCategoryServicesImpl implements IBlogCategoriesServices<BlogCat
             BlogCategoryEntity blogCategoryEntity=dtoToEntity(blogCategoryDto);
             blogCategoryEntity.setCategoryName(blogCategoryDto.getCategoryName());
             iBlogCategoryRepository.save(blogCategoryEntity);
-           return findBlogCategoryDto;
+            return findBlogCategoryDto;
         }
         return null;
     }
