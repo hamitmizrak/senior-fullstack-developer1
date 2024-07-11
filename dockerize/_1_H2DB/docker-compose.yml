@@ -1,0 +1,26 @@
+#$ docker-compose -v
+# docker-compose up
+# docker-compose up -d
+# docker-compose -f Custom_Docker_compose.yml up
+# docker-compose -f Custom_Docker_compose.yml up -d
+
+# Version
+version: '3.1'
+
+# Services
+services:
+  backend:
+    container_name: blog
+    image: blog
+    restart: always
+    build: ./
+    ports:
+      - "4444:4444"
+    networks:
+      - blog_network
+
+# Networks
+networks:
+  blog_network:
+    name: blog_network
+    driver: bridge
