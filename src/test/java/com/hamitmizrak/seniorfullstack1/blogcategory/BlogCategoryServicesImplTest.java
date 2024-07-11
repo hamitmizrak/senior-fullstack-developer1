@@ -25,10 +25,22 @@ Bu sayede @Service @Repository @Controller bu anotationlara sahip sınıflara te
 public class BlogCategoryServicesImplTest implements IBlogCategoryTest {
 
     // Test Metot Yapısında
-    // 1-Hazırlık(Setup): TEstin çalışması için başlangıç koşullarını hazırlar
+    // 1-Hazırlık(Setup): Testin çalışması için başlangıç koşullarını hazırlar
     // 2-Eylem(Action): Test edilmek istenen işlevleri çalıştırır.
     // 3-Doğrulama(Assertion): Test Sonuçlarını doğrular
     // 4-Temizlik (Teardown):  Testten sonra gerekli temizlik işlemlerini yapar.
+
+    /*
+     ### Zengin Assert Metotları
+    JUnit, test sonuçlarını doğrulamak için çeşitli assert metotları sağlar.
+    Bu metotlar, beklenen ve gerçek sonuçları karşılaştırarak testlerin başarılı olup olmadığını belirler.
+    assertEquals(expected, actual):** İki değerin eşit olup olmadığını kontrol eder.
+    assertTrue(condition):** Koşulun doğru olup olmadığını kontrol eder.
+    assertFalse(condition):** Koşulun yanlış olup olmadığını kontrol eder.
+    assertNull(object):** Nesnenin null olup olmadığını kontrol eder.
+    assertNotNull(object):** Nesnenin null olmadığını kontrol eder.
+    assertArrayEquals(expectedArray, actualArray):** İki dizinin eşit olup olmadığını kontrol eder.
+  */
 
     // Variable
     private BlogCategoryEntity blogCategoryEntity;
@@ -74,7 +86,7 @@ public class BlogCategoryServicesImplTest implements IBlogCategoryTest {
         log.info("******Blog Categories Methodlarından hepsinden Sonra**********");
     }
 
-    //
+    // getFail
     @Test
     @Override
     public void getFail(){
@@ -150,7 +162,5 @@ public class BlogCategoryServicesImplTest implements IBlogCategoryTest {
         iBlogCategoryRepository.deleteById(1L);
         assertThat(iBlogCategoryRepository.existsById(1L)).isFalse();
     }
-
-
 
 } //end class test
