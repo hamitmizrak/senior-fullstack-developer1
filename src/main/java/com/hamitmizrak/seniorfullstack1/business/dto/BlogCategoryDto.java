@@ -1,6 +1,7 @@
 package com.hamitmizrak.seniorfullstack1.business.dto;
 
 import com.hamitmizrak.seniorfullstack1.annotation.AUniqueBlogCategoryName;
+import com.hamitmizrak.seniorfullstack1.audit.AuditingAwareBaseDto;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -20,7 +21,7 @@ import java.util.Date;
 @Builder
 
 // BlogCategoryDto(1)- BlogDto(N)
-public class BlogCategoryDto implements Serializable {
+public class BlogCategoryDto extends AuditingAwareBaseDto implements Serializable {
 
     // Serileştirme
    public static final Long serialVersionUID=1L;

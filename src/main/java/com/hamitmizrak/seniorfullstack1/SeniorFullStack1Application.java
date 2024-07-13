@@ -3,6 +3,7 @@ package com.hamitmizrak.seniorfullstack1;
 import jakarta.annotation.PostConstruct;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 import java.util.TimeZone;
 
@@ -23,7 +24,7 @@ import java.util.TimeZone;
 // @EnableCaching
 
 // Auditing Aktif etmek
-// @EnableJpaAuditing(auditorAwareRef = "auditorAwareBeanMethod")
+@EnableJpaAuditing(auditorAwareRef = "auditorAwareBeanMethod")
 
 // Spring Security: Şimdilik dahil etme ancak Spring security için gerekli kütüphaneleri dahil
 @SpringBootApplication(exclude = {
@@ -36,7 +37,6 @@ import java.util.TimeZone;
 //public class FullStackDeveloper12Application {
 
 // Apache Tomcat için: extends SpringBootServletInitializer
-
 
 //@SpringBootApplication
 public class SeniorFullStack1Application {

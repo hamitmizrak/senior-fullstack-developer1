@@ -1,6 +1,7 @@
 package com.hamitmizrak.seniorfullstack1.data.entity;
 
 import com.hamitmizrak.seniorfullstack1.annotation.AUniqueBlogCategoryName;
+import com.hamitmizrak.seniorfullstack1.audit.AuditingAwareBaseEntity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
@@ -24,9 +25,8 @@ import java.util.Date;
 // ENTITY
 @Entity(name = "BlogCategories")
 @Table(name="blogCategories")
-
 // BlogCategoryDto(1)- BlogDto(N)
-public class BlogCategoryEntity implements Serializable {
+public class BlogCategoryEntity extends AuditingAwareBaseEntity implements Serializable {
 
     // Serileştirme
     public static final Long serialVersionUID=1L;
