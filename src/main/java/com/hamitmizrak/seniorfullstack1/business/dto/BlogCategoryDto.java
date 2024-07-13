@@ -27,7 +27,7 @@ public class BlogCategoryDto extends AuditingAwareBaseDto implements Serializabl
    public static final Long serialVersionUID=1L;
 
    // ID
-    private Long categoryID;
+    private Long blogCategoryID;
 
     // DATE
     @Builder.Default
