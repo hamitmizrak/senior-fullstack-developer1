@@ -1,4 +1,4 @@
-#$ docker-compose -v
+# docker-compose -v
 # docker-compose up
 # docker-compose up -d
 # docker-compose -f Custom_Docker_compose.yml up

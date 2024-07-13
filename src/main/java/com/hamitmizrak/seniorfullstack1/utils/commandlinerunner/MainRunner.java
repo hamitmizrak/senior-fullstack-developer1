@@ -30,7 +30,7 @@ public class MainRunner {
      // Lambda Expression
       return args -> {
         log.info("Blog Categories");
-          /*System.out.println("Blog Categories");
+          System.out.println("Blog Categories");
           BlogCategoryEntity blogCategoryEntity1=BlogCategoryEntity.builder().categoryName("computer").build();
           iBlogCategoryRepository.save(blogCategoryEntity1);
 
@@ -38,7 +38,7 @@ public class MainRunner {
           iBlogCategoryRepository.save(blogCategoryEntity2);
 
           BlogCategoryEntity blogCategoryEntity3=BlogCategoryEntity.builder().categoryName("pc").build();
-          iBlogCategoryRepository.save(blogCategoryEntity3);*/
+          iBlogCategoryRepository.save(blogCategoryEntity3);
       };
     }
     // START
