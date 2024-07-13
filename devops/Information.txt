@@ -1,0 +1,33 @@
+Project Name: ubuntu_bashscript
+Choose Region: Franfurt
+OS: Ubuntu 24.04 (LTS) *64
+Choose Size: Basic
+CPU Options: Regular 1GB/1CPU /25 GB SSD/1000 GB Transfer
+
+Public IPV4 ADDRESS: 64.226.71.226
+PUBLIC GATEWAY: 64.226.64.1
+SUBNET MASK: 255.255.240.0
+Snapshot name: hamit-mizrak-1720642402536
+TAG NAME: ubuntu, docker
+
+Hostname: hamit-mizrak
+Şifre: Ubuntu123456789@.Ub
+IP Address: 64.226.71.226
+
+ssh root@64.226.71.226
+Ubuntu123456789@.Ub
+
+
+
+###############################################
+64.226.71.226
+64.226.71.226:80
+64.226.71.226:1111 # Apache Tomcat - Docker 
+64.226.71.226:2222 # docker portainer
+64.226.71.226:8000 # docker portainer
+64.226.71.226:3333 # Jenkins
+64.226.71.226:3306 # mysql
+64.226.71.226:5432 # Postgresql
+64.226.71.226:8080
+64.226.71.226:9000
+64.226.71.226:9090

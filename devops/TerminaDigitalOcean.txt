@@ -1,0 +1,18 @@
+cd /home 
+git clone https://github.com/hamitmizrak/offline-vps-digital-ocean
+
+RAM: 4GB
+STORAGE: 80GB
+ubuntu-bashscript
+ubuntu,docker,jenkins,sonarqube
+
+ssh root@138.68.71.176
+Ubuntu12345@Ub
+
+cd /home
+ls -al
+git clone https://github.com/hamitmizrak/offline-vps-digital-ocean.git
+
+cd offline-vps-digital-ocean/script
+sudo chmod  +x  _1_common.sh
+./_1_common.sh

@@ -787,3 +787,6 @@ Consider defining a bean of type 'com.hamitmizrak.seniorfullstack1.business.serv
 2024-07-13T14:45:45.080+05:30  INFO 27132 --- [restartedMain] c.h.s.SeniorFullStack1Application        : Started SeniorFullStack1Application in 1.451 seconds (process running for 2429.145)
 2024-07-13T14:45:45.081+05:30  INFO 27132 --- [restartedMain] c.h.s.u.commandlinerunner.MainRunner     : Blog Categories
 2024-07-13T14:45:45.096+05:30  INFO 27132 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-07-13T15:46:26.722+05:30  INFO 27132 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-13T15:46:26.724+05:30  INFO 27132 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2024-07-13T15:46:26.725+05:30  INFO 27132 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
