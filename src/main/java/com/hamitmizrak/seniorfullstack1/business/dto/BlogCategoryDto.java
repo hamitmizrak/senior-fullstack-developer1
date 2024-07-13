@@ -33,7 +33,7 @@ public class BlogCategoryDto implements Serializable {
     private Date systemCreatedDate=new Date(System.currentTimeMillis());
 
     // Category Name
-    //@AUniqueBlogCategoryName
+    @AUniqueBlogCategoryName
     @NotEmpty(message = "{blog.category.validation.constraints.NotNull.message}")
     @Size(min = 2, message = "{blog.category.least.validation.constraints.NotNull.message}")
     private String categoryName;

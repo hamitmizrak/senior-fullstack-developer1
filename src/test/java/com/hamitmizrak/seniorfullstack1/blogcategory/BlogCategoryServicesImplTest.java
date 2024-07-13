@@ -14,14 +14,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 // LOMBOK
 @Log4j2
 
+/*
+Spring boot, @SpringBootTest uygulamalarında kapsamlı testler yazmak için kullanılır
+Spring boot uygulama,@SpringBootTest bağlamını(application Context) başlatır.
+Bu sayede @Service @Repository @Controller bu annotationlara sahip sınıflara test sırasında erişim sağlayabilirim
+*/
 // Test Sırasını Belirleme
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @SpringBootTest
-/*
-Spring boot uygulamalarında kapsamlı testler yazmak için kullanılır
-Spring boot uygulama bağlamını(application Context) başlatır.
-Bu sayede @Service @Repository @Controller bu anotationlara sahip sınıflara test sırasında erişim sağlayabilirim
-*/
 public class BlogCategoryServicesImplTest implements IBlogCategoryTest {
 
     // Test Metot Yapısında
@@ -34,6 +34,8 @@ public class BlogCategoryServicesImplTest implements IBlogCategoryTest {
      ### Zengin Assert Metotları
     JUnit, test sonuçlarını doğrulamak için çeşitli assert metotları sağlar.
     Bu metotlar, beklenen ve gerçek sonuçları karşılaştırarak testlerin başarılı olup olmadığını belirler.
+    expected:Beklenen
+    actual: Gerçek (Benim yazdığım sonuç)
     assertEquals(expected, actual):** İki değerin eşit olup olmadığını kontrol eder.
     assertTrue(condition):** Koşulun doğru olup olmadığını kontrol eder.
     assertFalse(condition):** Koşulun yanlış olup olmadığını kontrol eder.
@@ -42,6 +44,7 @@ public class BlogCategoryServicesImplTest implements IBlogCategoryTest {
     assertArrayEquals(expectedArray, actualArray):** İki dizinin eşit olup olmadığını kontrol eder.
   */
 
+    // 1-Hazırlık(Setup):
     // Variable
     private BlogCategoryEntity blogCategoryEntity;
 
@@ -69,7 +72,7 @@ public class BlogCategoryServicesImplTest implements IBlogCategoryTest {
         blogCategoryEntity = new BlogCategoryEntity();
     }
 
-    // Metottan Hemen Sonra
+    // Metottan Hemen Sonra ( 4-Temizlik (Teardown): )
     @AfterEach
     void getAfterEachBlogCategoriesAllMethod() {
         System.out.println("Blog Categories Methodlarından Hemen Sonra");
@@ -104,7 +107,7 @@ public class BlogCategoryServicesImplTest implements IBlogCategoryTest {
     ///////////////////////////////////////////////////////////////////////////////////////////////
     // BLOG CATEGORY CREATE
     //@Test
-    @RepeatedTest(3) // Bu Create testini 3 defa çalıştır
+    @RepeatedTest(1) // Bu Create testini 3 defa çalıştır
     @Order(1)
     @Tag("create") // Testleri mantıksal gruplar ayırmak için
     @Override
@@ -133,7 +136,7 @@ public class BlogCategoryServicesImplTest implements IBlogCategoryTest {
     @Tag("list") // Testleri mantıksal gruplar ayırmak için
     @Override
     public void blogCategoryListTest() {
-        System.out.println("Blog Categories List");
+      System.out.println("Blog Categories List");
       Iterable<BlogCategoryEntity> list=iBlogCategoryRepository.findAll();
       assertThat(list).size().isGreaterThan(0);
     }

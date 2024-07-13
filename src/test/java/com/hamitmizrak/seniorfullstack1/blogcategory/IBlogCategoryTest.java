@@ -2,9 +2,11 @@ package com.hamitmizrak.seniorfullstack1.blogcategory;
 
 public interface IBlogCategoryTest {
 
+    // Fail
     public void getFail();
-    public void getDisable();
 
+    // Disable
+    public void getDisable();
 
     // SAVE
     public void blogCategoryCreateTest();
