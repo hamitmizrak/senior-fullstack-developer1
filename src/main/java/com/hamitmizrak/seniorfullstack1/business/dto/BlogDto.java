@@ -1,6 +1,5 @@
 package com.hamitmizrak.seniorfullstack1.business.dto;
 
-import com.hamitmizrak.seniorfullstack1.annotation.AUniqueBlogCategoryName;
 import com.hamitmizrak.seniorfullstack1.audit.AuditingAwareBaseDto;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
