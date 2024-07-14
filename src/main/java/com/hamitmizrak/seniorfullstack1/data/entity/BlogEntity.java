@@ -13,7 +13,7 @@ import java.util.Date;
 // LOMBOK
 @Data
 @Log4j2
-@Builder
+//@Builder
 
 // ENTITY
 @Entity(name = "Blogs")
