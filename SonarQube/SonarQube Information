@@ -1,0 +1,10 @@
+SONARQUBE
+--------------------------------------
+Default
+localhost:9000
+username: admin
+password: admin
+
+Yenisi
+username: admin
+password: adminadmin
