@@ -16,7 +16,7 @@ public class SwaggerBean {
         return new OpenAPI().info(new Info()
                 .title("Master Computer Engineer Hamit Mızrak")
                 .version("V1.0.0")
-                .summary(" for spring boot on react js, auth: "+hashCode())
+                //.summary(" for spring boot on react js, auth: "+hashCode())
                 .description("Spring Boot & React Js & Devops")
                 .termsOfService(" Software INC")
                 .contact(new Contact()

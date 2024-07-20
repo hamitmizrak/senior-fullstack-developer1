@@ -3,7 +3,10 @@ package com.hamitmizrak.seniorfullstack1;
 import jakarta.annotation.PostConstruct;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import java.util.TimeZone;
 
@@ -17,8 +20,9 @@ import java.util.TimeZone;
 // @EnableAsync
 
 // SCAN
-// @EntityScan(basePackages = "com.hamitmizrak.data.entity") //Entity bulamadığı zaman
-// @EnableJpaRepositories(basePackages = "com.hamitmizrak.data.repository") //Repository bulamadığı zaman
+ //@EntityScan(basePackages = "com.hamitmizrak.seniorfullstack1.data.entity") //Entity bulamadığı zaman
+ //@EnableJpaRepositories(basePackages = "com.hamitmizrak.seniorfullstack1.data.repository") //Repository bulamadığı zaman
+ //@ComponentScan("com")
 
 // Spring Cache aktif etmek gerekiyor.
 // @EnableCaching

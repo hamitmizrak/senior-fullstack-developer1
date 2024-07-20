@@ -1,10 +1,12 @@
 package com.hamitmizrak.seniorfullstack1.error;
 
-import lombok.RequiredArgsConstructor;
+
 import lombok.extern.log4j.Log4j2;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.error.ErrorAttributeOptions;
 import org.springframework.boot.web.servlet.error.ErrorAttributes;
 import org.springframework.boot.web.servlet.error.ErrorController;
+import org.springframework.stereotype.Component;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,13 +17,14 @@ import java.util.List;
 import java.util.Map;
 
 // LOMBOK
-@RequiredArgsConstructor // Inject
+//@RequiredArgsConstructor // Inject
 @Log4j2
 
 // API
 @RestController
 @CrossOrigin
 // Spring error için benim yazdığım class,method
+@Component
 public class ErrorControllerHandleWebRequest implements ErrorController {
     // ErrorController
     // ErrorAttributes
@@ -30,6 +33,10 @@ public class ErrorControllerHandleWebRequest implements ErrorController {
     // Injection
     // org.springframework.boot.web.servlet.error.ErrorAttributes
     private final ErrorAttributes errorAttributes;
+    @Autowired
+    public ErrorControllerHandleWebRequest(ErrorAttributes errorAttributes) {
+        this.errorAttributes = errorAttributes;
+    }
 
     // Field: s m p v
     private Integer status;
@@ -76,5 +83,8 @@ public class ErrorControllerHandleWebRequest implements ErrorController {
         }
         return apiResult;
     } //end method
+
+
+
 
 } //end class
