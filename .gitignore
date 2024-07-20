@@ -1,4 +1,6 @@
 # Special
+/blog/node_modules
+
 /log/
 /memory_persist/
 
