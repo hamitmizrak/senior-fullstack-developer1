@@ -1,5 +1,6 @@
 package com.hamitmizrak.seniorfullstack1.blogcategory;
 
+import com.hamitmizrak.seniorfullstack1.data.entity.BlogCategoryEntity;
 import com.hamitmizrak.seniorfullstack1.data.repository.IBlogCategoryRepository;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.*;
