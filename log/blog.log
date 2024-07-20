@@ -2860,3 +2860,6 @@ insert into blog (content,header,image,title,created_date,created_user,last_date
 2024-07-20T15:05:50.067+05:30  INFO 13748 --- [restartedMain] c.h.s.SeniorFullStack1Application        : Started SeniorFullStack1Application in 0.692 seconds (process running for 213.292)
 2024-07-20T15:05:50.068+05:30  INFO 13748 --- [restartedMain] c.h.s.u.commandlinerunner.MainRunner     : Blog Categories
 2024-07-20T15:05:50.195+05:30  INFO 13748 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-07-20T16:01:35.399+05:30  INFO 13748 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T16:01:35.483+05:30  INFO 13748 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-07-20T16:01:35.486+05:30  INFO 13748 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
