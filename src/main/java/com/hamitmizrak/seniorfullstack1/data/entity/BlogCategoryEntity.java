@@ -45,6 +45,10 @@ public class BlogCategoryEntity extends AuditingAwareBaseEntity implements Seria
     @Temporal(TemporalType.TIMESTAMP)
     private Date systemCreatedDate;
 
+    // RELATION
+    @OneToMany(mappedBy = "relationCategoryEntity",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    List<BlogEntity> relationBlogEntityList;
+
     // Constructor (parametreli)
     public BlogCategoryEntity(String categoryName) {
         this.categoryName = categoryName;
@@ -55,9 +59,5 @@ public class BlogCategoryEntity extends AuditingAwareBaseEntity implements Seria
         this.categoryName = categoryName;
         this.relationBlogEntityList = relationBlogEntityList;
     }
-
-    // RELATION
-    @OneToMany(mappedBy = "relationCategoryEntity",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
-    List<BlogEntity> relationBlogEntityList;
 
 } //end class
