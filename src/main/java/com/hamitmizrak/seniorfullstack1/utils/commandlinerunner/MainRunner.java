@@ -41,41 +41,15 @@ public class MainRunner {
           javaBlogCategory.setCategoryName("java");
           iBlogCategoryRepository.save(javaBlogCategory);
 
-          BlogCategoryEntity frontBlogCategory= BlogCategoryEntity
-                  .builder().categoryName("frontend").build();
-          iBlogCategoryRepository.save(frontBlogCategory);
-
-
           // Çoğul Blog'tur
           // Java
-          /*
           BlogEntity blogEntity1= new BlogEntity();
           blogEntity1.getEmbeddableBlogEntity().setHeader("Javanın Gelecekteki Kullanımı");
           blogEntity1.getEmbeddableBlogEntity().setTitle("Javanın Gelecekteki Kullanımı devamı ....");
           blogEntity1.getEmbeddableBlogEntity().setContent("Java yüksek seviyeli bir dildir.");
           blogEntity1.getEmbeddableBlogEntity().setImage("java.jpg");
-          blogEntity1.setRelationBlogCategoryEntity(javaBlogCategory);
-          iBlogRepository.save(blogEntity1);*/
-
-          /*
-          BlogEntity blogEntity2= new BlogEntity();
-          blogEntity2.getEmbeddableBlogEntity().setHeader("JSP Gelecekteki Kullanımı");
-          blogEntity2.getEmbeddableBlogEntity().setTitle("JSP Gelecekteki Kullanımı devamı ....");
-          blogEntity2.getEmbeddableBlogEntity().setContent("JSP bir java kütüphanesidir.");
-          blogEntity2.getEmbeddableBlogEntity().setImage("jsp.jpg");
-          blogEntity2.setRelationBlogCategoryEntity(javaBlogCategory);
-          iBlogRepository.save(blogEntity2);
-
-          // Frontend
-          BlogEntity blogEntity3= new BlogEntity();
-          blogEntity3.getEmbeddableBlogEntity().setHeader("React JS Gelecekteki Kullanımı");
-          blogEntity3.getEmbeddableBlogEntity().setTitle("React JS Gelecekteki Kullanımı devamı ....");
-          blogEntity3.getEmbeddableBlogEntity().setContent("React bir Javascript kütüphanesidir.");
-          blogEntity3.getEmbeddableBlogEntity().setImage("react.jpg");
-          blogEntity3.setRelationBlogCategoryEntity(frontBlogCategory);
-          iBlogRepository.save(blogEntity3);
-          */
-
+          blogEntity1.setRelationCategoryEntity(javaBlogCategory);
+          iBlogRepository.save(blogEntity1);
       };
     }
     // START

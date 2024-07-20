@@ -1,10 +1,7 @@
 package com.hamitmizrak.seniorfullstack1.data.entity;
 
-import com.hamitmizrak.seniorfullstack1.annotation.AUniqueBlogCategoryName;
 import com.hamitmizrak.seniorfullstack1.audit.AuditingAwareBaseEntity;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,6 +11,7 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 // LOMBOK
 @Data
@@ -24,7 +22,7 @@ import java.util.Date;
 
 // ENTITY
 @Entity(name = "BlogCategories")
-@Table(name="blogCategories")
+@Table(name="blogCategory")
 // BlogCategoryDto(1)- BlogDto(N)
 public class BlogCategoryEntity extends AuditingAwareBaseEntity implements Serializable {
 
@@ -34,7 +32,7 @@ public class BlogCategoryEntity extends AuditingAwareBaseEntity implements Seria
     // ID
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "blog_category_id",unique=true, nullable=false, updatable=false,insertable = true)
+    @Column(name = "category_id",unique=true, nullable=false, updatable=false,insertable = true)
     private Long categoryID;
 
     // DATE
@@ -45,4 +43,22 @@ public class BlogCategoryEntity extends AuditingAwareBaseEntity implements Seria
     // Category Name
     @Column(name = "category_name")
     private String categoryName;
+
+    // Constructor(Parametreli)
+    public BlogCategoryEntity(String categoryName) {
+        this.categoryName = categoryName;
+    }
+
+    // Constructor(Parametreli)
+    public BlogCategoryEntity(String categoryName,List<BlogEntity> relationBlogEntityList) {
+        this.relationBlogEntityList = relationBlogEntityList;
+        this.categoryName = categoryName;
+    }
+
+    // RELATION
+    // BlogCategoryDto(1)- BlogDto(N)
+    @OneToMany(mappedBy = "relationCategoryEntity",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    List<BlogEntity> relationBlogEntityList;
+
+
 } // end BlogCategoryName

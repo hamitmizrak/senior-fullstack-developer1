@@ -1,9 +1,9 @@
 package com.hamitmizrak.seniorfullstack1.data.entity;
 
 import com.hamitmizrak.seniorfullstack1.audit.AuditingAwareBaseEntity;
+import com.hamitmizrak.seniorfullstack1.data.embedded.EmbeddableBlogEntity;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import lombok.extern.log4j.Log4j2;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -11,9 +11,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 // LOMBOK
-//@Data
-@Getter
-@Setter
+@Data
+@AllArgsConstructor
+@Builder
 @Log4j2
 //@Builder
 
@@ -30,11 +30,11 @@ public class BlogEntity extends AuditingAwareBaseEntity implements Serializable 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "blog_id",unique=true, nullable=false, updatable=false,insertable = true)
-    private Long blogID;
+    private Long blogId;
 
     // DATE
-    @Temporal(TemporalType.TIMESTAMP)
     @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
     private Date systemCreatedDate;
 
     // Embedded
@@ -44,16 +44,16 @@ public class BlogEntity extends AuditingAwareBaseEntity implements Serializable 
     // RELATION
     // BlogEntity(N) - BlogCategoryEntity(1)
     @ManyToOne(fetch = FetchType.LAZY,optional = false)
-    @JoinColumn(name="blog_category_id",nullable = false)
-    private BlogCategoryEntity relationBlogCategoryEntity;
+    @JoinColumn(name="category_id",nullable = false)
+    private BlogCategoryEntity relationCategoryEntity;
 
     // Constructor(Parametresiz)
     public BlogEntity() {
     }
 
     // Constructor(Parametreli)
-    public BlogEntity(EmbeddableBlogEntity embeddableBlogEntity, BlogCategoryEntity relationBlogCategoryEntity) {
+    public BlogEntity(EmbeddableBlogEntity embeddableBlogEntity, BlogCategoryEntity relationCategoryEntity) {
         this.embeddableBlogEntity = embeddableBlogEntity;
-        this.relationBlogCategoryEntity = relationBlogCategoryEntity;
+        this.relationCategoryEntity = relationCategoryEntity;
     }
 } // end BlogCategoryName
