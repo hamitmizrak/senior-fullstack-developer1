@@ -4,7 +4,7 @@ import com.hamitmizrak.seniorfullstack1.business.dto.BlogCategoryDto;
 import com.hamitmizrak.seniorfullstack1.business.services.IBlogCategoriesServices;
 import com.hamitmizrak.seniorfullstack1.controller.api.IBlogCategoriesApi;
 import com.hamitmizrak.seniorfullstack1.error.ApiResult;
-import com.hamitmizrak.seniorfullstack1.utils.frontend.React;
+import com.hamitmizrak.seniorfullstack1.utils.frontend.ReactFrontend;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -21,8 +21,8 @@ import java.util.List;
 // API
 @RestController
 //@CrossOrigin
-@CrossOrigin(origins = React.REACT_FRONTEND_PORT_URL) // http://localhost:3000
-@RequestMapping("/blog/categories/api/v1")
+@CrossOrigin(origins = ReactFrontend.REACT_FRONTEND_PORT_URL) // http://localhost:3000
+@RequestMapping("/blog/categories/api/v100")
 public class BlogCategoriesApiImpl implements IBlogCategoriesApi<BlogCategoryDto> {
 
     // INJECTION
@@ -31,9 +31,9 @@ public class BlogCategoriesApiImpl implements IBlogCategoriesApi<BlogCategoryDto
 
     /////////////////////////////////////////////////////////////
     // SPEED DATA
-    // http://localhost:4444/blog/categories/api/v1/speed
-    // http://localhost:4444/blog/categories/api/v1/speed/0
-    // http://localhost:4444/blog/categories/api/v1/speed/5
+    // http://localhost:4444/blog/categories/api/v100/speed
+    // http://localhost:4444/blog/categories/api/v100/speed/0
+    // http://localhost:4444/blog/categories/api/v100/speed/5
     @Override
     @GetMapping(value = {"/speed", "/speed/{id}"})
     public ResponseEntity<String> blogCategoryApiSpeedData(@PathVariable(name = "id", required = false) Integer data) {
@@ -42,7 +42,7 @@ public class BlogCategoriesApiImpl implements IBlogCategoriesApi<BlogCategoryDto
 
 
     // DELETE ALL
-    // http://localhost:4444/blog/categories/api/v1/delete/all
+    // http://localhost:4444/blog/categories/api/v100/delete/all
     @Override
     @DeleteMapping(value = "/delete/all")
     public ResponseEntity<String> blogCategoryApiDeleteAllData() {
@@ -52,7 +52,7 @@ public class BlogCategoriesApiImpl implements IBlogCategoriesApi<BlogCategoryDto
     ////////////////////////////////////////////////////////////
     // CRUD
     // CREATE
-    // http://localhost:4444/blog/categories/api/v1/create
+    // http://localhost:4444/blog/categories/api/v100/create
     @Override
     @PostMapping("/create")
     public ResponseEntity<?> blogCategoryApiCreate(@Valid @RequestBody BlogCategoryDto blogCategoryDto) {
@@ -60,7 +60,7 @@ public class BlogCategoriesApiImpl implements IBlogCategoriesApi<BlogCategoryDto
     }
 
     // LIST
-    // http://localhost:4444/blog/categories/api/v1/list
+    // http://localhost:4444/blog/categories/api/v100/list
     @Override
     @GetMapping("/list")
     public ResponseEntity<List<BlogCategoryDto>> blogCategoryApiList() {
@@ -68,9 +68,9 @@ public class BlogCategoriesApiImpl implements IBlogCategoriesApi<BlogCategoryDto
     }
 
     // FIND
-    // http://localhost:4444/blog/categories/api/v1/find
-    // http://localhost:4444/blog/categories/api/v1/find/0
-    // http://localhost:4444/blog/categories/api/v1/find/1
+    // http://localhost:4444/blog/categories/api/v100/find
+    // http://localhost:4444/blog/categories/api/v100/find/0
+    // http://localhost:4444/blog/categories/api/v100/find/1
     @Override
     @GetMapping({"/find", "/find/{id}"})
     public ResponseEntity<?> blogCategoryApiFindById(@PathVariable(name = "id", required = false) Long id) {
@@ -91,9 +91,9 @@ public class BlogCategoriesApiImpl implements IBlogCategoriesApi<BlogCategoryDto
     }
 
     // UPDATE
-    // http://localhost:4444/blog/categories/api/v1/update
-    // http://localhost:4444/blog/categories/api/v1/update/0
-    // http://localhost:4444/blog/categories/api/v1/update/1
+    // http://localhost:4444/blog/categories/api/v100/update
+    // http://localhost:4444/blog/categories/api/v100/update/0
+    // http://localhost:4444/blog/categories/api/v100/update/1
     @Override
     @PutMapping({"/update", "/update/{id}"})
     public ResponseEntity<?> blogCategoryApiUpdateById(@PathVariable(name = "id", required = false) Long id, @Valid @RequestBody BlogCategoryDto blogCategoryDto) {
@@ -101,9 +101,9 @@ public class BlogCategoriesApiImpl implements IBlogCategoriesApi<BlogCategoryDto
     }
 
     // DELETE
-    // http://localhost:4444/blog/categories/api/v1/delete
-    // http://localhost:4444/blog/categories/api/v1/delete/0
-    // http://localhost:4444/blog/categories/api/v1/delete/1
+    // http://localhost:4444/blog/categories/api/v100/delete
+    // http://localhost:4444/blog/categories/api/v100/delete/0
+    // http://localhost:4444/blog/categories/api/v100/delete/1
     @Override
     @DeleteMapping({"/delete", "/delete/{id}"})
     public ResponseEntity<?> blogCategoryApiDeleteById(@PathVariable(name = "id", required = false) Long id) {
