@@ -58,8 +58,18 @@ public class MainRunner {
           blogEntity2.getBlogEntityEmbeddable().setHeader("Header-2");
           blogEntity2.getBlogEntityEmbeddable().setContent("Content-2");
           blogEntity2.getBlogEntityEmbeddable().setTitle("Title-2");
-          blogEntity2.setRelationCategoryEntity(tabletCategory);
+          blogEntity2.setRelationCategoryEntity(computerCategory);
           iBlogRepository.save(blogEntity2);
+
+          // Blog-3
+          BlogEntity blogEntity3=new BlogEntity();
+          blogEntity3.getBlogEntityEmbeddable().setHeader("Header-3");
+          blogEntity3.getBlogEntityEmbeddable().setContent("Content-3");
+          blogEntity3.getBlogEntityEmbeddable().setTitle("Title-3");
+          blogEntity3.setRelationCategoryEntity(tabletCategory);
+          iBlogRepository.save(blogEntity3);
+
+
       };
     }
     // START

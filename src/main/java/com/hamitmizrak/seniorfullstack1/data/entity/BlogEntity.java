@@ -19,6 +19,7 @@ import java.util.Date;
 @Builder
 @Log4j2
 
+
 // ENTITY
 @Entity(name = "Blogs") // Sql JOIN için yazdım
 @Table(name = "blog")
