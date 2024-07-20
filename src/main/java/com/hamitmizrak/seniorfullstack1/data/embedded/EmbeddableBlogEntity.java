@@ -14,20 +14,19 @@ import lombok.Setter;
 public class EmbeddableBlogEntity {
 
     // HEADER
-   @Column(
-           name = "header",
-           nullable = false,
-           unique = true,
-           //length = 255,
-           //insertable = true,
-           //updatable = true,
-           columnDefinition = "varchar(255) default 'Blog Başlığını Yazmadınız ..."
-   )
+    @Column(
+            name = "header",
+            nullable = false,
+            unique = true,
+            length = 500,
+            insertable = true,
+            updatable = true,
+            columnDefinition = "varchar(255) default 'blog için başlık girilmedi'")
     private String header;
 
     // CONTENT
     @Lob
-    @Column(name="content",columnDefinition = "varchar(255) default 'Blog İçeriğini Eklemediniz'")
+    @Column(name = "content", columnDefinition = "varchar(255) default 'blog için içerik girilmedi'")
     private String content;
 
     // TITLE
@@ -36,8 +35,9 @@ public class EmbeddableBlogEntity {
     // IMAGE
     private String image;
 
-    /*
-    @Transient // Sadece Javada olsun ancak Database(Entity) eklenmesin.
-    private Object justJava;
+   /*
+   Javada olsun Database(Entity) olmasının
+   @Transient
+    private Object specialData;
     */
 }

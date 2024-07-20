@@ -4,31 +4,30 @@ import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
-// D: Dto
 public interface IBlogApi<D> {
 
+    // ALL DELETE
+    public ResponseEntity<String> blogApiAllDelete();
+
     // SPEED DATA
-    public ResponseEntity<String> blogApiSpeedData(Integer data);
+    public ResponseEntity<List<D>> blogApiSpeedData(Long key);
 
-    // DELETE ALL
-    public ResponseEntity<String> blogApiDeleteAllData();
+    ////////////////////////////////////////////////////////////////////////////
 
-    ////////////////////////////////////////////////////////////
-    // CRUD
+    // C R U D
     // CREATE
-    public ResponseEntity<?> blogApiCreate(D d);
+    public ResponseEntity<?>  blogApiCreate(D d);
 
     // LIST
-    public ResponseEntity<List<D>> blogApiList();
+    public ResponseEntity<List<D>>  blogApiList();
 
-    // FIND
-    public ResponseEntity<?> blogApiFindById(Long id);
+    // FIND BY
+    public ResponseEntity<?>  blogApiFindById(Long id);
 
     // UPDATE
-    public ResponseEntity<?> blogApiUpdateById(Long id,D d);
+    public ResponseEntity<?>  blogApiUpdate(Long id,D d);
 
     // DELETE
-    public ResponseEntity<?> blogApiDeleteById(Long id);
+    public ResponseEntity<?>  blogApiDeleteById(Long id);
 
-} //end interface
-
+}

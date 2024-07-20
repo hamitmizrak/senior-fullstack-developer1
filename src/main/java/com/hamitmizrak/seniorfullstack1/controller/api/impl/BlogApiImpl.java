@@ -1,12 +1,14 @@
 package com.hamitmizrak.seniorfullstack1.controller.api.impl;
 
+
 import com.hamitmizrak.seniorfullstack1.business.dto.BlogDto;
-import com.hamitmizrak.seniorfullstack1.business.services.IBlogServices;
+import com.hamitmizrak.seniorfullstack1.business.services.impl.IBlogServices;
 import com.hamitmizrak.seniorfullstack1.controller.api.IBlogApi;
 import com.hamitmizrak.seniorfullstack1.utils.frontend.ReactFrontend;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,69 +21,66 @@ import java.util.List;
 // API
 @RestController
 @CrossOrigin(origins = ReactFrontend.REACT_FRONTEND_PORT_URL) // http://localhost:3000
-@RequestMapping("/blog/api/v100")
+@RequestMapping("/blog/api/v1")
 public class BlogApiImpl implements IBlogApi<BlogDto> {
 
-    // INJECTION
+    // Injection
     private final IBlogServices iBlogServices;
 
+    //////////////////////////////////////////////////////////////////////////////////////////
     // SPEED DATA
-    // http://localhost:4444/blog/api/v100/speed/data
     @Override
-    @GetMapping(value="/speed/{data}")
-    public ResponseEntity<String> blogApiSpeedData(@PathVariable(name="data") Integer data) {
-        return ResponseEntity.ok(iBlogServices.blogServiceSpeedData(data));
+    @GetMapping(value="/speed/data")
+    public ResponseEntity<List<BlogDto>> blogApiSpeedData(Long key) {
+        return null ;
     }
 
     // ALL DELETE
-    // http://localhost:4444/blog/api/v100/delete/all
     @Override
     @GetMapping(value="/delete/all")
-    public ResponseEntity<String> blogApiDeleteAllData() {
-        return ResponseEntity.ok(iBlogServices.blogServiceDeleteAllData());
+    public ResponseEntity<String> blogApiAllDelete() {
+        return ResponseEntity.ok(iBlogServices.blogAllDelete());
     }
 
-    //////////////////////////////////////////////////////////////
-    // CRUD
-
+    //////////////////////////////////////////////////////////////////////////////////////////
     // CREATE
-    // http://localhost:4444/blog/api/v100/create
+    // http://localhost:4444/blog/api/v1/create
     @Override
     @PostMapping("/create")
-    public ResponseEntity<?> blogApiCreate(@Valid @RequestBody BlogDto blogDto) {
-        return ResponseEntity.ok(iBlogServices.blogServiceCreate(blogDto));
+    public ResponseEntity<?> blogApiCreate(@Valid @RequestBody BlogDto categoryDto) {
+        return ResponseEntity.ok(iBlogServices.blogServiceCreate(categoryDto));
     }
 
     // LIST
-    // http://localhost:4444/blog/api/v100/list
+    // http://localhost:4444/blog/api/v1/list
     @Override
-    @GetMapping("/list")
+    @GetMapping(value="/list")
     public ResponseEntity<List<BlogDto>> blogApiList() {
-        return ResponseEntity.ok(iBlogServices.blogServiceList());
+        return ResponseEntity.status(HttpStatus.OK).body(iBlogServices.blogServiceList());
     }
 
     // FIND
-    // http://localhost:4444/blog/api/v100/find/1
+    // http://localhost:4444/blog/api/v1/find/1
     @Override
-    @GetMapping("/find/{id}")
+    @GetMapping(value="/find/{id}")
     public ResponseEntity<?> blogApiFindById(@PathVariable(name = "id") Long id) {
-        return ResponseEntity.ok(iBlogServices.blogServiceFindById(id));
+        return ResponseEntity.status(200).body(iBlogServices.blogServiceFindById(id));
     }
 
     // UPDATE
-    // http://localhost:4444/blog/api/v100/update/1
+    // http://localhost:4444/blog/api/v1/update/1
     @Override
-    @PutMapping("/update/{id}")
-    public ResponseEntity<?> blogApiUpdateById(@PathVariable(name = "id") Long id, @Valid @RequestBody  BlogDto blogDto) {
-        return ResponseEntity.ok(iBlogServices.blogServiceUpdateById(id,blogDto));
+    @PutMapping(value="/update/{id}")
+    public ResponseEntity<?> blogApiUpdate(@PathVariable(name = "id") Long id, @Valid @RequestBody BlogDto categoryDto) {
+        return ResponseEntity.ok().body(iBlogServices.blogServiceUpdate(id,categoryDto));
     }
 
-    // DELETE
-    // http://localhost:4444/blog/api/v100/delete/1
+    // DELETE BY ID
+    // http://localhost:4444/blog/api/v1/delete/1
     @Override
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping(value="/delete/{id}")
     public ResponseEntity<?> blogApiDeleteById(@PathVariable(name = "id") Long id) {
-        return ResponseEntity.ok(iBlogServices.blogServiceDeleteById(id));
+        return new ResponseEntity<>(iBlogServices.blogServiceDeleteById(id),HttpStatus.OK);
     }
 
-} // end Api Blog
+} //end class

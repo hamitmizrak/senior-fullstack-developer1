@@ -1,6 +1,6 @@
 package com.hamitmizrak.seniorfullstack1.utils.commandlinerunner;
 
-import com.hamitmizrak.seniorfullstack1.controller.api.IBlogCategoriesApi;
+
 import com.hamitmizrak.seniorfullstack1.data.entity.BlogCategoryEntity;
 import com.hamitmizrak.seniorfullstack1.data.entity.BlogEntity;
 import com.hamitmizrak.seniorfullstack1.data.repository.IBlogCategoryRepository;
@@ -21,7 +21,7 @@ public class MainRunner {
 
     // INJECTION
     private final IBlogCategoryRepository iBlogCategoryRepository;
-    private final IBlogRepository iBlogRepository;
+    private final IBlogRepository iBlogRepository ;
 
     // START
     public void start(){
@@ -35,21 +35,31 @@ public class MainRunner {
         log.info("Blog Categories");
           System.out.println("Blog Categories");
 
-          // BlogCategory(1) - Blog(N)
-          // Tekil Kategori'dir
-          BlogCategoryEntity javaBlogCategory= new BlogCategoryEntity();
-          javaBlogCategory.setCategoryName("java");
-          iBlogCategoryRepository.save(javaBlogCategory);
+          // Tekil Kategory
+          BlogCategoryEntity computerCategory=new BlogCategoryEntity();
+          computerCategory.setCategoryName("Bilgisayar");
+          iBlogCategoryRepository.save(computerCategory);
 
-          // Çoğul Blog'tur
-          // Java
-          BlogEntity blogEntity1= new BlogEntity();
-          blogEntity1.getEmbeddableBlogEntity().setHeader("Javanın Gelecekteki Kullanımı");
-          blogEntity1.getEmbeddableBlogEntity().setTitle("Javanın Gelecekteki Kullanımı devamı ....");
-          blogEntity1.getEmbeddableBlogEntity().setContent("Java yüksek seviyeli bir dildir.");
-          blogEntity1.getEmbeddableBlogEntity().setImage("java.jpg");
-          blogEntity1.setRelationCategoryEntity(javaBlogCategory);
-          iBlogRepository.save(blogEntity1);
+          // Tekil Kategory
+          BlogCategoryEntity tabletCategory=new BlogCategoryEntity();
+          tabletCategory.setCategoryName("Tablet");
+          iBlogCategoryRepository.save(tabletCategory);
+
+          // Blog-1
+          BlogEntity blogEntity=new BlogEntity();
+          blogEntity.getBlogEntityEmbeddable().setHeader("Header-1");
+          blogEntity.getBlogEntityEmbeddable().setContent("Content-1");
+          blogEntity.getBlogEntityEmbeddable().setTitle("Title-1");
+          blogEntity.setRelationCategoryEntity(computerCategory);
+          iBlogRepository.save(blogEntity);
+
+          // Blog-2
+          BlogEntity blogEntity2=new BlogEntity();
+          blogEntity2.getBlogEntityEmbeddable().setHeader("Header-2");
+          blogEntity2.getBlogEntityEmbeddable().setContent("Content-2");
+          blogEntity2.getBlogEntityEmbeddable().setTitle("Title-2");
+          blogEntity2.setRelationCategoryEntity(tabletCategory);
+          iBlogRepository.save(blogEntity2);
       };
     }
     // START

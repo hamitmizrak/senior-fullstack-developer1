@@ -17,48 +17,47 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Log4j2
 @Builder
+@Log4j2
 
 // ENTITY
-@Entity(name = "BlogCategories")
-@Table(name="blogCategory")
-// BlogCategoryDto(1)- BlogDto(N)
+@Entity(name = "BlogCategories") // Sql JOIN için yazdım
+@Table(name = "blogCategory")
+
+// Category(1) Blog(N)
 public class BlogCategoryEntity extends AuditingAwareBaseEntity implements Serializable {
 
-    // Serileştirme
-    public static final Long serialVersionUID=1L;
+    // SERILEŞTIRME
+    public static final Long serialVersionUID = 1L;
 
     // ID
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "category_id",unique=true, nullable=false, updatable=false,insertable = true)
-    private Long categoryID;
+    @Column(name="category_id",unique = true,nullable = false,insertable = true,updatable = false)
+    private Long categoryId;
 
-    // DATE
-    @Temporal(TemporalType.TIMESTAMP)
-    @CreationTimestamp
-    private Date systemCreatedDate;
-
-    // Category Name
+    // CATEGORY NAME
     @Column(name = "category_name")
     private String categoryName;
 
-    // Constructor(Parametreli)
+    // DATE
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date systemCreatedDate;
+
+    // Constructor (parametreli)
     public BlogCategoryEntity(String categoryName) {
         this.categoryName = categoryName;
     }
 
-    // Constructor(Parametreli)
-    public BlogCategoryEntity(String categoryName,List<BlogEntity> relationBlogEntityList) {
-        this.relationBlogEntityList = relationBlogEntityList;
+    // Constructor (parametreli)
+    public BlogCategoryEntity(String categoryName, List<BlogEntity> relationBlogEntityList) {
         this.categoryName = categoryName;
+        this.relationBlogEntityList = relationBlogEntityList;
     }
 
     // RELATION
-    // BlogCategoryDto(1)- BlogDto(N)
     @OneToMany(mappedBy = "relationCategoryEntity",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     List<BlogEntity> relationBlogEntityList;
 
-
-} // end BlogCategoryName
+} //end class
