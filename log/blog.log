@@ -2947,3 +2947,802 @@ insert into blog (content,header,image,title,created_date,created_user,last_date
 2024-07-20T15:20:11.398+03:00  INFO 12544 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-07-20T15:20:11.524+03:00  INFO 12544 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-07-20T15:20:11.533+03:00  INFO 12544 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-20T15:20:14.723+03:00  INFO 17860 --- [restartedMain] c.h.s.SeniorFullStack1Application        : Starting SeniorFullStack1Application using Java 17.0.11 with PID 17860 (E:\8-) Projeler DokÃ¼man\spring\SeniorFullStack1\target\classes started by Hamit-Mizrak in E:\8-) Projeler DokÃ¼man\spring\SeniorFullStack1)
+2024-07-20T15:20:14.726+03:00  INFO 17860 --- [restartedMain] c.h.s.SeniorFullStack1Application        : The following 1 profile is active: "frontend"
+2024-07-20T15:20:14.802+03:00  INFO 17860 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-20T15:20:14.804+03:00  INFO 17860 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-20T15:20:16.392+03:00  INFO 17860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-20T15:20:16.471+03:00  INFO 17860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 2 JPA repository interfaces.
+2024-07-20T15:20:17.241+03:00  INFO 17860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 4444 (http)
+2024-07-20T15:20:17.252+03:00  INFO 17860 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-20T15:20:17.254+03:00  INFO 17860 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-07-20T15:20:17.338+03:00  INFO 17860 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-20T15:20:17.338+03:00  INFO 17860 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2534 ms
+2024-07-20T15:20:17.478+03:00  INFO 17860 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-20T15:20:17.825+03:00  INFO 17860 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ef34d0d
+2024-07-20T15:20:17.829+03:00  INFO 17860 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-20T15:20:17.845+03:00  INFO 17860 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/blog?createDatabaseIfNotExist=true&autoReconnect=true&allowPublicKeyRetrieval=true&useSSL=false'
+2024-07-20T15:20:17.941+03:00 DEBUG 17860 --- [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2024-07-20T15:20:17.942+03:00 DEBUG 17860 --- [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2024-07-20T15:20:18.366+03:00  INFO 17860 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-20T15:20:20.115+03:00  INFO 17860 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T15:20:20.554+03:00  WARN 17860 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-20T15:20:20.646+03:00 DEBUG 17860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-07-20T15:20:20.673+03:00  INFO 17860 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-07-20T15:20:20.725+03:00 DEBUG 17860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2024-07-20T15:20:21.372+03:00 DEBUG 17860 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-07-20T15:20:21.404+03:00 DEBUG 17860 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-07-20T15:20:21.784+03:00  INFO 17860 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-20T15:20:21.787+03:00  INFO 17860 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2024-07-20T15:20:21.851+03:00  INFO 17860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 4444 (http) with context path ''
+2024-07-20T15:20:21.868+03:00  INFO 17860 --- [restartedMain] c.h.s.SeniorFullStack1Application        : Started SeniorFullStack1Application in 7.859 seconds (process running for 8.803)
+2024-07-20T15:20:21.881+03:00  INFO 17860 --- [restartedMain] c.h.s.u.commandlinerunner.MainRunner     : Blog Categories
+2024-07-20T15:20:22.548+03:00  INFO 17860 --- [RMI TCP Connection(2)-192.168.1.7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-20T15:20:22.548+03:00  INFO 17860 --- [RMI TCP Connection(2)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-20T15:20:22.549+03:00 DEBUG 17860 --- [RMI TCP Connection(2)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-07-20T15:20:22.549+03:00 DEBUG 17860 --- [RMI TCP Connection(2)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-07-20T15:20:22.549+03:00 DEBUG 17860 --- [RMI TCP Connection(2)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-07-20T15:20:22.550+03:00 DEBUG 17860 --- [RMI TCP Connection(2)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@266bdc76
+2024-07-20T15:20:22.550+03:00 DEBUG 17860 --- [RMI TCP Connection(2)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@471e11a2
+2024-07-20T15:20:22.550+03:00 DEBUG 17860 --- [RMI TCP Connection(2)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-07-20T15:20:22.550+03:00  INFO 17860 --- [RMI TCP Connection(2)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-20T15:46:23.881+03:00  INFO 17860 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 61 class path changes (0 additions, 61 deletions, 0 modifications)
+2024-07-20T15:46:23.901+03:00  INFO 17860 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-07-20T15:46:23.902+03:00  INFO 17860 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-07-20T15:46:23.907+03:00  INFO 17860 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T15:46:23.983+03:00  INFO 17860 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-20T15:46:23.989+03:00  INFO 17860 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-20T18:16:59.617+05:30  INFO 17860 --- [restartedMain] c.h.s.SeniorFullStack1Application        : Starting SeniorFullStack1Application using Java 17.0.11 with PID 17860 (E:\8-) Projeler DokÃ¼man\spring\SeniorFullStack1\target\classes started by Hamit-Mizrak in E:\8-) Projeler DokÃ¼man\spring\SeniorFullStack1)
+2024-07-20T18:16:59.618+05:30  INFO 17860 --- [restartedMain] c.h.s.SeniorFullStack1Application        : The following 1 profile is active: "frontend"
+2024-07-20T18:16:59.790+05:30  INFO 17860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-20T18:16:59.790+05:30  INFO 17860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+2024-07-20T18:16:59.853+05:30  INFO 17860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 4444 (http)
+2024-07-20T18:16:59.854+05:30  INFO 17860 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-20T18:16:59.854+05:30  INFO 17860 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-07-20T18:16:59.870+05:30  INFO 17860 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-07-20T18:16:59.870+05:30  INFO 17860 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 252 ms
+2024-07-20T18:16:59.887+05:30  INFO 17860 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-07-20T18:16:59.891+05:30  INFO 17860 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5a7fbc03
+2024-07-20T18:16:59.891+05:30  INFO 17860 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-07-20T18:16:59.891+05:30  INFO 17860 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/blog?createDatabaseIfNotExist=true&autoReconnect=true&allowPublicKeyRetrieval=true&useSSL=false'
+2024-07-20T18:16:59.904+05:30 DEBUG 17860 --- [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2024-07-20T18:16:59.904+05:30 DEBUG 17860 --- [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2024-07-20T18:16:59.918+05:30  INFO 17860 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-20T18:16:59.926+05:30  INFO 17860 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:16:59.934+05:30  WARN 17860 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaAuditingHandler': Cannot create inner bean '(inner bean)#38dd989d' of type [org.springframework.aop.framework.ProxyFactoryBean] while setting bean property 'auditorAware'
+2024-07-20T18:16:59.934+05:30  INFO 17860 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:16:59.934+05:30  INFO 17860 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-07-20T18:16:59.935+05:30  INFO 17860 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-07-20T18:16:59.935+05:30  INFO 17860 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-07-20T18:16:59.944+05:30  INFO 17860 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-20T18:16:59.946+05:30 ERROR 17860 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean named 'auditorAwareBeanMethod' that could not be found.
+
+
+Action:
+
+Consider defining a bean named 'auditorAwareBeanMethod' in your configuration.
+
+2024-07-20T18:17:08.307+05:30  INFO 17860 --- [restartedMain] c.h.s.SeniorFullStack1Application        : Starting SeniorFullStack1Application using Java 17.0.11 with PID 17860 (E:\8-) Projeler DokÃ¼man\spring\SeniorFullStack1\target\classes started by Hamit-Mizrak in E:\8-) Projeler DokÃ¼man\spring\SeniorFullStack1)
+2024-07-20T18:17:08.307+05:30  INFO 17860 --- [restartedMain] c.h.s.SeniorFullStack1Application        : The following 1 profile is active: "frontend"
+2024-07-20T18:17:08.770+05:30  INFO 17860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-20T18:17:08.787+05:30  INFO 17860 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
+2024-07-20T18:17:08.907+05:30  INFO 17860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 4444 (http)
+2024-07-20T18:17:08.908+05:30  INFO 17860 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-20T18:17:08.910+05:30  INFO 17860 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2024-07-20T18:17:08.932+05:30  INFO 17860 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-07-20T18:17:08.933+05:30  INFO 17860 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 624 ms
+2024-07-20T18:17:08.964+05:30  INFO 17860 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-07-20T18:17:08.969+05:30  INFO 17860 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b7c002
+2024-07-20T18:17:08.969+05:30  INFO 17860 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-07-20T18:17:08.969+05:30  INFO 17860 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/blog?createDatabaseIfNotExist=true&autoReconnect=true&allowPublicKeyRetrieval=true&useSSL=false'
+2024-07-20T18:17:08.986+05:30 DEBUG 17860 --- [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2024-07-20T18:17:08.986+05:30 DEBUG 17860 --- [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2024-07-20T18:17:09.009+05:30  INFO 17860 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-20T18:17:09.444+05:30  INFO 17860 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:17:09.502+05:30  WARN 17860 --- [restartedMain] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hamitmizrak.seniorfullstack1.data.repository.IBlogCategoryRepository
+2024-07-20T18:17:09.585+05:30  WARN 17860 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-20T18:17:09.640+05:30 DEBUG 17860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-07-20T18:17:09.644+05:30  INFO 17860 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-07-20T18:17:09.672+05:30 DEBUG 17860 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2024-07-20T18:17:10.238+05:30 DEBUG 17860 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-07-20T18:17:10.249+05:30 DEBUG 17860 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-07-20T18:17:10.471+05:30  INFO 17860 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-07-20T18:17:10.481+05:30  INFO 17860 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2024-07-20T18:17:10.526+05:30  INFO 17860 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 4444 (http) with context path ''
+2024-07-20T18:17:10.545+05:30  INFO 17860 --- [restartedMain] c.h.s.SeniorFullStack1Application        : Started SeniorFullStack1Application in 2.27 seconds (process running for 1617.48)
+2024-07-20T18:17:10.549+05:30  INFO 17860 --- [restartedMain] c.h.s.u.commandlinerunner.MainRunner     : Blog Categories
+2024-07-20T18:17:10.620+05:30  INFO 17860 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-07-20T15:47:15.880+03:00  INFO 27112 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : Starting BlogCategoryServicesImplTest using Java 17.0.11 with PID 27112 (started by Hamit-Mizrak in E:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-07-20T15:47:15.884+03:00  INFO 27112 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : The following 1 profile is active: "frontend"
+2024-07-20T15:47:18.544+03:00  INFO 27112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-20T15:47:18.680+03:00  INFO 27112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123 ms. Found 2 JPA repository interfaces.
+2024-07-20T15:47:21.260+03:00  INFO 27112 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-20T15:47:21.341+03:00  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-20T15:47:21.601+03:00  INFO 27112 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e1add6f
+2024-07-20T15:47:21.606+03:00  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-20T15:47:23.510+03:00  INFO 27112 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T15:47:24.119+03:00  WARN 27112 --- [main] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hamitmizrak.seniorfullstack1.data.repository.IBlogCategoryRepository
+2024-07-20T15:47:24.450+03:00  WARN 27112 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'errorControllerHandleWebRequest' defined in file [E:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes\com\hamitmizrak\seniorfullstack1\error\ErrorControllerHandleWebRequest.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-07-20T15:47:24.451+03:00  INFO 27112 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T15:47:24.551+03:00  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-20T15:47:24.565+03:00  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-20T15:47:24.593+03:00  INFO 27112 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-20T15:47:24.650+03:00 ERROR 27112 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hamitmizrak.seniorfullstack1.error.ErrorControllerHandleWebRequest required a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' in your configuration.
+
+2024-07-20T15:47:24.733+03:00  INFO 27112 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-07-20T18:17:24.810+05:30  INFO 27112 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : Starting BlogCategoryServicesImplTest using Java 17.0.11 with PID 27112 (started by Hamit-Mizrak in E:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-07-20T18:17:24.811+05:30  INFO 27112 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : The following 1 profile is active: "frontend"
+2024-07-20T18:17:25.485+05:30  INFO 27112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-20T18:17:25.537+05:30  INFO 27112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 2 JPA repository interfaces.
+2024-07-20T18:17:25.752+05:30  INFO 27112 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-20T18:17:25.755+05:30  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-07-20T18:17:25.765+05:30  INFO 27112 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6b7ebac1
+2024-07-20T18:17:25.766+05:30  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-07-20T18:17:26.524+05:30  INFO 27112 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:17:26.618+05:30  WARN 27112 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'errorControllerHandleWebRequest' defined in file [E:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes\com\hamitmizrak\seniorfullstack1\error\ErrorControllerHandleWebRequest.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-07-20T18:17:26.620+05:30  INFO 27112 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:17:26.752+05:30  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-07-20T18:17:26.759+05:30  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-07-20T18:17:26.778+05:30  INFO 27112 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-20T18:17:26.789+05:30 ERROR 27112 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hamitmizrak.seniorfullstack1.error.ErrorControllerHandleWebRequest required a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' in your configuration.
+
+2024-07-20T18:17:26.806+05:30  INFO 27112 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-07-20T18:17:26.872+05:30  INFO 27112 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : Starting BlogCategoryServicesImplTest using Java 17.0.11 with PID 27112 (started by Hamit-Mizrak in E:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-07-20T18:17:26.873+05:30  INFO 27112 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : The following 1 profile is active: "frontend"
+2024-07-20T18:17:27.393+05:30  INFO 27112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-20T18:17:27.424+05:30  INFO 27112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
+2024-07-20T18:17:27.553+05:30  INFO 27112 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-20T18:17:27.556+05:30  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-07-20T18:17:27.564+05:30  INFO 27112 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e268c19
+2024-07-20T18:17:27.564+05:30  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-07-20T18:17:28.065+05:30  INFO 27112 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:17:28.213+05:30  WARN 27112 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'errorControllerHandleWebRequest' defined in file [E:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes\com\hamitmizrak\seniorfullstack1\error\ErrorControllerHandleWebRequest.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-07-20T18:17:28.214+05:30  INFO 27112 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:17:28.335+05:30  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-07-20T18:17:28.343+05:30  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-07-20T18:17:28.365+05:30  INFO 27112 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-20T18:17:28.380+05:30 ERROR 27112 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hamitmizrak.seniorfullstack1.error.ErrorControllerHandleWebRequest required a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' in your configuration.
+
+2024-07-20T18:17:28.403+05:30  INFO 27112 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-07-20T18:17:28.505+05:30  INFO 27112 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : Starting BlogCategoryServicesImplTest using Java 17.0.11 with PID 27112 (started by Hamit-Mizrak in E:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-07-20T18:17:28.506+05:30  INFO 27112 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : The following 1 profile is active: "frontend"
+2024-07-20T18:17:29.240+05:30  INFO 27112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-20T18:17:29.285+05:30  INFO 27112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
+2024-07-20T18:17:29.500+05:30  INFO 27112 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-20T18:17:29.503+05:30  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-07-20T18:17:29.516+05:30  INFO 27112 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b6d9650
+2024-07-20T18:17:29.516+05:30  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-07-20T18:17:30.065+05:30  INFO 27112 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:17:30.196+05:30  WARN 27112 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'errorControllerHandleWebRequest' defined in file [E:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes\com\hamitmizrak\seniorfullstack1\error\ErrorControllerHandleWebRequest.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-07-20T18:17:30.197+05:30  INFO 27112 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:17:30.292+05:30  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2024-07-20T18:17:30.301+05:30  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2024-07-20T18:17:30.312+05:30  INFO 27112 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-20T18:17:30.328+05:30 ERROR 27112 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hamitmizrak.seniorfullstack1.error.ErrorControllerHandleWebRequest required a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' in your configuration.
+
+2024-07-20T18:17:30.343+05:30  INFO 27112 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-07-20T18:17:30.409+05:30  INFO 27112 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : Starting BlogCategoryServicesImplTest using Java 17.0.11 with PID 27112 (started by Hamit-Mizrak in E:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-07-20T18:17:30.410+05:30  INFO 27112 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : The following 1 profile is active: "frontend"
+2024-07-20T18:17:30.954+05:30  INFO 27112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-20T18:17:30.984+05:30  INFO 27112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 2 JPA repository interfaces.
+2024-07-20T18:17:31.136+05:30  INFO 27112 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-20T18:17:31.138+05:30  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2024-07-20T18:17:31.147+05:30  INFO 27112 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3fc4e667
+2024-07-20T18:17:31.148+05:30  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2024-07-20T18:17:31.607+05:30  INFO 27112 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:17:31.687+05:30  WARN 27112 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'errorControllerHandleWebRequest' defined in file [E:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes\com\hamitmizrak\seniorfullstack1\error\ErrorControllerHandleWebRequest.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-07-20T18:17:31.688+05:30  INFO 27112 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:17:31.793+05:30  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2024-07-20T18:17:31.800+05:30  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2024-07-20T18:17:31.809+05:30  INFO 27112 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-20T18:17:31.817+05:30 ERROR 27112 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hamitmizrak.seniorfullstack1.error.ErrorControllerHandleWebRequest required a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' in your configuration.
+
+2024-07-20T18:17:31.829+05:30  INFO 27112 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-07-20T18:17:31.894+05:30  INFO 27112 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : Starting BlogCategoryServicesImplTest using Java 17.0.11 with PID 27112 (started by Hamit-Mizrak in E:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-07-20T18:17:31.894+05:30  INFO 27112 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : The following 1 profile is active: "frontend"
+2024-07-20T18:17:32.451+05:30  INFO 27112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-20T18:17:32.502+05:30  INFO 27112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 2 JPA repository interfaces.
+2024-07-20T18:17:32.709+05:30  INFO 27112 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-20T18:17:32.712+05:30  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2024-07-20T18:17:32.722+05:30  INFO 27112 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@431bf770
+2024-07-20T18:17:32.722+05:30  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2024-07-20T18:17:33.217+05:30  INFO 27112 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:17:33.310+05:30  WARN 27112 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'errorControllerHandleWebRequest' defined in file [E:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes\com\hamitmizrak\seniorfullstack1\error\ErrorControllerHandleWebRequest.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-07-20T18:17:33.311+05:30  INFO 27112 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:17:33.456+05:30  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2024-07-20T18:17:33.467+05:30  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2024-07-20T18:17:33.481+05:30  INFO 27112 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-20T18:17:33.493+05:30 ERROR 27112 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hamitmizrak.seniorfullstack1.error.ErrorControllerHandleWebRequest required a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' in your configuration.
+
+2024-07-20T18:17:33.514+05:30  INFO 27112 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-07-20T18:17:33.581+05:30  INFO 27112 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : Starting BlogCategoryServicesImplTest using Java 17.0.11 with PID 27112 (started by Hamit-Mizrak in E:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-07-20T18:17:33.582+05:30  INFO 27112 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : The following 1 profile is active: "frontend"
+2024-07-20T18:17:34.005+05:30  INFO 27112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-20T18:17:34.033+05:30  INFO 27112 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
+2024-07-20T18:17:34.166+05:30  INFO 27112 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-20T18:17:34.169+05:30  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2024-07-20T18:17:34.175+05:30  INFO 27112 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2f9a7d6f
+2024-07-20T18:17:34.177+05:30  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2024-07-20T18:17:34.765+05:30  INFO 27112 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:17:34.844+05:30  WARN 27112 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'errorControllerHandleWebRequest' defined in file [E:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes\com\hamitmizrak\seniorfullstack1\error\ErrorControllerHandleWebRequest.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-07-20T18:17:34.846+05:30  INFO 27112 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:17:34.959+05:30  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2024-07-20T18:17:34.964+05:30  INFO 27112 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2024-07-20T18:17:34.972+05:30  INFO 27112 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-20T18:17:34.977+05:30 ERROR 27112 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hamitmizrak.seniorfullstack1.error.ErrorControllerHandleWebRequest required a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' in your configuration.
+
+2024-07-20T18:17:34.995+05:30  INFO 27112 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : ******Blog Categories Methodlar?ndan hepsinden Sonra**********
+2024-07-20T18:18:42.895+05:30  INFO 17860 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 61 class path changes (0 additions, 61 deletions, 0 modifications)
+2024-07-20T18:18:43.045+05:30  INFO 17860 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-07-20T18:18:43.057+05:30  INFO 17860 --- [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:18:43.061+05:30 ERROR 17860 --- [Thread-7] .SchemaDropperImpl$DelayedDropActionImpl : HHH000478: Unsuccessful: 
+    alter table blog 
+       drop 
+       foreign key FK75jvpydhijny2hovb7t1ca3c5
+2024-07-20T18:18:43.081+05:30  INFO 17860 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2024-07-20T18:18:43.087+05:30  INFO 17860 --- [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2024-07-20T15:49:06.979+03:00  INFO 16516 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : Starting BlogCategoryServicesImplTest using Java 17.0.11 with PID 16516 (started by Hamit-Mizrak in E:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-07-20T15:49:06.984+03:00  INFO 16516 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : The following 1 profile is active: "frontend"
+2024-07-20T15:49:08.815+03:00  INFO 16516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-20T15:49:08.893+03:00  INFO 16516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 2 JPA repository interfaces.
+2024-07-20T15:49:10.686+03:00  INFO 16516 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-20T15:49:10.739+03:00  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-20T15:49:11.136+03:00  INFO 16516 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e5e6573
+2024-07-20T15:49:11.143+03:00  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-20T15:49:12.845+03:00  INFO 16516 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T15:49:13.687+03:00  WARN 16516 --- [main] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hamitmizrak.seniorfullstack1.data.repository.IBlogCategoryRepository
+2024-07-20T15:49:14.076+03:00  WARN 16516 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'errorControllerHandleWebRequest' defined in file [E:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes\com\hamitmizrak\seniorfullstack1\error\ErrorControllerHandleWebRequest.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-07-20T15:49:14.077+03:00  INFO 16516 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T15:49:14.160+03:00  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-20T15:49:14.187+03:00  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-20T15:49:14.214+03:00  INFO 16516 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-20T15:49:14.343+03:00 ERROR 16516 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hamitmizrak.seniorfullstack1.error.ErrorControllerHandleWebRequest required a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' in your configuration.
+
+2024-07-20T15:49:14.578+03:00  INFO 16516 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-07-20T18:19:14.662+05:30  INFO 16516 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : Starting BlogCategoryServicesImplTest using Java 17.0.11 with PID 16516 (started by Hamit-Mizrak in E:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-07-20T18:19:14.664+05:30  INFO 16516 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : The following 1 profile is active: "frontend"
+2024-07-20T18:19:15.161+05:30  INFO 16516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-20T18:19:15.184+05:30  INFO 16516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2024-07-20T18:19:15.314+05:30  INFO 16516 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-20T18:19:15.316+05:30  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-07-20T18:19:15.324+05:30  INFO 16516 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@654dbb78
+2024-07-20T18:19:15.324+05:30  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-07-20T18:19:16.104+05:30  INFO 16516 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:19:16.206+05:30  WARN 16516 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'errorControllerHandleWebRequest' defined in file [E:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes\com\hamitmizrak\seniorfullstack1\error\ErrorControllerHandleWebRequest.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-07-20T18:19:16.207+05:30  INFO 16516 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:19:16.318+05:30  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-07-20T18:19:16.324+05:30  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-07-20T18:19:16.344+05:30  INFO 16516 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-20T18:19:16.352+05:30 ERROR 16516 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hamitmizrak.seniorfullstack1.error.ErrorControllerHandleWebRequest required a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' in your configuration.
+
+2024-07-20T18:19:16.370+05:30  INFO 16516 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-07-20T18:19:16.428+05:30  INFO 16516 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : Starting BlogCategoryServicesImplTest using Java 17.0.11 with PID 16516 (started by Hamit-Mizrak in E:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-07-20T18:19:16.430+05:30  INFO 16516 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : The following 1 profile is active: "frontend"
+2024-07-20T18:19:16.914+05:30  INFO 16516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-20T18:19:16.939+05:30  INFO 16516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+2024-07-20T18:19:17.065+05:30  INFO 16516 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-20T18:19:17.067+05:30  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-07-20T18:19:17.075+05:30  INFO 16516 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@392af2e0
+2024-07-20T18:19:17.076+05:30  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-07-20T18:19:17.424+05:30  INFO 16516 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:19:17.495+05:30  WARN 16516 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'errorControllerHandleWebRequest' defined in file [E:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes\com\hamitmizrak\seniorfullstack1\error\ErrorControllerHandleWebRequest.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-07-20T18:19:17.496+05:30  INFO 16516 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:19:17.562+05:30  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-07-20T18:19:17.566+05:30  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-07-20T18:19:17.579+05:30  INFO 16516 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-20T18:19:17.586+05:30 ERROR 16516 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hamitmizrak.seniorfullstack1.error.ErrorControllerHandleWebRequest required a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' in your configuration.
+
+2024-07-20T18:19:17.604+05:30  INFO 16516 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-07-20T18:19:17.660+05:30  INFO 16516 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : Starting BlogCategoryServicesImplTest using Java 17.0.11 with PID 16516 (started by Hamit-Mizrak in E:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-07-20T18:19:17.661+05:30  INFO 16516 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : The following 1 profile is active: "frontend"
+2024-07-20T18:19:18.001+05:30  INFO 16516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-20T18:19:18.023+05:30  INFO 16516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+2024-07-20T18:19:18.121+05:30  INFO 16516 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-20T18:19:18.123+05:30  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-07-20T18:19:18.128+05:30  INFO 16516 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3220ffb
+2024-07-20T18:19:18.129+05:30  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-07-20T18:19:18.651+05:30  INFO 16516 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:19:18.737+05:30  WARN 16516 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'errorControllerHandleWebRequest' defined in file [E:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes\com\hamitmizrak\seniorfullstack1\error\ErrorControllerHandleWebRequest.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-07-20T18:19:18.738+05:30  INFO 16516 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:19:18.813+05:30  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2024-07-20T18:19:18.817+05:30  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2024-07-20T18:19:18.831+05:30  INFO 16516 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-20T18:19:18.840+05:30 ERROR 16516 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hamitmizrak.seniorfullstack1.error.ErrorControllerHandleWebRequest required a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' in your configuration.
+
+2024-07-20T18:19:18.852+05:30  INFO 16516 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-07-20T18:19:18.889+05:30  INFO 16516 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : Starting BlogCategoryServicesImplTest using Java 17.0.11 with PID 16516 (started by Hamit-Mizrak in E:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-07-20T18:19:18.890+05:30  INFO 16516 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : The following 1 profile is active: "frontend"
+2024-07-20T18:19:19.198+05:30  INFO 16516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-20T18:19:19.224+05:30  INFO 16516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 2 JPA repository interfaces.
+2024-07-20T18:19:19.343+05:30  INFO 16516 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-20T18:19:19.344+05:30  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2024-07-20T18:19:19.351+05:30  INFO 16516 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7222e168
+2024-07-20T18:19:19.351+05:30  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2024-07-20T18:19:19.698+05:30  INFO 16516 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:19:19.758+05:30  WARN 16516 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'errorControllerHandleWebRequest' defined in file [E:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes\com\hamitmizrak\seniorfullstack1\error\ErrorControllerHandleWebRequest.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-07-20T18:19:19.758+05:30  INFO 16516 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:19:19.837+05:30  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2024-07-20T18:19:19.840+05:30  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2024-07-20T18:19:19.845+05:30  INFO 16516 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-20T18:19:19.851+05:30 ERROR 16516 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hamitmizrak.seniorfullstack1.error.ErrorControllerHandleWebRequest required a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' in your configuration.
+
+2024-07-20T18:19:19.863+05:30  INFO 16516 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-07-20T18:19:19.904+05:30  INFO 16516 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : Starting BlogCategoryServicesImplTest using Java 17.0.11 with PID 16516 (started by Hamit-Mizrak in E:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-07-20T18:19:19.906+05:30  INFO 16516 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : The following 1 profile is active: "frontend"
+2024-07-20T18:19:20.212+05:30  INFO 16516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-20T18:19:20.230+05:30  INFO 16516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+2024-07-20T18:19:20.315+05:30  INFO 16516 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-20T18:19:20.317+05:30  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2024-07-20T18:19:20.324+05:30  INFO 16516 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@21d85933
+2024-07-20T18:19:20.324+05:30  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2024-07-20T18:19:20.684+05:30  INFO 16516 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:19:20.737+05:30  WARN 16516 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'errorControllerHandleWebRequest' defined in file [E:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes\com\hamitmizrak\seniorfullstack1\error\ErrorControllerHandleWebRequest.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-07-20T18:19:20.737+05:30  INFO 16516 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:19:20.817+05:30  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2024-07-20T18:19:20.821+05:30  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2024-07-20T18:19:20.826+05:30  INFO 16516 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-20T18:19:20.834+05:30 ERROR 16516 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hamitmizrak.seniorfullstack1.error.ErrorControllerHandleWebRequest required a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' in your configuration.
+
+2024-07-20T18:19:20.846+05:30  INFO 16516 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-07-20T18:19:20.885+05:30  INFO 16516 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : Starting BlogCategoryServicesImplTest using Java 17.0.11 with PID 16516 (started by Hamit-Mizrak in E:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-07-20T18:19:20.886+05:30  INFO 16516 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : The following 1 profile is active: "frontend"
+2024-07-20T18:19:21.204+05:30  INFO 16516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-20T18:19:21.231+05:30  INFO 16516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 2 JPA repository interfaces.
+2024-07-20T18:19:21.348+05:30  INFO 16516 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-20T18:19:21.349+05:30  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2024-07-20T18:19:21.358+05:30  INFO 16516 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1de78f97
+2024-07-20T18:19:21.359+05:30  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2024-07-20T18:19:21.759+05:30  INFO 16516 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:19:21.831+05:30  WARN 16516 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'errorControllerHandleWebRequest' defined in file [E:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes\com\hamitmizrak\seniorfullstack1\error\ErrorControllerHandleWebRequest.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-07-20T18:19:21.832+05:30  INFO 16516 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:19:21.905+05:30  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2024-07-20T18:19:21.909+05:30  INFO 16516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2024-07-20T18:19:21.914+05:30  INFO 16516 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-20T18:19:21.921+05:30 ERROR 16516 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hamitmizrak.seniorfullstack1.error.ErrorControllerHandleWebRequest required a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' in your configuration.
+
+2024-07-20T18:19:21.939+05:30  INFO 16516 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : ******Blog Categories Methodlar?ndan hepsinden Sonra**********
+2024-07-20T15:51:34.718+03:00  INFO 27656 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : Starting BlogCategoryServicesImplTest using Java 17.0.11 with PID 27656 (started by Hamit-Mizrak in E:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-07-20T15:51:34.722+03:00  INFO 27656 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : The following 1 profile is active: "frontend"
+2024-07-20T15:51:36.159+03:00  INFO 27656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-20T15:51:36.237+03:00  INFO 27656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 2 JPA repository interfaces.
+2024-07-20T15:51:38.018+03:00  INFO 27656 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-20T15:51:38.086+03:00  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-20T15:51:38.279+03:00  INFO 27656 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58aa5c94
+2024-07-20T15:51:38.281+03:00  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-20T15:51:39.783+03:00  INFO 27656 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T15:51:40.431+03:00  WARN 27656 --- [main] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hamitmizrak.seniorfullstack1.data.repository.IBlogCategoryRepository
+2024-07-20T15:51:40.813+03:00  WARN 27656 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'errorControllerHandleWebRequest' defined in file [E:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes\com\hamitmizrak\seniorfullstack1\error\ErrorControllerHandleWebRequest.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-07-20T15:51:40.814+03:00  INFO 27656 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T15:51:40.886+03:00  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-20T15:51:40.909+03:00  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-20T15:51:40.939+03:00  INFO 27656 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-20T15:51:41.049+03:00 ERROR 27656 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hamitmizrak.seniorfullstack1.error.ErrorControllerHandleWebRequest required a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' in your configuration.
+
+2024-07-20T15:51:41.180+03:00  INFO 27656 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-07-20T18:21:41.226+05:30  INFO 27656 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : Starting BlogCategoryServicesImplTest using Java 17.0.11 with PID 27656 (started by Hamit-Mizrak in E:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-07-20T18:21:41.227+05:30  INFO 27656 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : The following 1 profile is active: "frontend"
+2024-07-20T18:21:41.669+05:30  INFO 27656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-20T18:21:41.696+05:30  INFO 27656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 2 JPA repository interfaces.
+2024-07-20T18:21:41.827+05:30  INFO 27656 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-20T18:21:41.828+05:30  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-07-20T18:21:41.836+05:30  INFO 27656 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7692c0e9
+2024-07-20T18:21:41.837+05:30  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-07-20T18:21:42.187+05:30  INFO 27656 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:21:42.271+05:30  WARN 27656 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'errorControllerHandleWebRequest' defined in file [E:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes\com\hamitmizrak\seniorfullstack1\error\ErrorControllerHandleWebRequest.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-07-20T18:21:42.272+05:30  INFO 27656 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:21:42.339+05:30  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-07-20T18:21:42.343+05:30  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-07-20T18:21:42.351+05:30  INFO 27656 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-20T18:21:42.359+05:30 ERROR 27656 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hamitmizrak.seniorfullstack1.error.ErrorControllerHandleWebRequest required a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' in your configuration.
+
+2024-07-20T18:21:42.376+05:30  INFO 27656 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-07-20T18:21:42.433+05:30  INFO 27656 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : Starting BlogCategoryServicesImplTest using Java 17.0.11 with PID 27656 (started by Hamit-Mizrak in E:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-07-20T18:21:42.434+05:30  INFO 27656 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : The following 1 profile is active: "frontend"
+2024-07-20T18:21:42.844+05:30  INFO 27656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-20T18:21:42.868+05:30  INFO 27656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 2 JPA repository interfaces.
+2024-07-20T18:21:42.966+05:30  INFO 27656 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-20T18:21:42.968+05:30  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-07-20T18:21:42.976+05:30  INFO 27656 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a94c8e3
+2024-07-20T18:21:42.977+05:30  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-07-20T18:21:43.363+05:30  INFO 27656 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:21:43.443+05:30  WARN 27656 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'errorControllerHandleWebRequest' defined in file [E:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes\com\hamitmizrak\seniorfullstack1\error\ErrorControllerHandleWebRequest.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-07-20T18:21:43.444+05:30  INFO 27656 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:21:43.529+05:30  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-07-20T18:21:43.537+05:30  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2024-07-20T18:21:43.553+05:30  INFO 27656 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-20T18:21:43.564+05:30 ERROR 27656 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hamitmizrak.seniorfullstack1.error.ErrorControllerHandleWebRequest required a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' in your configuration.
+
+2024-07-20T18:21:43.583+05:30  INFO 27656 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-07-20T18:21:43.642+05:30  INFO 27656 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : Starting BlogCategoryServicesImplTest using Java 17.0.11 with PID 27656 (started by Hamit-Mizrak in E:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-07-20T18:21:43.644+05:30  INFO 27656 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : The following 1 profile is active: "frontend"
+2024-07-20T18:21:44.078+05:30  INFO 27656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-20T18:21:44.113+05:30  INFO 27656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
+2024-07-20T18:21:44.317+05:30  INFO 27656 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-20T18:21:44.320+05:30  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-07-20T18:21:44.330+05:30  INFO 27656 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@415c5469
+2024-07-20T18:21:44.331+05:30  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-07-20T18:21:44.788+05:30  INFO 27656 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:21:44.887+05:30  WARN 27656 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'errorControllerHandleWebRequest' defined in file [E:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes\com\hamitmizrak\seniorfullstack1\error\ErrorControllerHandleWebRequest.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-07-20T18:21:44.888+05:30  INFO 27656 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:21:44.962+05:30  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2024-07-20T18:21:44.968+05:30  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2024-07-20T18:21:44.987+05:30  INFO 27656 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-20T18:21:44.999+05:30 ERROR 27656 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hamitmizrak.seniorfullstack1.error.ErrorControllerHandleWebRequest required a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' in your configuration.
+
+2024-07-20T18:21:45.011+05:30  INFO 27656 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-07-20T18:21:45.074+05:30  INFO 27656 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : Starting BlogCategoryServicesImplTest using Java 17.0.11 with PID 27656 (started by Hamit-Mizrak in E:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-07-20T18:21:45.075+05:30  INFO 27656 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : The following 1 profile is active: "frontend"
+2024-07-20T18:21:45.478+05:30  INFO 27656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-20T18:21:45.509+05:30  INFO 27656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 2 JPA repository interfaces.
+2024-07-20T18:21:45.663+05:30  INFO 27656 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-20T18:21:45.664+05:30  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2024-07-20T18:21:45.670+05:30  INFO 27656 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47c019d7
+2024-07-20T18:21:45.671+05:30  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2024-07-20T18:21:46.053+05:30  INFO 27656 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:21:46.104+05:30  WARN 27656 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'errorControllerHandleWebRequest' defined in file [E:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes\com\hamitmizrak\seniorfullstack1\error\ErrorControllerHandleWebRequest.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-07-20T18:21:46.104+05:30  INFO 27656 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:21:46.176+05:30  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2024-07-20T18:21:46.180+05:30  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2024-07-20T18:21:46.186+05:30  INFO 27656 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-20T18:21:46.192+05:30 ERROR 27656 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hamitmizrak.seniorfullstack1.error.ErrorControllerHandleWebRequest required a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' in your configuration.
+
+2024-07-20T18:21:46.206+05:30  INFO 27656 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-07-20T18:21:46.251+05:30  INFO 27656 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : Starting BlogCategoryServicesImplTest using Java 17.0.11 with PID 27656 (started by Hamit-Mizrak in E:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-07-20T18:21:46.252+05:30  INFO 27656 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : The following 1 profile is active: "frontend"
+2024-07-20T18:21:46.717+05:30  INFO 27656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-20T18:21:46.754+05:30  INFO 27656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 2 JPA repository interfaces.
+2024-07-20T18:21:46.902+05:30  INFO 27656 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-20T18:21:46.904+05:30  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2024-07-20T18:21:46.913+05:30  INFO 27656 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@269bf9e6
+2024-07-20T18:21:46.914+05:30  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2024-07-20T18:21:47.352+05:30  INFO 27656 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:21:47.405+05:30  WARN 27656 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'errorControllerHandleWebRequest' defined in file [E:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes\com\hamitmizrak\seniorfullstack1\error\ErrorControllerHandleWebRequest.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-07-20T18:21:47.406+05:30  INFO 27656 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:21:47.473+05:30  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2024-07-20T18:21:47.477+05:30  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2024-07-20T18:21:47.483+05:30  INFO 27656 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-20T18:21:47.489+05:30 ERROR 27656 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hamitmizrak.seniorfullstack1.error.ErrorControllerHandleWebRequest required a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' in your configuration.
+
+2024-07-20T18:21:47.500+05:30  INFO 27656 --- [main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+2024-07-20T18:21:47.540+05:30  INFO 27656 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : Starting BlogCategoryServicesImplTest using Java 17.0.11 with PID 27656 (started by Hamit-Mizrak in E:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-07-20T18:21:47.540+05:30  INFO 27656 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : The following 1 profile is active: "frontend"
+2024-07-20T18:21:47.923+05:30  INFO 27656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-20T18:21:47.949+05:30  INFO 27656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+2024-07-20T18:21:48.104+05:30  INFO 27656 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-20T18:21:48.105+05:30  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2024-07-20T18:21:48.112+05:30  INFO 27656 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2495a351
+2024-07-20T18:21:48.113+05:30  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2024-07-20T18:21:48.503+05:30  INFO 27656 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:21:48.605+05:30  WARN 27656 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'errorControllerHandleWebRequest' defined in file [E:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes\com\hamitmizrak\seniorfullstack1\error\ErrorControllerHandleWebRequest.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2024-07-20T18:21:48.606+05:30  INFO 27656 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-20T18:21:48.680+05:30  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2024-07-20T18:21:48.685+05:30  INFO 27656 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2024-07-20T18:21:48.691+05:30  INFO 27656 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-07-20T18:21:48.696+05:30 ERROR 27656 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.hamitmizrak.seniorfullstack1.error.ErrorControllerHandleWebRequest required a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.boot.web.servlet.error.ErrorAttributes' in your configuration.
+
+2024-07-20T18:21:48.716+05:30  INFO 27656 --- [main] c.h.s.b.BlogCategoryServicesImplTest     : ******Blog Categories Methodlar?ndan hepsinden Sonra**********
