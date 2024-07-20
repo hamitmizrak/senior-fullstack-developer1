@@ -75,6 +75,7 @@ public class BlogServicesImpl implements IBlogServices<BlogDto, BlogEntity> {
         if(blogDto!=null){
             BlogEntity blogCategoryEntity=dtoToEntity(blogDto);
             iBlogRepository.save(blogCategoryEntity);
+            // BlogDto Kaydettikten sonra Set
             blogDto.setHeader(blogCategoryEntity.getEmbeddableBlogEntity().getHeader());
             blogDto.setTitle(blogCategoryEntity.getEmbeddableBlogEntity().getTitle());
             blogDto.setContent(blogCategoryEntity.getEmbeddableBlogEntity().getContent());

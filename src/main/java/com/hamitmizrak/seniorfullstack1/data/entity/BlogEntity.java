@@ -2,7 +2,8 @@ package com.hamitmizrak.seniorfullstack1.data.entity;
 
 import com.hamitmizrak.seniorfullstack1.audit.AuditingAwareBaseEntity;
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.extern.log4j.Log4j2;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -10,7 +11,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 // LOMBOK
-@Data
+//@Data
+@Getter
+@Setter
 @Log4j2
 //@Builder
 
