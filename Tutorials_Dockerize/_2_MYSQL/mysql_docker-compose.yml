@@ -38,6 +38,8 @@ services:
       - "4444:4444"
     volumes:
       - mysql_volume_data:/var/lib/mysql
+      #- ./src/main/resources/pom.xml:/src/main/resources/pom.xml
+
     environment:
       # spring.datasource.url=jdbc:mysql://localhost:3306/blog?createDatabaseIfNotExist=true&autoReconnect=true&allowPublicKeyRetrieval=true&useSSL=false
       - spring.datasource.url=jdbc:mysql://mysql_depends_on:3306/blog?createDatabaseIfNotExist=true&autoReconnect=true&allowPublicKeyRetrieval=true&useSSL=false

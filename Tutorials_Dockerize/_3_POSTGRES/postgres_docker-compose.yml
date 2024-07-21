@@ -41,6 +41,7 @@ services:
       - "5555:4444"
     volumes:
       - postgres_volume_data:/var/lib/postgresql/data
+      #- ./src/main/resources/pom.xml:/src/main/resources/pom.xml
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres_depends_on:5432/blog
       SPRING_DATASOURCE_USERNAME: "postgres"

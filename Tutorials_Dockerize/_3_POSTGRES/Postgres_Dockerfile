@@ -43,11 +43,11 @@ RUN echo "App Year: $YEAR"
 # Data Persist (Kalıcı Veri)
 VOLUME /tmp
 
+# Veri Kopyalama
+#COPY ./src/main/resources/pom.xml /opt/lib/java/
+
 # Port # Expose(Harici)
 EXPOSE 4444
-
-# Veri Kopyalama
-#COPY ./pom.xml /opt/lib/java/
 
 # ARG
 #ARG JAR_FILE=Mysql_SeniorFullStack1.jar
