@@ -1,13 +1,35 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// Eğer ES5 üzerinden ilerlemek istiyorsanız katı mod olan
+// "use strict";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// REACT
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+// ROUTER
+// BrowserRouter  => http://localhost:3000/
+// HashRouter     => http://localhost:3000/#
+import BlogRouter from "./BlogRouter";
+import { BrowserRouter } from "react-router-dom";
+
+// Dil
+import './internationalization/i18nlanguage'
+
+// Index CSS
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+
+// Dark Mode
+import './dark.css'
+
+// ROOT
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+// RENDER
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <BlogRouter> </BlogRouter>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
