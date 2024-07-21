@@ -29,7 +29,11 @@ services:
     container_name: blog_react
     image: blog_react
     restart: always
-    build: .
+    #build: .
+    #build: ./dizinAdi
+    build:
+      context: .
+      dockerfile: Mysql_Dockerfile
     ports:
       - "4444:4444"
     volumes:

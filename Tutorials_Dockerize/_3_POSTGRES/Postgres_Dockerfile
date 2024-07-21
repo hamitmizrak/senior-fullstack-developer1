@@ -2,7 +2,7 @@
 # docker container run -d -p 4444:4444 --rm --name my_imageName
 
 # DockerHub push
-# 1.adım: Dockerfile ile image oluştur
+# 1.adım: Mysql_Dockerfile ile image oluştur
 # 2.adım: Dockerhub üzerinden repository oluştur
 # 3.adım: docker ps
 # image name: image_spring_react

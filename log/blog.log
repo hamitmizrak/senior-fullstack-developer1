@@ -2893,3 +2893,39 @@ Caused by: org.postgresql.util.PSQLException: FATAL: database "blog" does not ex
 2024-07-21T16:24:15.605+03:00  INFO 39672 --- [SeniorFullStack1] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-07-21T16:24:15.625+03:00  INFO 39672 --- [SeniorFullStack1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-07-21T16:24:15.634+03:00  INFO 39672 --- [SeniorFullStack1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-21T16:31:19.181+03:00  INFO 40812 --- [SeniorFullStack1] [main] c.h.s.b.BlogCategoryServicesImplTest     : Starting BlogCategoryServicesImplTest using Java 17.0.11 with PID 40812 (started by Hamit-Mizrak in E:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-07-21T16:31:19.188+03:00  INFO 40812 --- [SeniorFullStack1] [main] c.h.s.b.BlogCategoryServicesImplTest     : The following 1 profile is active: "frontend"
+2024-07-21T16:31:19.272+03:00 DEBUG 40812 --- [SeniorFullStack1] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5a5c128
+2024-07-21T16:31:21.234+03:00  INFO 40812 --- [SeniorFullStack1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-21T16:31:21.363+03:00  INFO 40812 --- [SeniorFullStack1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 2 JPA repository interfaces.
+2024-07-21T16:31:24.035+03:00  INFO 40812 --- [SeniorFullStack1] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-21T16:31:24.066+03:00  INFO 40812 --- [SeniorFullStack1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-21T16:31:24.356+03:00  INFO 40812 --- [SeniorFullStack1] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@50b38342
+2024-07-21T16:31:24.358+03:00  INFO 40812 --- [SeniorFullStack1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-21T16:31:26.292+03:00  INFO 40812 --- [SeniorFullStack1] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-21T16:31:28.196+03:00  WARN 40812 --- [SeniorFullStack1] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-21T16:31:28.334+03:00  INFO 40812 --- [SeniorFullStack1] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-07-21T16:31:28.738+03:00 DEBUG 40812 --- [SeniorFullStack1] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 15 mappings in 'requestMappingHandlerMapping'
+2024-07-21T16:31:30.664+03:00 DEBUG 40812 --- [SeniorFullStack1] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-07-21T16:31:30.824+03:00 DEBUG 40812 --- [SeniorFullStack1] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-07-21T16:31:31.008+03:00 DEBUG 40812 --- [SeniorFullStack1] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-07-21T16:31:32.904+03:00  INFO 40812 --- [SeniorFullStack1] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoints beneath base path '/actuator'
+2024-07-21T16:31:33.248+03:00  INFO 40812 --- [SeniorFullStack1] [main] c.h.s.b.BlogCategoryServicesImplTest     : Started BlogCategoryServicesImplTest in 14.585 seconds (process running for 16.429)
+2024-07-21T16:31:33.363+03:00  INFO 40812 --- [SeniorFullStack1] [main] c.h.s.u.commandlinerunner.MainRunner     : Blog Categories
+2024-07-21T16:31:34.219+03:00  INFO 40812 --- [SeniorFullStack1] [main] c.h.s.b.BlogCategoryServicesImplTest     : Blog Categories Methodlar?ndan hepsinden Önce
+2024-07-21T16:31:34.289+03:00  INFO 40812 --- [SeniorFullStack1] [main] c.h.s.b.BlogCategoryServicesImplTest     : Blog Categories Methodlar?ndan hepsinden Sonra
+2024-07-21T16:31:34.311+03:00  INFO 40812 --- [SeniorFullStack1] [main] c.h.s.b.BlogCategoryServicesImplTest     : Blog Categories Methodlar?ndan hepsinden Önce
+2024-07-21T16:31:34.320+03:00  INFO 40812 --- [SeniorFullStack1] [main] c.h.s.b.BlogCategoryServicesImplTest     : Blog Categories Methodlar?ndan hepsinden Sonra
+2024-07-21T16:31:34.328+03:00  INFO 40812 --- [SeniorFullStack1] [main] c.h.s.b.BlogCategoryServicesImplTest     : Blog Categories Methodlar?ndan hepsinden Önce
+2024-07-21T16:31:34.560+03:00  INFO 40812 --- [SeniorFullStack1] [main] c.h.s.b.BlogCategoryServicesImplTest     : Blog Categories Methodlar?ndan hepsinden Sonra
+2024-07-21T16:31:34.568+03:00  INFO 40812 --- [SeniorFullStack1] [main] c.h.s.b.BlogCategoryServicesImplTest     : Blog Categories Methodlar?ndan hepsinden Önce
+2024-07-21T16:31:34.620+03:00  INFO 40812 --- [SeniorFullStack1] [main] c.h.s.b.BlogCategoryServicesImplTest     : Blog Categories Methodlar?ndan hepsinden Sonra
+2024-07-21T16:31:34.626+03:00  INFO 40812 --- [SeniorFullStack1] [main] c.h.s.b.BlogCategoryServicesImplTest     : Blog Categories Methodlar?ndan hepsinden Önce
+2024-07-21T16:31:35.115+03:00  INFO 40812 --- [SeniorFullStack1] [main] c.h.s.b.BlogCategoryServicesImplTest     : Blog Categories Methodlar?ndan hepsinden Sonra
+2024-07-21T16:31:35.127+03:00  INFO 40812 --- [SeniorFullStack1] [main] c.h.s.b.BlogCategoryServicesImplTest     : Blog Categories Methodlar?ndan hepsinden Önce
+2024-07-21T16:31:35.128+03:00  INFO 40812 --- [SeniorFullStack1] [main] c.h.s.b.BlogCategoryServicesImplTest     : Blog Categories Methodlar?ndan hepsinden Sonra
+2024-07-21T16:31:35.140+03:00  INFO 40812 --- [SeniorFullStack1] [main] c.h.s.b.BlogCategoryServicesImplTest     : ******Blog Categories Methodlar?ndan hepsinden Sonra**********
+2024-07-21T16:31:35.215+03:00 DEBUG 40812 --- [SeniorFullStack1] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@5a5c128, started on Sun Jul 21 19:01:19 IST 2024
+2024-07-21T16:31:35.224+03:00  INFO 40812 --- [SeniorFullStack1] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-21T16:31:35.244+03:00  INFO 40812 --- [SeniorFullStack1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-21T16:31:35.251+03:00  INFO 40812 --- [SeniorFullStack1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -32,7 +32,11 @@ services:
     container_name: blog_react
     image: blog_react
     restart: always
-    build: .
+    #build: .
+    #build: ./dizinAdi
+    build:
+      context: .
+      dockerfile: Postgres_Dockerfile
     ports:
       - "5555:4444"
     volumes:
@@ -59,7 +63,7 @@ services:
       - springreactpostres
     environment:
       - POSTGRES_PASSWORD=postgres
-      - POSTGRES_USER=hamit
+      - POSTGRES_USER=postgres
       - POSTGRES_DB=blog
     restart: unless-stopped
 
