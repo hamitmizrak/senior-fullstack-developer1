@@ -2198,3 +2198,10 @@ Consider defining a bean of type 'org.springframework.boot.web.servlet.error.Err
 2024-07-21T00:25:11.113+03:00  INFO 23212 --- [SeniorFullStack1] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-07-21T00:25:11.165+03:00  INFO 23212 --- [SeniorFullStack1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2024-07-21T00:25:11.170+03:00  INFO 23212 --- [SeniorFullStack1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-21T02:58:18.843+05:30  INFO 18412 --- [SeniorFullStack1] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-21T02:58:18.845+05:30 ERROR 18412 --- [SeniorFullStack1] [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000478: Unsuccessful: 
+    alter table blog 
+       drop 
+       foreign key FK75jvpydhijny2hovb7t1ca3c5
+2024-07-21T02:58:18.854+05:30  INFO 18412 --- [SeniorFullStack1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2024-07-21T02:58:18.855+05:30  INFO 18412 --- [SeniorFullStack1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
