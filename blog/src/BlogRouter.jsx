@@ -25,7 +25,7 @@ function BlogRouter() {
       <BlogHeader logo="fa-solid fa-blog"></BlogHeader>
 
       {/* Blog Main */}
-      <div className="container App-header">
+      <div className="container App-header" style={{marginTop:"5rem"}}>
         <Routes>
           <Route path={"/"} element={<BlogMain />} />
           <Route path={"/index"} element={<BlogMain />} />
