@@ -34,12 +34,12 @@ function OtherLanguageReusability(props) {
             <div className="hidden-arrow flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none">
                 {/* Dil */}
                 <Link className="" onClick={() => internationalizationLanguage('tr')}>
-                    <img loading="lazy" src={tr} className="relative rounded-full w-6 h-6 me-3 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0" alt="TR" />
+                    <img loading="lazy" src={tr} className="rounded-circle" style={{width:"1.5rem", height:"1.7rem",marginRight:"0.5rem"}} alt="TR" />
                 </Link>
 
                 {/* style={{ height: "1rem" }} */}
                 <Link className="" onClick={() => internationalizationLanguage('en')}>
-                    <img loading="lazy" src={en} className="relative rounded-full w-6 h-6 me-3 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0" alt="EN" />
+                    <img loading="lazy" src={en} className="rounded-circle" style={{width:"1.5rem", height:"1.7rem"}} alt="EN" />
                 </Link>
             </div>
 

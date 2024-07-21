@@ -1,7 +1,9 @@
 # Special
 /blog/node_modules
 
-/log/
+
+/log/**
+/log/blog.log
 /memory_persist/
 
 *.log

@@ -22,7 +22,7 @@ function BlogRouter() {
     // <>BlogRouter</>
     <React.Fragment>
       {/* Blog Header */}
-      <BlogHeader></BlogHeader>
+      <BlogHeader logo="fa-solid fa-blog"></BlogHeader>
 
       {/* Blog Main */}
       <div className="container App-header">
@@ -45,7 +45,7 @@ function BlogRouter() {
       </div>
 
       {/* Blog Footer */}
-      <BlogFooter></BlogFooter>
+      <BlogFooter copy="Tüm Haklar Saklıdır."></BlogFooter>
     </React.Fragment>
   ); //end return
 } // end BlogRouter
