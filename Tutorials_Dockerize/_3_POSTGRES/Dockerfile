@@ -64,7 +64,7 @@ ADD ${JAR_FILE} blog.jar
 # --retries=3  ==>  Sağlık kontrolünü eğer ilk denemede başarısız olursa 3 defa daha  çalışsın.
 # Eğer bu 3s komutu belirtilenin dışına çıkarsa Docker sağlıksız olarak işaretlenir
 # CMD wget --quiet --tries=1 --spider http://localhost : wget ile localhost istek atmak
-HEALTHCHECK --interval=30s --timeout=3s --start-periyod=5s --retries=3 \
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
     CMD wget --quiet --tries=1  --spider http://localhost:4444 || exit 1
 
 # Docker konteynarı çalışması sırasında varsılan çalışacak komutlar
