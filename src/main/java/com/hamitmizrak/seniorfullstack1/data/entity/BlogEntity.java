@@ -30,6 +30,7 @@ public class BlogEntity extends AuditingAwareBaseEntity implements Serializable 
     // SERILEŞTIRME
     public static final Long serialVersionUID = 1L;
 
+
     // ID
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

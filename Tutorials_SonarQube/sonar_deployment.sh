@@ -1,3 +1,3 @@
 !/bin/bash
 
-docker-compose -f SonarQube_docker-compose.yml up -d
+docker-compose -f sonarQube_docker-compose.yml up -d

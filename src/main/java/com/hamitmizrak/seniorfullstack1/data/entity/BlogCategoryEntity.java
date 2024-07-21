@@ -47,7 +47,7 @@ public class BlogCategoryEntity extends AuditingAwareBaseEntity implements Seria
 
     // RELATION
     @OneToMany(mappedBy = "relationCategoryEntity",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
-    List<BlogEntity> relationBlogEntityList;
+    private List<BlogEntity> relationBlogEntityList;
 
     // Constructor (parametreli)
     public BlogCategoryEntity(String categoryName) {

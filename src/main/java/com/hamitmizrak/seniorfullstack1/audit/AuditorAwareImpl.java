@@ -17,17 +17,17 @@ import java.util.Optional;
 public class AuditorAwareImpl implements AuditorAware<String> {
 
     @Override
+    @SuppressWarnings("all") // aşağıdaki olabilecek hataları ben mesulum java lütfen işine bak
     public Optional<String> getCurrentAuditor() {
         // Authentication olmuş kullanıcı bilgilerini almak
         Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
         // Eğer kullanıcı sisteme giriş yapmışsa
         if(authentication!=null&&authentication.isAuthenticated()){
-            log.warn("Sistemde Kullanıcı mevcut"+authentication.getName());
+            log.warn("Sistemde Kullanıcı adı"+authentication.getName());
             System.out.println("Sistemde Kullanıcı mevcut"+authentication.getName());
-            log.warn("Sistemde Kullanıcı mevcut"+authentication.getPrincipal());
+            log.warn("Sistemde Kullanıcı bilgileri"+authentication.getPrincipal());
             return Optional.of(authentication.getName());
         }
-
         //return Optional.empty();
         return Optional.of("HamitMizrak");
     }
