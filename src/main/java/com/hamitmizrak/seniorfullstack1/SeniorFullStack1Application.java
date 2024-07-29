@@ -45,10 +45,10 @@ import java.util.TimeZone;
 //@SpringBootApplication
 public class SeniorFullStack1Application {
 
-    @PostConstruct
+ /*   @PostConstruct
     public void init() {
         TimeZone.setDefault(TimeZone.getTimeZone("IST"));
-    }
+    }*/
 
     public static void main(String[] args) {
 

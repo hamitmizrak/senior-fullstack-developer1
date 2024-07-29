@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_USER: sonarqube
+      POSTGRES_PASSWORD: sonarqube
+      POSTGRES_DB: sonarqube
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  sonarqube:
+    image: sonarqube:latest
+    container_name: sonarqube
+    environment:
+      SONAR_JDBC_URL: jdbc:postgresql://postgres:5432/sonarqube
+      SONAR_JDBC_USERNAME: sonarqube
+      SONAR_JDBC_PASSWORD: sonarqube
+    depends_on:
+      - postgres
+    ports:
+      - "9000:9000"
+
+  jdk:
+    image: openjdk:latest
+    container_name: jdk
+    command: sleep infinity
+    volumes:
+      - jdk_volume:/usr/src/myapp
+    working_dir: /usr/src/myapp
+
+  sonarqube-scanner:
+    image: sonarsource/sonar-scanner-cli:latest
+    container_name: sonarqube-scanner
+    environment:
+      SONAR_HOST_URL: http://sonarqube:9000
+      SONAR_LOGIN: admin
+      SONAR_PASSWORD: admin
+    volumes:
+      - ./project:/usr/src
+
+volumes:
+  postgres_data:
+  jdk_volume:
+
+# docker-compose up -d
+# docker-compose run sonarqube-scanner   # Kodu analiz etmek için, sonarqube-scanner konteynerini çalıştırabilirsiniz:
