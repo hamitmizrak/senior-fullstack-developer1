@@ -1,8 +1,9 @@
 // rfce
 import React, { useEffect, useState } from "react";
+import { withTranslation } from "react-i18next";
 
 //REDIRECT
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import BlogCategoryApi from "../../services/BlogCategoryApi";
 
 // FUNCTION
@@ -71,7 +72,7 @@ function BlogCategoryList({ t, i18n, props }) {
   ///////////////////////
   // BLOG CATEGORY DELETE
   const setDeleteBlogCategory = (id) => {
-    if (Window.confirm(id + " blog category Silmek istiyor musunuz ?")) {
+    if (window.confirm(id + " nolu blog category'i Silmek istiyor musunuz ?")) {
       BlogCategoryApi.categoryApiDeleteById(id)
         .then((response) => {
           if (response.status === 200) {
@@ -92,19 +93,75 @@ function BlogCategoryList({ t, i18n, props }) {
       window.location = "/blog/category/list";
     }
   };
-  ///////////////////////
-  // CRUD
-  // BLOG CATEGORY CREATE
-  // BLOG CATEGORY FIND
-  // BLOG CATEGORY UPDATE
 
   ///////////////////////////////////////////////////////////////////////
   ///////////////////////////////////////////////////////////////////////
   // return
-  return <React.Fragment>
-    BlogCategoryList
-    </React.Fragment>; //end return
+  return (
+    <React.Fragment>
+      <h1 className="text-center display-5 mb-5">{t("blog_category_list")}</h1>
+      <Link className="btn btn-primary me-2" to="/blog/category/create">
+        {t("blog_category_create")}
+      </Link>
+      <table className="table table-striped table-responsive mb-4">
+        <thead>
+          <tr>
+            <th>{t("id")}</th>
+            <th>{t("blog_category_name")}</th>
+            <th>{t("date")}</th>
+            <th>{t("update")}</th>
+            <th>{t("show")}</th>
+            <th>{t("delete")}</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {blogCategoryApiImplListData.map((item) => (
+            <tr key={item.categoryId}>
+              <td>{item.categoryId}</td>
+              <td>{item.categoryName}</td>
+              {/* <td>{new Date(item.createdAt).toLocaleString()}</td> */}
+              <td>{item.systemCreatedDate}</td>
+              <td>
+                <Link
+                  className="btn btn-warning"
+                  to={`/blog/category/update/${item.categoryId}`}
+                  onClick={() =>
+                    localStorageUpdateBlogCategoryId(item.categoryId)
+                  }
+                >
+                  {t("update")}
+                </Link>
+              </td>
+
+              <td>
+                <Link
+                  className="btn btn-info"
+                  to={`/blog/category/view/${item.categoryId}`}
+                  onClick={() =>
+                    localStorageViewBlogCategoryId(item.categoryId)
+                  }
+                >
+                  {t("show")}
+                </Link>
+              </td>
+
+              <td>
+                <Link
+                  className="btn btn-danger"
+                  onClick={() => setDeleteBlogCategory(item.categoryId)}
+                >
+                  {t("delete")}
+                </Link>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+  
+    </React.Fragment>
+  ); //end return
 } //end BlogCategoryList
 
 // EXPORT
-export default BlogCategoryList;
+export default withTranslation()(BlogCategoryList);

@@ -29,6 +29,8 @@ i18n.use(initReactI18next).init({
                     'blog_category_update': 'Blog Category Update',
                     'blog_category_view': 'Blog Category View',
                     'blog_category_create': 'Blog Category Create',
+
+                    'id':'id',
                     'blog_category_name':'Blog Category Name'
                 }
             },
@@ -54,6 +56,7 @@ i18n.use(initReactI18next).init({
                     'blog_category_update': 'Blog Kategori Güncelleme',
                     'blog_category_view': 'Blog Kategori Göster',
                     'blog_category_create': 'Blog Kategori Oluştur',
+                    'id':'id',
                     'blog_category_name':'Blog Kategori Adı'
                 }
             }
