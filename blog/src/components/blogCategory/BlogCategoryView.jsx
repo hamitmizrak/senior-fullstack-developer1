@@ -8,7 +8,8 @@ import image from "../../assets/image/sunset.jpg";
 import BlogCategoryApi from "../../services/BlogCategoryApi";
 
 // FUNCTION
-function BlogCategoryView() {
+function BlogCategoryView({ t, i18n, props }) {
+
   // REDIRECT
   let navigate = useNavigate();
 
@@ -50,6 +51,7 @@ function BlogCategoryView() {
         <div className="row">
           <div className="col-md-2"></div>
           <div className="col-md-8">
+            <h1 className="text-center display-4 mt-4 mb-4 text-uppercase">{t('blog_category_view')}</h1>
             <img
               className="card-img-top"
               src={image}
