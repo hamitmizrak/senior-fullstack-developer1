@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 
 //REDIRECT
 import { useNavigate } from "react-router-dom";
+import BlogCategoryApi from "../../services/BlogCategoryApi";
 
 // FUNCTION
 function BlogCategoryList({ t, i18n, props }) {
@@ -15,11 +16,18 @@ function BlogCategoryList({ t, i18n, props }) {
 
   // EFFECT
   useEffect(() => {
-    // fetchBlogCategoryApiImplListData();
+     fetchBlogCategoryApiImplListData();
   }, []);
 
   // API CALLS
-  const fetchBlogCategoryApiImplListData = () => {}; //end fetchBlogCategoryApiImplListData
+  const fetchBlogCategoryApiImplListData = async () => {
+    try {
+      const response = await BlogCategoryApi.categoryApiList();
+      setBlogCategoryApiImplListData(response.data);
+    } catch (error) {
+      console.error("Error fetching blogCategoryApiImplListData: ", error);
+    }
+  }; //end fetchBlogCategoryApiImplListData
   ///////////////////////////////////////////////////////////////////////
   ///////////////////////////////////////////////////////////////////////
 
