@@ -52,12 +52,12 @@ RUN npm -g list
 
 RUN ls
 RUN node -v
-RUN mvn -v
+# RUN mvn -v
 RUN npm install --production
 RUN npm install -g typescript
 
 # Clear Cache
-RUN apt-get clean --force && rm -rf /var/lib/apt/lists/*
+RUN apt-get clean  && rm -rf /var/lib/apt/lists/*
 
 # COPY
 COPY . .
@@ -83,14 +83,15 @@ CMD ["npm","start"]
 # Eğer bu 3s komutu belirtilenin dışına çıkarsa Docker sağlıksız olarak işaretlenir
 # CMD wget --quiet --tries=1 --spider http://localhost : wget ile localhost istek atmak
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-    CMD wget --quiet --tries=1  --spider http://localhost:4444 || exit 1
+    CMD wget --quiet --tries=1  --spider http://localhost:80 || exit 1
 
-# Docker konteynarı çalışması sırasında varsılan çalışacak komutlar
-# Uygulamayı başlatma komut dizinidir
-# ENTRYPOINT ["executable","param1","param2","param3"]
-ENTRYPOINT ["java", "-jar","/blog.jar"]
+##########################################################################################################
+##########################################################################################################
 
-########################################################
+# Başka zaman buraya Maven ekle
+
+##########################################################################################################
+##########################################################################################################
 # docker build -t imageName .
 # docker build -f CustomizeDockerFile -t imageName .
 

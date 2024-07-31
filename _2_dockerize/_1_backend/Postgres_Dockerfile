@@ -52,7 +52,7 @@ EXPOSE 4444
 # ARG
 #ARG JAR_FILE=Mysql_SeniorFullStack1.jar
 #ARG JAR_FILE=/target/*.jar
-ARG JAR_FILE=../../target/*.jar
+ARG JAR_FILE=./../../target/*.jar
 
 # ADD
 ADD ${JAR_FILE} blog.jar

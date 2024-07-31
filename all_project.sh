@@ -12,6 +12,10 @@ UFW="Uncomplicated Firewall Ggüvenlik duvarı Yöentim Araçı"
 LOGOUT="Sistemi Tekrar Başlatmak"
 CHECK="Yüklenecek Paket bağımlılıkları"
 TECH="Diğer Teknolojiler"
+MAVEN="Maven Kurulumu Başlıyor"
+BACKEND="Backend Kurulumu Başlıyor"
+FRONTEND="Frontend Kurulumu Başlıyor"
+SONARQUBE="SonarQube Kurulumu Başlıyor"
 
 ###################################################################
 ###################################################################
@@ -44,10 +48,10 @@ accessPermission() {
         # chmod 755 ../script
 
         # Bash scriptlere izin vermek
-        sudo chmod +x ./countdown.sh
-        sudo chmod +x ./reboot.sh
+        sudo chmod +x countdown.sh
+        sudo chmod +x reboot.sh
          # Geriye Say
-        sudo ./countdown.sh
+        sudo countdown.sh
     else
         echo -e "Dosya İzinleri Yapılmadı..."
     fi
@@ -59,17 +63,17 @@ accessPermission
 ###################################################################
 maven() {
     sleep 2
-    echo -e "\n###### ${CHMOD} ######  "
+    echo -e "\n###### ${MAVEN} ######  "
     read -p "Maven ile projeyi build almak istiyor musunuz ? e/h " mavenResult
     if [[ $mavenResult == "e" || $mavenResult == "E" ]]; then
         echo -e "Backend Dockerize Başladı ... "
 
         # Bash scriptlere izin vermek
-        sudo chmod +x ./countdown.sh
-        sudo chmod +x ./reboot.sh
+        sudo chmod +x countdown.sh
+        sudo chmod +x reboot.sh
 
          # Geriye Say
-        sudo ./countdown.sh
+        sudo countdown.sh
 
         # Version
         echo -e "Version ... "
@@ -78,7 +82,7 @@ maven() {
         echo -e "javac Version => $(javac --version)\n"
         echo -e "adb Version => $(adb --version)\n"
         echo -e "node Version => $(node -v)\n"
-        echo -e "nvm Version => $(nvm --version)\n"
+        #echo -e "nvm Version => $(nvm --version)\n"
         echo -e "npm Version => $(npm -v)\n"
         echo -e "mvn Version => $(mvn)\n"
         echo -e "choco Version => $(choco --version)\n"
@@ -99,17 +103,17 @@ maven
 # Backend Project
 backend() {
     sleep 2
-    echo -e "\n###### ${CHMOD} ######  "
+    echo -e "\n###### ${BACKEND} ######  "
     read -p "Backend çalıştırmak istiyor musunuz ? e/h " backendResult
     if [[ $backendResult == "e" || $backendResult == "E" ]]; then
         echo -e "Backend Dockerize Başladı ... "
 
         # Bash scriptlere izin vermek
-        sudo chmod +x ./countdown.sh
-        sudo chmod +x ./reboot.sh
+        sudo chmod +x countdown.sh
+        sudo chmod +x reboot.sh
 
          # Geriye Say
-        sudo ./countdown.sh
+        sudo countdown.sh
 
         # Dockerize dosya path
         docker-compose -f _2_dockerize/_1_backend/postgres_docker-compose.yml up -d
@@ -127,17 +131,17 @@ backend
 # Frontend Project
 frontend() {
     sleep 2
-    echo -e "\n###### ${CHMOD} ######  "
+    echo -e "\n###### ${FRONTEND} ######  "
     read -p "Frontend çalıştırmak istiyor musunuz ? e/h " frontendResult
     if [[ $frontendResult == "e" || $frontendResult == "E" ]]; then
         echo -e "frontend Dockerize Başladı ... "
 
         # Bash scriptlere izin vermek
-        sudo chmod +x ./countdown.sh
-        sudo chmod +x ./reboot.sh
+        sudo chmod +x countdown.sh
+        sudo chmod +x reboot.sh
 
          # Geriye Say
-        sudo ./countdown.sh
+        sudo countdown.sh
 
         # Dockerize dosya path
         sudo ./_2_dockerize/_2_frontend/frontend.sh
@@ -154,7 +158,7 @@ backend
 # SonarQube Project
 sonarQube() {
     sleep 2
-    echo -e "\n###### ${CHMOD} ######  "
+    echo -e "\n###### ${SONARQUBE} ######  "
     read -p "sonarQube çalıştırmak istiyor musunuz ? e/h " sonarQubeResult
     if [[ $sonarQubeResult == "e" || $sonarQubeResult == "E" ]]; then
         echo -e "sonarQube Dockerize Başladı ... "

@@ -305,3 +305,27 @@ Consider defining a bean named 'auditorAwareBeanMethod' in your configuration.
 2024-07-31T18:20:33.180+03:00  INFO 26760 --- [SeniorFullStack1] [restartedMain] c.h.s.SeniorFullStack1Application        : Started SeniorFullStack1Application in 2.562 seconds (process running for 487.647)
 2024-07-31T18:20:33.182+03:00  INFO 26760 --- [SeniorFullStack1] [restartedMain] c.h.s.u.commandlinerunner.MainRunner     : Blog Categories
 2024-07-31T18:20:33.231+03:00  INFO 26760 --- [SeniorFullStack1] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-07-31T19:34:57.277+03:00  INFO 26760 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-31T19:34:57.277+03:00  INFO 26760 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-31T19:34:57.277+03:00 DEBUG 26760 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-07-31T19:34:57.277+03:00 DEBUG 26760 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-07-31T19:34:57.278+03:00 DEBUG 26760 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-07-31T19:34:57.279+03:00 DEBUG 26760 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7254d9fa
+2024-07-31T19:34:57.279+03:00 DEBUG 26760 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@62cca8bb
+2024-07-31T19:34:57.279+03:00 DEBUG 26760 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-07-31T19:34:57.279+03:00  INFO 26760 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-07-31T19:34:57.280+03:00 DEBUG 26760 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/blog/category/api/v1/list", parameters={}
+2024-07-31T19:34:57.281+03:00 DEBUG 26760 --- [SeniorFullStack1] [http-nio-4444-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.seniorfullstack1.controller.api.impl.BlogCategoryApiImpl#categoryApiList()
+2024-07-31T19:34:57.297+03:00  INFO 26760 --- [SeniorFullStack1] [http-nio-4444-exec-1] c.h.s.b.s.BlogCategoryServicesImpl       : Liste Sayısı: 2
+2024-07-31T19:34:57.297+03:00 DEBUG 26760 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-07-31T19:34:57.299+03:00 DEBUG 26760 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[BlogCategoryDto(categoryId=1, systemCreatedDate=2024-07-31 18:20:33.194, categoryName=Bilgisayar),  (truncated)...]
+2024-07-31T19:34:57.305+03:00 DEBUG 26760 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-07-31T19:34:57.314+03:00 DEBUG 26760 --- [SeniorFullStack1] [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/blog/category/api/v1/list", parameters={}
+2024-07-31T19:34:57.315+03:00 DEBUG 26760 --- [SeniorFullStack1] [http-nio-4444-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.seniorfullstack1.controller.api.impl.BlogCategoryApiImpl#categoryApiList()
+2024-07-31T19:34:57.321+03:00  INFO 26760 --- [SeniorFullStack1] [http-nio-4444-exec-2] c.h.s.b.s.BlogCategoryServicesImpl       : Liste Sayısı: 2
+2024-07-31T19:34:57.322+03:00 DEBUG 26760 --- [SeniorFullStack1] [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-07-31T19:34:57.322+03:00 DEBUG 26760 --- [SeniorFullStack1] [http-nio-4444-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[BlogCategoryDto(categoryId=1, systemCreatedDate=2024-07-31 18:20:33.194, categoryName=Bilgisayar),  (truncated)...]
+2024-07-31T19:34:57.323+03:00 DEBUG 26760 --- [SeniorFullStack1] [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-07-31T20:22:38.541+03:00  INFO 26760 --- [SeniorFullStack1] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-31T20:22:38.555+03:00  INFO 26760 --- [SeniorFullStack1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2024-07-31T20:22:38.557+03:00  INFO 26760 --- [SeniorFullStack1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
