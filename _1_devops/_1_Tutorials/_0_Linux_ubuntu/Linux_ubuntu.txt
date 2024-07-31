@@ -1,0 +1,203 @@
+Linux
+1-) Kernel (Çekirdek): 
+- Yazılım ile Donanım arasındaki haberleşmeyi sağlıyor.
+- Bütün kaynaklarının yönetimini sağlıyor.
+
+2-) Shell (Kabuk)
+- Kullanıcıdan(client) gelen istekleri (request) kernel'a iletiyor.
+- bash: Bourne Again Shell (Linux default kabuk) 
+
+--------------------------------------------------------------------
+###### UBUNTU ######################################################
+Ubuntu
+- Linux dağıtımlarından en popüler olanı.
+- 1990 Yıllarında Linus Torvalds ve ekibiyle linux yazılıyor.
+- 2004 Yılında Ubuntu tanıtılıyor.
+- Unix İşletim sistemi paralı
+- Linux İşletim sistemleri ücretsiz
+- Linux open source(Açık kaynak kodludur)
+- GNU: Gnu is Not Unit
+- GPL: Free as in Freedom (GNU General Public License)
+- Ubuntu Debian çekirdeğini kullana dağıtımdır.
+- Ubuntu: Güney Afrika Dilinde => Başka nesneye saygı.
+
+Operation  Format    Installing
+Ubuntu     deb       apt,apt-get
+Centos     rpm       yum
+Fedora     rpm       dnf
+
+
+# dependency 
+sudo apt install -f (Kurulan dosyalarda eksik bağlantılar varsa eklemesin)
+hostname 
+pwd
+echo 
+wget URL 
+--------------------------------------------------------------------
+###### UBUNTU/WINDOWS ##############################################
+Dosya Sistemi
+Windows => FAT(Eski), NTFS(Yeni)
+Linux   => Ext2,3,4
+
+
+--------------------------------------------------------------------
+###### UBUNTU/WINDOWS ##############################################
+Dosya Sistemi
+/boot : Kernel boot dosya ve dizinleri
+/dev  : Fiziksel donanımlara erişim
+/etc  : Servis yapılandırma dosyaları
+/home : Ana dizin 
+/lib   : boot libraries
+/media
+/opt
+/proc 
+/root 
+/snap 
+/tmp 
+/usr
+/var
+
+
+--------------------------------------------------------------------
+###### PORT ########################################################
+
+Bilgisayar binary (2 tabanda)
+2^16=65536
+0-65535 Port
+
+0<=PORT<=1023 (Well Know Port)
+20  => FTP
+22  => SSH
+80  => HTTP
+443 => HTTPS
+
+1024<=PORT<=49151 (Registed Port)
+3306  => Mysql
+5432  => Postgresql
+27017 => Mongo
+6379  => Redis
+8080  => Tomcat default
+
+49152<=PORT<=65535 (Dynamics Port)
+--------------------------------------------------------------------
+###### HTTP STATUS #################################################
+Http Status Codes
+1XX = Information
+2XX = Success
+3XX = Redirection
+4XX = Client Error
+5XX = Server Error
+
+
+---------------------------------------------------------
+apt-get update : Paketlerimizin versiyon farkları araştırsın ve liste güncellensin.
+apt-get upgrade: Güncellenmiş listeyi kurmak içindir. En son sürüme geçilecektir.
+apt-get dist-upgrade: En güncel kernek sürümüne taşıyor.
+sudo apt-get update && apt-get upgrade -y
+
+--------------------------------------------------------------------
+###### KOMUTLAR ###################################################
+sudo apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y
+
+sudo su 
+su hamit
+
+curl --version 
+sudo apt-get install curl -y
+sudo apt-get install zip 
+sudo apt-get install gunzip 
+ping google.com 
+curl google.com
+
+mkdir deneme
+info mkdir 
+man mkdir
+whereis java
+whatis ls
+hostname --help 
+clear
+whoami
+history
+
+mkdir deneme 
+rmdir deneme 
+rm -rf deneme
+mv deneme.txt data.txt
+cp data.txt deneme/
+
+diff data.txt data2.txt
+#Arama
+grep kelime data.txt
+
+cd deneme 
+cd ..
+cd / 
+cd ~/Desktop
+
+ls
+ls -al
+ls -lar 
+
+cat >> deneme.txt
+cat deneme.txt
+tac deneme.txt
+
+tail deneme.txt => Son 10 tane datayı göster
+tail -n 5 deneme.txt
+tail -f deneme.txt
+head -n 5 deneme.txt 
+
+sudo apt install vim -y
+vim deneme.txt
+-- Basic Mode
+g => En baş
+5j => 5 satır alta
+5k => 5 satır yukarı
+--
+i => insert mode 
+k  => Basılı tutulduğu kadar satır sil 
+:q!  => Kaydetmeden çık 
+:wq! => Kaydederek çık
+vi deneme.txt
+
+
+d rwx rwx r-x
+d: directory
+r:read (2^2=4)
+w=write (2^1=2)
+x=execute (2^0=1)
+d775  d755
+rwx: Kullanıcının 
+rwx: Group
+r-x: Diğer
+
+# chmod
+ls -al
+chmod 755 data.txt
+
+# deneme.txt dosyasının yetkisini al admin'e ver
+chown user deneme.txt admin
+
+# Bilgi 
+uname
+df 
+lshw -short
+cat /proc/cpuinfo (CPU)
+free -m (RAM)
+
+
+--------------------------------------------------------------------
+###### LIBRARIES ###################################################
+PID: Process içindir
+FTP: File Transfer Protocol
+
+
+
+--------------------------------------------------------------------
+###### SCRIPT ###################################################
+GIT 
+DOCKER
+VSCODE
+JAVA 
+MAVEN
+SONARQUBE
