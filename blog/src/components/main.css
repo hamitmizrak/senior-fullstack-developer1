@@ -1,9 +1,0 @@
-p{
-    text-align: justify;
-    margin:.5rem .4rem;
-    transition: 2s all;
-}
-
-p:hover{
-    text-shadow: 0.1px 0.4px rgba(0,0,0,.8);
-}

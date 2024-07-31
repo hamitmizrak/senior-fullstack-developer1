@@ -1,0 +1,51 @@
+**** VERSION *****************
+node -v
+npm -v
+
+mvn -v
+java -version
+javac -version
+
+**************************************
+**** NPM/AppData ************
+C:\Users\Hamit-Mizrak\AppData\Roaming\npm
+
+
+**************************************
+**** NPM G LIST********
+npm -g list
+
+
+**************************************
+**** NPM INSTALL ********
+npm install -g typescript
+
+
+**************************************
+**** NPM DELETE ********
+npm uninstall -g typescript
+
+
+**************************************
+**** NPM CLEAN ********
+npm cache clean --force
+npm update
+npm install
+npm i
+
+
+
+**************************************
+**** REACT ***************************
+npx create-react-app blog
+cd blog
+npm start
+
+
+npm install axios --save
+npm install react-router-dom@6.21.1 --save
+npm install i18next@23.7.11  --save
+npm install react-i18next@14.0.0  --save
+npm install redux-thunk
+npm install secure-ls --save
+

@@ -1,0 +1,220 @@
+
+################################################################################################
+################################################################################################
+1-) JDK KUR
+JAVA  => Çevresel Değişkenini tanımla
+New => JAVA_HOME  => C:\Program Files\Microsoft\jdk-17.0.11.9-hotspot\
+PATH => %JAVA_HOME%\bin
+$ java --version (openjdk 17.0.11 2024-04-16 LTS)
+
+Version=> java --version, javac --version
+
+
+################################################################################################
+################################################################################################
+2-) ANDROID STUDIO KUR
+ANDROID  => Çevresel Değişkenini tanımla 
+New => ANDROID_HOME => C:\Users\Hamit-Mizrak\AppData\Local\Android\Sdk
+%ANDROID_HOME%\emulator
+%ANDROID_HOME%\platform-tools
+
+
+################################################################################################
+################################################################################################
+3-) ADB (Android Debug Bridge) => Android İşletim sistemi ile çalışan cihazlarla iletişim kurmak ve onları yönetmek için kullandığımınız komut aracıdır.
+
+NOT: ADB android studio kurduğumuzda geliyor
+ADB(Android Debug Bridge) => Çevresel Değişkenini tanımla
+$  adb --version
+
+Android Debug Bridge version 1.0.41
+Version 35.0.1-11580240
+Installed as C:\Users\Hamit-Mizrak\AppData\Local\Android\Sdk\platform-tools\adb.exe
+Running on Windows 10.0.22631
+
+$ adb --version
+$ adb devices
+$ adb install path/to/your/app.apk (Uygulama Yükle)
+$ adb uninstall path/to/your/app.apk (Uygulama Sil)
+$ adb shell
+$ adb logcat
+$ adb kill-server
+$ adb start-server
+$ adb error
+
+################################################################################################
+################################################################################################
+4-) MAVEN
+New MAVEN_HOME  => D:\1_Kodlar\maven\apache-maven-3.9.8
+PATH => %MAVEN_HOME%\bin
+
+$ mvn -v
+
+
+################################################################################################
+################################################################################################
+5-) CHOCO 
+Windows üzerinde `Powershell` terminalinden programlamalar yüklemek  istiyorsak paket yönetimi olan choco yüklemek
+
+$ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+$ choco --version
+
+$ choco install -y nodejs.install python2
+$ choco install -y nodejs-lts microsoft-openjdk17
+
+
+################################################################################################
+################################################################################################
+6) NODE JS
+New NVM_SYMLINK  => C:\Program Files\nodejs
+PATH => %NVM_SYMLINK%
+
+$ node -v
+
+
+################################################################################################
+################################################################################################
+7-) NPM
+New NPM_HOME  => C:\Users\Hamit-Mizrak\AppData\Roaming\npm
+PATH => %NPM_HOME%
+$ npm -v
+
+
+################################################################################################
+################################################################################################
+8-) NVM (Node Version Manager)
+Node.js farklı sürümlerini yönetmemize yarayan komut satıdır.
+
+~~POWERSHELL Yönetici olarak Aç~~
+$ nvm --version (1.1.12)
+$ nvm install latest
+$ nvm use latest
+$ nvm install 14.17.0
+$ nvm use 14.17.0
+$ nvm ls (Yüklü Node.js sürümlerini lsitele)
+$ nvm ls-remote
+
+NVM Not aşağıdaki path otomatik geliyor.
+New NVM_HOME  => C:\Users\Hamit-Mizrak\AppData\Roaming\nvm
+PATH => %NVM_HOME%
+
+################################################################################################
+################################################################################################
+9-) NPM
+## NPM ###
+C:\Users\Hamit-Mizrak\AppData\Roaming\npm
+
+## NPM VERSION ###
+$ npm --version
+
+## NPM LIST ###
+$ npm -g list
+
+## NPM CLEAN ###
+$ npm cache clean --force
+
+## NPM INSTALL ###
+$ npm install -g typescript
+
+## NPM UNINSTALL ###
+$ npm uninstall -g typescript
+
+## NPM OTHER ###
+$ npm update
+$ npm install
+$ npm i
+
+$ npm start --reset-cache
+$ npm install -g npm
+$ npm install latest
+
+$ rm -rf node_modules
+$ npm install
+
+################################################################################################
+################################################################################################
+10-) VERSION
+$ java --version
+$ javac --version
+
+$ adb --version
+
+$ choco --version
+
+$ node -v
+$ npm -v
+$ nvm --version
+
+$ git -v
+$ mvn -v
+
+################################################################################################
+################################################################################################
+11-) REACT NATIVE YÜKLEME
+
+NOT: Android Studio Device Açık olmalıdır.
+
+$ npm uninstall -g react-native-cli
+
+$ npm install -g typescript
+$ npm install -g npm
+$ npm install http-server -g (terminalde ==> http-server)
+
+
+
+$ choco install -y nodejs.install python2
+$ choco install -y nodejs-lts microsoft-openjdk17
+
+
+~~POWERSHELL Yönetici olarak Aç~~
+$ nvm install latest
+$ nvm use latest
+
+
+$ npx react-native init ReactNativeTodoList
+$ cd ReactNativeTodoList/
+$ ls -al
+$ code .
+$ npx react-native start 
+$ npx react-native start --port=6666
+$ a => android istiyorsam
+$ i => android istiyorsam
+
+veya
+$ npx react-native start 
+$ npx react-native start --port=6666
+$ npm run start 
+$ npx react-native run-android
+
+
+* What went wrong:
+java.io.UncheckedIOException: Could not move temporary workspace
+Project => android => gradle => wrapper => gradle-wrapper.properties =>distributionUrl=https\://services.gradle.org/distributions/gradle-8.5-all.zip
+`
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+distributionUrl=https\://services.gradle.org/distributions/gradle-8.5-all.zip
+networkTimeout=10000
+validateDistributionUrl=true
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists
+`
+$ Ctrl+C
+$ npx react-native start
+$  cd "D:\1_Kodlar\React Native\ReactNativeTodoList" && npx react-native run-android
+$ npx react-native run-android
+$ npx react-native doctor
+
+
+
+2.YOL
+-------------------------------
+netstat -ano | findstrt:6666
+taskill /PID ID /F
+npx create-expo-app Deneme2
+npx expo start
+npx expo start --port=9696
+npx expo start --android
+npx expo start --ios
+
+

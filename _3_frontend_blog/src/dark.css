@@ -1,0 +1,27 @@
+/* dark mode */
+:root{
+  --body_background:white!important;
+  --body_color:black!important;
+}
+
+/* dark mode */
+[data-theme="dark"]{
+  --body_background:black!important;
+  --body_color:white!important;
+}
+
+/* dark mode */
+*{
+  transition: all 0.3 ease-in-out;
+}
+
+
+/* dark mode */
+.App-header {
+  background-color: var(--body_background);
+  color:var(--body_color);
+}
+
+.App-header > .table{
+  color:var(--body_color);
+}
