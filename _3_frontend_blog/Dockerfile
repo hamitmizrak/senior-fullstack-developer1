@@ -1,8 +1,8 @@
 # docker image build -t imageAdi .
-# docker container run -d -p 4444:4444 --rm --name my_imageName
+# docker container run -d -p 3333:80 --rm --name my_imageName
 
 # DockerHub push
-# 1.adım: Mysql_Dockerfile ile image oluştur
+# 1.adım: Dockerfile ile image oluştur
 # 2.adım: Dockerhub üzerinden repository oluştur
 # 3.adım: docker ps
 # image name: image_spring_react
@@ -11,21 +11,21 @@
 
 #####################################################################
 # FROM:  Çalıştıracağımız image adı
-# JDK Sürümü
-FROM openjdk:17
+# Node JS Image
+FROM node:18.17.1
 
-# Blgilendirme
+# Description
 LABEL maintainer="hamitmizrak@gmail.com"
 
-# Çevresel Değişkenler
-ENV APP_NAME="Senior Full Stack1"
+# Environment Variables
+ENV APP_NAME="Senior Full Stack1 Frontend"
 ENV TECH="Spring Boot, React, Devops, Docker, SonarQube, Git"
 ENV VERSION="v1.0.0"
-ENV PORT="http://localhost:4444"
+ENV PORT="http://localhost:3333"
 ENV AUTHOR="Hamit Mızrak"
-ENV YEAR="21/07/2024"
+ENV YEAR="31/07/2024"
 
-# Çalıştırmak
+# Running
 ## RUN apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y
 RUN echo "App Name: $APP_NAME"
 RUN echo "Technology: $TECH"
@@ -34,8 +34,8 @@ RUN echo "App Port: $PORT"
 RUN echo "App Author: $AUTHOR"
 RUN echo "App Year: $YEAR"
 
-# Dizin oluştur
-# WORKDIR /var/www/html
+# Directory Create
+WORKDIR /app
 
 # RUN: Terminalde çalışmasını istediğimiz kısımlar
 # RUN mkdir -p deneme
@@ -43,19 +43,37 @@ RUN echo "App Year: $YEAR"
 # Data Persist (Kalıcı Veri)
 VOLUME /tmp
 
-# Veri Kopyalama
-#COPY ./src/main/resources/pom.xml /opt/lib/java/
+# COPY
+COPY ["package.json","package-lock.json","./"]
 
-# Port # Expose(Harici)
-EXPOSE 4444
+# Running Continue
+RUN npm -v
+RUN npm -g list
 
-# ARG
-#ARG JAR_FILE=Mysql_SeniorFullStack1.jar
-#ARG JAR_FILE=/target/*.jar
-ARG JAR_FILE=../../target/*.jar
+RUN ls
+RUN node -v
+RUN mvn -v
+RUN npm install --production
+RUN npm install -g typescript
 
-# ADD
-ADD ${JAR_FILE} blog.jar
+# Clear Cache
+RUN apt-get clean --force && rm -rf /var/lib/apt/lists/*
+
+# COPY
+COPY . .
+
+# 1<=PORT<=1023
+# 1023<=PORT<=49151
+# 49151<=PORT<=65535
+
+# EXPOSE
+# 80  = Web dış dünyaya açılış yeridir
+# 443 = SSL Sertifates
+EXPOSE 80 443
+
+# CMD
+CMD ["npm","start"]
+
 
 # HEALTHCHECK => Bu image dosyasının sağlık durumu (Container Çalışıyor mu)
 # --interval=30s  ==> 30 saniyede bir sağlık kontrolü yapılsın
@@ -80,9 +98,9 @@ ENTRYPOINT ["java", "-jar","/blog.jar"]
 # docker container ls -a
 # docker ps
 # docker ps -a
-# docker container run -p 2222:4444 blog
-# docker container run -p 3333:4444 --name malatya blog
-# docker container run -d -p 5555:4444 --name malatya2 blog
-# docker container run --rm -d -p 6666:4444 --name malatya3 blog
+# docker container run -p 3333:80 blog
+# docker container run -p 3333:80 --name react_blog blog
+# docker container run -d -p 5555:4444 --name react_blog blog
+# docker container run --rm -d -p 6666:4444 --name react_blog blog
 # docker container prune
 # docker container exec -it containerID bash

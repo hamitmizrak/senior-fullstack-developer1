@@ -140,8 +140,7 @@ frontend() {
         sudo ./countdown.sh
 
         # Dockerize dosya path
-        docker-compose -f _2_dockerize/_2_frontend/react_docker-compose.yml up -d
-
+        sudo ./_2_dockerize/_2_frontend/frontend.sh
     else
         echo -e "Frontend çalıştırılmadı ..."
     fi
