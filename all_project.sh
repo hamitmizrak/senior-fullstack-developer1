@@ -48,10 +48,10 @@ accessPermission() {
         # chmod 755 ../script
 
         # Bash scriptlere izin vermek
-        sudo chmod +x countdown.sh
-        sudo chmod +x reboot.sh
+         chmod +x countdown.sh
+         chmod +x reboot.sh
          # Geriye Say
-        sudo countdown.sh
+         countdown.sh
     else
         echo -e "Dosya İzinleri Yapılmadı..."
     fi
@@ -69,11 +69,11 @@ maven() {
         echo -e "Backend Dockerize Başladı ... "
 
         # Bash scriptlere izin vermek
-        sudo chmod +x countdown.sh
-        sudo chmod +x reboot.sh
+         chmod +x countdown.sh
+         chmod +x reboot.sh
 
          # Geriye Say
-        sudo countdown.sh
+         countdown.sh
 
         # Version
         echo -e "Version ... "
@@ -92,7 +92,7 @@ maven() {
         # mvn clean package
         mvn clean package -DskipTests
     else
-        echo -e "Backend çalıştırılmadı ..."
+        echo -e "Maven çalıştırılmadı ..."
     fi
 }
 # Function Calling (maven)
@@ -109,11 +109,11 @@ backend() {
         echo -e "Backend Dockerize Başladı ... "
 
         # Bash scriptlere izin vermek
-        sudo chmod +x countdown.sh
-        sudo chmod +x reboot.sh
+         chmod +x countdown.sh
+         chmod +x reboot.sh
 
          # Geriye Say
-        sudo countdown.sh
+         countdown.sh
 
         # Dockerize dosya path
         docker-compose -f _2_dockerize/_1_backend/postgres_docker-compose.yml up -d
@@ -137,14 +137,14 @@ frontend() {
         echo -e "frontend Dockerize Başladı ... "
 
         # Bash scriptlere izin vermek
-        sudo chmod +x countdown.sh
-        sudo chmod +x reboot.sh
+         chmod +x countdown.sh
+         chmod +x reboot.sh
 
          # Geriye Say
-        sudo countdown.sh
+         countdown.sh
 
         # Dockerize dosya path
-        sudo ./_2_dockerize/_2_frontend/frontend.sh
+         _2_dockerize/_2_frontend/frontend.sh
     else
         echo -e "Frontend çalıştırılmadı ..."
     fi
@@ -164,14 +164,14 @@ sonarQube() {
         echo -e "sonarQube Dockerize Başladı ... "
 
         # Bash scriptlere izin vermek
-        sudo chmod +x ./countdown.sh
-        sudo chmod +x ./reboot.sh
+         chmod +x countdown.sh
+         chmod +x reboot.sh
 
          # Geriye Say
-        sudo ./countdown.sh
+         countdown.sh
 
         # Dockerize dosya path
-        sudo ./_2_dockerize/_3_sonarqube/sonar_deployment.sh
+         _2_dockerize/_3_sonarqube/sonar_deployment.sh
 
     else
         echo -e "sonarQube çalıştırılmadı ..."
