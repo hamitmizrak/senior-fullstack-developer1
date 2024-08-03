@@ -48,7 +48,7 @@ public class CustomErrorHandleWebRequest implements ErrorController {
     private ApiResult apiResult;
     private String path;
     private String message;
-    private int status;
+    private Integer status;
     private Map<String,String> validationErrors;
 
     // http://localhost:4444/error
@@ -63,7 +63,7 @@ public class CustomErrorHandleWebRequest implements ErrorController {
         ); //end attributes
 
         // Spring'ten verileri almak
-        status= (int) attributes.get("status");
+        status= (Integer) attributes.get("status");
         message= (String) attributes.get("message");
         path= (String) attributes.get("path");
         apiResult= new ApiResult(path,message,status);

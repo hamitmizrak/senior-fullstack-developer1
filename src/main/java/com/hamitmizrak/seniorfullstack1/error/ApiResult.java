@@ -23,7 +23,7 @@ public class ApiResult {
     private String path;
     private String message;
     private String error;
-    private int status;
+    private Integer status;
     private Date createdDate=new Date(System.currentTimeMillis());
     private Map<String,String> validationErrors;
 
@@ -32,14 +32,14 @@ public class ApiResult {
     }
 
     // parametreli constructor
-    public ApiResult(String path, String message,  int status) {
+    public ApiResult(String path, String message,  Integer status) {
         this.path = path;
         this.message = message;
         this.status = status;
     }
 
     // parametreli constructor
-    public ApiResult(String path, String message, String error, int status) {
+    public ApiResult(String path, String message, String error, Integer status) {
         this.path = path;
         this.message = message;
         this.error = error;

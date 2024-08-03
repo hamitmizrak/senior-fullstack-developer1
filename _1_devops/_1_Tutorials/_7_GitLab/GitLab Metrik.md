@@ -53,8 +53,36 @@
 - C diskinde GitLab-Runner dizinin icinde .exe dosyası olsun
 - cd C:\GitLab-Runner
 - bu dizin içinde gitlab-runner.exe bu dosya olmalıdır.
+
+## GitLab Runner Kurulum (Windows) Install, Start
 - powershell(Yönetici) =>  .\gitlab-runner.exe install
 - powershell(Yönetici) =>  .\gitlab-runner.exe start
+- powershell(Yönetici) =>  .\gitlab-runner --version
+
+
+## GitLab Runner Registraction Token (Windows) New project runner
+- Tags: Bu alan runner'a atanan etiketlerdir. 
+- Bu etiketlerde belirlediğimiz isimler sadece o runnerda çalışmasına izin verecektir.
+- Örneğin: windows => işletim sistemi windows olan etiketlerde sadece çalışır.
+- Etiketlerde virgüllerle ayırmaktayız.
+
+- Configuration (optional):
+- Runner description: Runner açıklayısıdır. Buraya hangi işlem yapacağımızı yazıyoruz.
+- Paused: Runner yeni işleri kabul etmez.
+- Protected: Runner yalnızca protected branches(yalnızca private olmuş branchler üzerinde çalışır)
+- Lock to current projects: Runner yalnızca şu anda atandığı projeler için kullanırız. Bu runner çeşitinde diğer projelerde kullanılmasını engeller ve güvenliği artırır.
+
+- Maximum job timeout: Runner tarafından çalıştırılan job(işler) Maksimum zaman aşımını belirtmemize olanak sağlar.
+- Eğer bu süre dolarsa iş otomatik olarak durur.
+- minimum of 600 seconds.
+
+- Tag Name: windows,spring,react
+- Windows OS
+- .\gitlab-runner.exe register  --url https://gitlab.com  --token glrt-vs3CMoAs4aZW4sRCum9z
+
+
+## GitLab Runner Kurulum (Windows)  Register
+- powershell(Yönetici) =>  .\gitlab-runner.exe register
 
 
 
