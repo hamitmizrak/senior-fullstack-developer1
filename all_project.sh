@@ -12,10 +12,19 @@ UFW="Uncomplicated Firewall Ggüvenlik duvarı Yöentim Araçı"
 LOGOUT="Sistemi Tekrar Başlatmak"
 CHECK="Yüklenecek Paket bağımlılıkları"
 TECH="Diğer Teknolojiler"
-MAVEN="Maven Kurulumu Başlıyor"
+MAVEN="Backend projesi için Jar veya War dosyasının maven ile oluşturmak"
 BACKEND="Backend Kurulumu Başlıyor"
 FRONTEND="Frontend Kurulumu Başlıyor"
 SONARQUBE="SonarQube Kurulumu Başlıyor"
+
+###################################################################
+###################################################################
+
+# Bash scriptlere izin vermek
+chmod +x ./countdown.sh
+chmod +x ./reboot.sh
+chmod +x ./_2_dockerize/_1_backend/_3_POSTGRES/backend.sh
+chmod +x ./_2_dockerize/_2_frontend/frontend.sh
 
 ###################################################################
 ###################################################################
@@ -47,11 +56,8 @@ accessPermission() {
         # İzinleri Sayısal Mod olarak değiştirmek
         # chmod 755 ../script
 
-        # Bash scriptlere izin vermek
-         chmod +x countdown.sh
-         chmod +x reboot.sh
          # Geriye Say
-         countdown.sh
+         ./countdown.sh
     else
         echo -e "Dosya İzinleri Yapılmadı..."
     fi
@@ -66,14 +72,14 @@ maven() {
     echo -e "\n###### ${MAVEN} ######  "
     read -p "Maven ile projeyi build almak istiyor musunuz ? e/h " mavenResult
     if [[ $mavenResult == "e" || $mavenResult == "E" ]]; then
-        echo -e "Backend Dockerize Başladı ... "
+        echo -e "Maven Dockerize Başladı ... "
 
         # Bash scriptlere izin vermek
-         chmod +x countdown.sh
-         chmod +x reboot.sh
+         #chmod +x countdown.sh
+         #chmod +x reboot.sh
 
          # Geriye Say
-         countdown.sh
+         ./countdown.sh
 
         # Version
         echo -e "Version ... "
@@ -109,14 +115,14 @@ backend() {
         echo -e "Backend Dockerize Başladı ... "
 
         # Bash scriptlere izin vermek
-         chmod +x countdown.sh
-         chmod +x reboot.sh
+         #chmod +x countdown.sh
+         #chmod +x reboot.sh
 
          # Geriye Say
-         countdown.sh
+         ./countdown.sh
 
         # Dockerize dosya path
-        docker-compose -f _2_dockerize/_1_backend/postgres_docker-compose.yml up -d
+        ./_2_dockerize/_1_backend/_3_POSTGRES/backend.sh
 
     else
         echo -e "Backend çalıştırılmadı ..."
@@ -137,20 +143,20 @@ frontend() {
         echo -e "frontend Dockerize Başladı ... "
 
         # Bash scriptlere izin vermek
-         chmod +x countdown.sh
-         chmod +x reboot.sh
+         #chmod +x ./countdown.sh
+         #chmod +x ./reboot.sh
 
          # Geriye Say
-         countdown.sh
+         ./countdown.sh
 
         # Dockerize dosya path
-         _2_dockerize/_2_frontend/frontend.sh
+         ./_2_dockerize/_2_frontend/frontend.sh
     else
         echo -e "Frontend çalıştırılmadı ..."
     fi
 }
-# Function Calling (Backend)
-backend
+# Function Calling (frontend)
+frontend
 
 
 ###################################################################
@@ -164,11 +170,11 @@ sonarQube() {
         echo -e "sonarQube Dockerize Başladı ... "
 
         # Bash scriptlere izin vermek
-         chmod +x countdown.sh
-         chmod +x reboot.sh
+         #chmod +x ./countdown.sh
+         #chmod +x ./reboot.sh
 
          # Geriye Say
-         countdown.sh
+         ./countdown.sh
 
         # Dockerize dosya path
          _2_dockerize/_3_sonarqube/sonar_deployment.sh

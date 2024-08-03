@@ -38,7 +38,7 @@ services:
       context: .
       dockerfile: Postgres_Dockerfile
     ports:
-      - "5555:4444"
+      - "4444:4444"
     volumes:
       - postgres_volume_data:/var/lib/postgresql/data
       #- ./src/main/resources/pom.xml:/src/main/resources/pom.xml

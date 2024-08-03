@@ -2,7 +2,7 @@
 # docker container run -d -p 3333:80 --rm --name my_imageName
 
 # DockerHub push
-# 1.adım: Dockerfile ile image oluştur
+# 1.adım: Postgres_Dockerfile ile image oluştur
 # 2.adım: Dockerhub üzerinden repository oluştur
 # 3.adım: docker ps
 # image name: image_spring_react
@@ -12,7 +12,8 @@
 #####################################################################
 # FROM:  Çalıştıracağımız image adı
 # Node JS Image
-FROM node:18.17.1
+# FROM node:18.17.1
+FROM node:alpine AS builder
 
 # Description
 LABEL maintainer="hamitmizrak@gmail.com"
@@ -34,7 +35,7 @@ RUN echo "App Port: $PORT"
 RUN echo "App Author: $AUTHOR"
 RUN echo "App Year: $YEAR"
 
-# Directory Create
+# Directory Create(Çalışma dizinini ayarlıyoruz)
 WORKDIR /app
 
 # RUN: Terminalde çalışmasını istediğimiz kısımlar
@@ -43,24 +44,49 @@ WORKDIR /app
 # Data Persist (Kalıcı Veri)
 VOLUME /tmp
 
-# COPY
-COPY ["package.json","package-lock.json","./"]
+# Package.json dosyalarını kopyalıyoruz
+# COPY ["package.json","package-lock.json","./"]  => 2.YOL
+COPY package*.json ./
 
 # Running Continue
+RUN node -v
 RUN npm -v
 RUN npm -g list
-
 RUN ls
-RUN node -v
+
 # RUN mvn -v
-RUN npm install --production
+
+# NPM Install
 RUN npm install -g typescript
 
-# Clear Cache
-RUN apt-get clean  && rm -rf /var/lib/apt/lists/*
+# RUN npm install --production komutu, Postgres_Dockerfile'da kullanıldığında,
+# Node.js uygulamanızın yalnızca üretim bağımlılıklarını yükler.
+# Bu, uygulamanızın geliştirici bağımlılıkları olmadan çalışmasını sağlar,
+# böylece Docker imajının boyutu küçülür ve daha güvenli bir üretim ortamı oluşturulur.
+# --production: Bu bayrak, yalnızca dependencies kısmında belirtilen bağımlılıkları yükler.
+# devDependencies kısmındaki bağımlılıklar yüklenmez.
+# Bu, uygulamanızın yalnızca üretim için gerekli olan bağımlılıkları yüklemesini sağlar.
+# Bu komut genellikle Postgres_Dockerfile'da kullanılır, çünkü üretim ortamında geliştirici bağımlılıklarına ihtiyaç duyulmaz
+RUN npm install --production
 
-# COPY
+
+# Clear Cache
+# RUN apt-get clean  && rm -rf /var/lib/apt/lists/*
+
+# COPY (Uygulama dosyalarını kopyalıyoruz)
+# COPY . . komutu, Postgres_Dockerfile'da kullanılan bir talimattır ve iki noktadan oluşur.
+# Bu kaynaklardan 1. nokta:kaynaktır 2.nokta hedeftir.
+# Bu komut, kaynak dizinindeki tüm dosya ve klasörleri, hedef dizinine kopyalar.
+# İşte bu komutun ne yaptığına dair bir detaylı açıklama:
+#İlk nokta (.): Docker build komutunun çalıştırıldığı dizini temsil eder,
+# yani Docker build komutunu çalıştırdığınız dizindeki tüm dosya ve klasörler.
+#İkinci nokta (.): Docker konteynerindeki çalışma dizinini temsil eder (WORKDIR ile belirlenen dizin).
 COPY . .
+
+# Uygulamayı build ediyoruz
+# Genellikle, bu komut, proje dosyalarını derler, minimize eder ve üretim için optimize eder.
+# Örneğin, React uygulamasında bu komut, src dizinindeki dosyaları alır ve optimize edilmiş, dağıtıma hazır statik dosyalar oluşturur.
+RUN npm run build
 
 # 1<=PORT<=1023
 # 1023<=PORT<=49151
@@ -69,11 +95,39 @@ COPY . .
 # EXPOSE
 # 80  = Web dış dünyaya açılış yeridir
 # 443 = SSL Sertifates
-EXPOSE 80 443
+# EXPOSE 80 443
+
+#######################################################################################################
+#######################################################################################################
+# Production aşaması
+FROM nginx:alpine
+
+# Nginx konfigürasyon dosyasını kopyalıyoruz
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+
+# Build edilmiş dosyaları kopyalıyoruz. Bu komut silsilesinde  Node.js yapılarında bir nginx sunucusunda barındırmak içindir.
+# İlk aşamada(builder) sonra uygulama dosyalarını oluşturuyoruz ve nginx ile reverse proxy yapıyoruz.
+# Bu komut, Dockerfil eiçindeki bir COPY komutudur.
+# --from=builder => Bu komut, çok aşamlı bit yapı sürecinde iken, bir önceki aşamda tanımlanan bir imaj dosyasından dosya kopyalamak anlamına gelir
+# Bu aşamada ise genelllikle bağımlılıkların ve uygulamanın derlenemesinde kullanılmaktadır.
+# /app/build => builder aşamasında oluşturulmuş olan kaynak dosyalarının konumunu belirlemek için kullanılır.
+# /usr/share/nginx/html => Kopyalanacak dosyaların hedef konumu belirtir. Yani /usr/share/nginx/html içindeki dosyayla değiştir.
+COPY --from=builder /app/build /usr/share/nginx/html
+
+# Nginx'i başlatıyoruz.
+# Docker konteynarı başlatıldığında çalışacak varsayılan komuttur.
+# CMD=>  Yalnızca bir kez tanımlanır ve konteynar çalıştığında eğer override(Ezme) yapılmadıkca çalışır.
+# "nginx", => Nginx web sunucusunu çalıştırağı yapıdır.
+# "-g" => Nginx'i  'i doğrudan global yapılandırmasıdır.
+# "daemon off;" =>  Nginx'i arka planda daemon mode çalışmasını engelleyen bir direktiftir(Emirdir)
+# daemon mode'un yerine Nginx ön planda çalışsın
+# Kısaca: Docker, bir konteynarın ana işlemini yapıp sona erdiğinde durdurulur.
+# Duran bu yapının yerinde ön planda Nginx çalışmaya devam eder
+CMD ["nginx", "-g", "daemon off;"]
 
 # CMD
-CMD ["npm","start"]
-
+# CMD ["npm","start"]
 
 # HEALTHCHECK => Bu image dosyasının sağlık durumu (Container Çalışıyor mu)
 # --interval=30s  ==> 30 saniyede bir sağlık kontrolü yapılsın
