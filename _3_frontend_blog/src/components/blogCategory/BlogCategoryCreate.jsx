@@ -101,6 +101,8 @@ function BlogCategoryCreate({ t, i18n, props }) {
     } catch (error) {
       // Hataları Gösteriyoruz
       setError(error.response.data.validationErrors);
+      console.error(error.response.data.validationErrors);
+      
 
       // Hata varsa Spinner'ı Açıyoruz(Aktif ediyoruz)
       setSpinner(true);
@@ -112,11 +114,11 @@ function BlogCategoryCreate({ t, i18n, props }) {
   };
 
   // SPINNER FORM
-  const spinnerForm = () => {
+  const spinnerFunction = () => {
     if (spinner) {
       return (
         <div
-          className="spinner-border spinner-border-sm text-primary me-2"
+          className="spinner-border spinner-border-sm text-warning me-2"
           role="status"
         >
           <span className="sr-only">Loading...</span>
@@ -194,19 +196,27 @@ function BlogCategoryCreate({ t, i18n, props }) {
                   </span>
                 )}{" "}
                 {/* checkbox end */}
-
                 {/* RESET BUTTON */}
                 <button
                   type="reset"
                   onClick={clearForm}
                   className="btn btn-danger mt-5 me-2"
                 >
-                  t('cleaner_form')
+                  {t("cleaner_form")}
                 </button>
+                {/* SUBMIT BUTTON */}
+                <button
+                  type="submit"
+                  onClick={submitBlogCategory}
+                  className="btn btn-primary"
+                  //disabled={(multipleRequest) || ( !(localStorage.getItem("is_read") === true))}
+                >
+                  {/* SPINNER */}
+                  {spinnerFunction()}
 
-{/* SUBMIT BUTTON */}
-
-
+                  {/* SUBMIT VIEW */}
+                  {t("blog_category_create")}
+                </button>
               </div>{" "}
               {/* d-grid gap-4 end */}
             </form>{" "}

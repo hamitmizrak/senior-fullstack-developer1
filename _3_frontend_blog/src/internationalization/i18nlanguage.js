@@ -32,7 +32,8 @@ i18n.use(initReactI18next).init({
 
                     'id':'id',
                     'blog_category_name':'Blog Category Name',
-                    'is_read':" are you is read requirement sözleşme ?"
+                    'is_read':" are you is read requirement sözleşme ?",
+                    'cleaner_form':"Form Cleaner",
                 }
             },
         tr:
@@ -59,7 +60,8 @@ i18n.use(initReactI18next).init({
                     'blog_category_create': 'Blog Kategori Oluştur',
                     'id':'id',
                     'blog_category_name':'Blog Kategori Adı',
-                    'is_read':"Gerekli Sözleşmeyi okunuz mu ?"
+                    'is_read':"Gerekli Sözleşmeyi okunuz mu ?",
+                    'cleaner_form':"Form temizle",
                 }
             }
     },
