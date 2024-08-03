@@ -7,4 +7,4 @@ echo "Spring Boot - Postgresql Dockerize"
 java --version
 javac --version
 
-docker-compose -f ./postgres_docker-compose.yml up -d
+docker-compose -f postgres_docker-compose.yml up -d

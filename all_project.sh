@@ -121,9 +121,15 @@ backend() {
          # Geriye Say
          ./countdown.sh
 
-        # Dockerize dosya path
-        ./_2_dockerize/_1_backend/_3_POSTGRES/backend.sh
+        # Listelemek
+        ls -al
+        pwd
+        ./countdown.sh
 
+        # Dockerize dosya path
+        cd ./_2_dockerize/_1_backend/_3_POSTGRES/
+        chmod +x backend.sh
+        ./backend.sh
     else
         echo -e "Backend çalıştırılmadı ..."
     fi
@@ -149,8 +155,18 @@ frontend() {
          # Geriye Say
          ./countdown.sh
 
+         # Listelemek
+        ls -al
+        pwd
+        ./countdown.sh
+
         # Dockerize dosya path
-         ./_2_dockerize/_2_frontend/frontend.sh
+        cd ../../
+        pwd
+         cd ./_2_frontend
+         ls -al
+         chmod +x frontend.sh
+         ./frontend.sh
     else
         echo -e "Frontend çalıştırılmadı ..."
     fi
@@ -177,8 +193,9 @@ sonarQube() {
          ./countdown.sh
 
         # Dockerize dosya path
-         _2_dockerize/_3_sonarqube/sonar_deployment.sh
-
+        cd ./_2_dockerize/_3_sonarqube
+         chmod +x sonar_deployment.sh
+         ./sonar_deployment.sh
     else
         echo -e "sonarQube çalıştırılmadı ..."
     fi
