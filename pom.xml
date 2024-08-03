@@ -141,51 +141,20 @@
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
-        <!--Templates thymeleaf springsecurity6-->
-        <!--<dependency>
-            <groupId>org.thymeleaf.extras</groupId>
-            <artifactId>thymeleaf-extras-springsecurity6</artifactId>
-        </dependency>-->
 
-        <!-- swagger open-api-3.0-->
-        <!--<dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-            <version>${swagger.version}</version>
-        </dependency>-->
+        <!--Swagger For Spring Boot 3+ :-->
         <dependency>
             <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-ui</artifactId>
-            <version>1.6.0</version>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.0.3</version>
         </dependency>
 
-        <!-- swagger open-api-3.0-->
-        <!--unutma ==> @SpringBootApplication @EnableSwagger2 eklemek gerekiyor-->
-        <!--
-            <dependency>
-                 <groupId>org.springdoc</groupId>
-                 <artifactId>springdoc-openapi-ui</artifactId>
-                 <version>1.6.5</version>
-             </dependency>
-         -->
-
-        <!-- swagger springfox-->
-        <!--
-            <dependency>
-                 <groupId>io.springfox</groupId>
-                 <artifactId>springfox-boot-starter</artifactId>
-                 <version>${swagger.version}</version>
-             </dependency>
-         -->
-
-        <!-- https://mvnrepository.com/artifact/io.springfox/springfox-boot-starter -->
-        <!--
-            <dependency>
-                  <groupId>io.springfox</groupId>
-                  <artifactId>springfox-boot-starter</artifactId>
-                  <version>${swagger.fox.version}</version>
-              </dependency>
-          -->
+       <!-- For Spring Boot 2+:-->
+        <!--<dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.6.15</version>
+        </dependency>-->
 
         <!-- #### AUTHENTICATION / AUTHORIZATION #################################################  -->
         <!--  json web token JWT-->
