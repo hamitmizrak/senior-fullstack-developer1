@@ -2,7 +2,7 @@ package com.hamitmizrak.seniorfullstack1.controller.api.impl;
 
 
 import com.hamitmizrak.seniorfullstack1.business.dto.BlogDto;
-import com.hamitmizrak.seniorfullstack1.business.services.impl.IBlogServices;
+import com.hamitmizrak.seniorfullstack1.business.services.IBlogServices;
 import com.hamitmizrak.seniorfullstack1.controller.api.IBlogApi;
 import com.hamitmizrak.seniorfullstack1.utils.frontend.ReactFrontend;
 import jakarta.validation.Valid;

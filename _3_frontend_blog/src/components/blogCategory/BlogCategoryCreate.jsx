@@ -101,6 +101,7 @@ function BlogCategoryCreate({ t, i18n, props }) {
     } catch (error) {
       // Hataları Gösteriyoruz
       setError(error.response.data.validationErrors);
+      console.error(error.response);
       console.error(error.response.data.validationErrors);
       
 
@@ -166,7 +167,7 @@ function BlogCategoryCreate({ t, i18n, props }) {
                     name="categoryName"
                     placeholder={t("blog_category_create")}
                     autoFocus={true}
-                    required={true}
+                    // required={true}
                     onChange={onChangecategoryName}
                   />
                   {/* input end */}

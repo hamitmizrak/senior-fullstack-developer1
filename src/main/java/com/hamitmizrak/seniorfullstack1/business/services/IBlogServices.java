@@ -1,4 +1,4 @@
-package com.hamitmizrak.seniorfullstack1.business.services.impl;
+package com.hamitmizrak.seniorfullstack1.business.services;
 
 import java.util.List;
 

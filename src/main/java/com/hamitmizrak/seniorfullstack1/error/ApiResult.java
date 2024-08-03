@@ -8,7 +8,9 @@ import java.util.Locale;
 import java.util.Map;
 
 // LOMBOK
-// @Data
+
+@Data
+/*
 @Getter
 @Setter
 @ToString
@@ -16,6 +18,7 @@ import java.util.Map;
 @AllArgsConstructor
 @Builder
 @Log4j2
+*/
 
 // jackson: Objeyi json'a çevirmek
 // Eğer aşağıdaki datalardan null değer varsa frontent'te gösterme
@@ -30,6 +33,12 @@ public class ApiResult {
     private Map<String, String> validationErrors;
     //private Date createdDate = new Date(System.currentTimeMillis());
     private String createdDate = nowDate();
+
+
+    // Constructor (Parametresiz)
+    public ApiResult() {
+
+    }
 
     // Constructor (Parametreli) => s  m  p
     public ApiResult(Integer status, String message, String path) {

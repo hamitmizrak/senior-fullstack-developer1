@@ -1,9 +1,9 @@
-package com.hamitmizrak.seniorfullstack1.business.services;
+package com.hamitmizrak.seniorfullstack1.business.services.impl;
 
 
 import com.hamitmizrak.seniorfullstack1.bean.ModelMapperBean;
 import com.hamitmizrak.seniorfullstack1.business.dto.BlogDto;
-import com.hamitmizrak.seniorfullstack1.business.services.impl.IBlogServices;
+import com.hamitmizrak.seniorfullstack1.business.services.IBlogServices;
 import com.hamitmizrak.seniorfullstack1.data.entity.BlogEntity;
 import com.hamitmizrak.seniorfullstack1.data.repository.IBlogRepository;
 import com.hamitmizrak.seniorfullstack1.exception.HamitMizrakException;

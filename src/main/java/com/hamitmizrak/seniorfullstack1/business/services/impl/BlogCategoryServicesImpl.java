@@ -1,9 +1,9 @@
-package com.hamitmizrak.seniorfullstack1.business.services;
+package com.hamitmizrak.seniorfullstack1.business.services.impl;
 
 
 import com.hamitmizrak.seniorfullstack1.bean.ModelMapperBean;
 import com.hamitmizrak.seniorfullstack1.business.dto.BlogCategoryDto;
-import com.hamitmizrak.seniorfullstack1.business.services.impl.IBlogCategoryServices;
+import com.hamitmizrak.seniorfullstack1.business.services.IBlogCategoryServices;
 import com.hamitmizrak.seniorfullstack1.data.entity.BlogCategoryEntity;
 import com.hamitmizrak.seniorfullstack1.data.repository.IBlogCategoryRepository;
 import com.hamitmizrak.seniorfullstack1.exception.HamitMizrakException;
@@ -91,7 +91,7 @@ public class BlogCategoryServicesImpl implements IBlogCategoryServices<BlogCateg
             blogCategoryDto.setCategoryId(categoryEntity.getCategoryId());
             blogCategoryDto.setSystemCreatedDate(categoryEntity.getSystemCreatedDate());
         } else {
-            throw new NullPointerException(" CategoryDto null veri");
+            throw new NullPointerException(BlogCategoryDto.class+" CategoryDto null veri");
         }
         return blogCategoryDto;
     }

@@ -1,18 +1,17 @@
 package com.hamitmizrak.seniorfullstack1.error;
 
-
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.error.ErrorAttributeOptions;
 import org.springframework.boot.web.servlet.error.ErrorAttributes;
 import org.springframework.boot.web.servlet.error.ErrorController;
-import org.springframework.stereotype.Component;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.WebRequest;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -24,7 +23,7 @@ import java.util.Map;
 @RestController
 @CrossOrigin
 // Spring error için benim yazdığım class,method
-@Component
+//@Component
 public class ErrorControllerHandleWebRequest implements ErrorController {
     // ErrorController
     // ErrorAttributes
@@ -32,11 +31,14 @@ public class ErrorControllerHandleWebRequest implements ErrorController {
 
     // Injection
     // org.springframework.boot.web.servlet.error.ErrorAttributes
+
     private final ErrorAttributes errorAttributes;
     @Autowired
     public ErrorControllerHandleWebRequest(ErrorAttributes errorAttributes) {
         this.errorAttributes = errorAttributes;
     }
+
+    //private final ErrorAttributes errorAttributes;
 
     // Field: s m p v
     private Integer status;
@@ -47,8 +49,8 @@ public class ErrorControllerHandleWebRequest implements ErrorController {
     // ApiResult (Global)
     private ApiResult apiResult;
 
-    // http://localhost:1111/error
-    @RequestMapping("/error")
+    // http://localhost:4444/error
+    @GetMapping("/error")
     public ApiResult handleError(WebRequest webRequest) {
 
         // Spring Boot Version>=2.3
@@ -70,8 +72,13 @@ public class ErrorControllerHandleWebRequest implements ErrorController {
         apiResult=new ApiResult(status,message,path);
 
         // Eğer Spring'ten gelen Hata varsa bunu yaz
-        if(attributes.containsKey("error")) {
+        if(attributes.containsKey("errors")) {
+
+            // List Create
             List<FieldError> fieldErrorList=(List<FieldError>) attributes.get("error");
+
+            // ValidationError Instance
+            validationErrors=new HashMap<>();
 
             // Bütün Hataları döngü ile dönerek yakala
             for(FieldError fieldError:fieldErrorList) {
@@ -80,11 +87,9 @@ public class ErrorControllerHandleWebRequest implements ErrorController {
 
             // Hatalarımızı yazdığımız ApiResult'ta Set et.
             apiResult.setValidationErrors(validationErrors);
+            System.out.println(validationErrors);
         }
         return apiResult;
     } //end method
-
-
-
 
 } //end class
