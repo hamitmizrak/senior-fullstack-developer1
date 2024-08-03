@@ -50,6 +50,19 @@
 - Access Token
 - SSH Keys
 - GPG Keys
+---
 
+## GitLab Push
+```sh 
+cd existing_repo
+git remote add gitlab https://gitlab.com/devops3664131/SpringBoot.git
+git branch -M main
+git push -uf gitlab main
+```
+
+git remote 
+git remote -v
+origin  https://github.com/hamitmizrak/senior-fullstack-developer1.git (fetch)
+origin  https://github.com/hamitmizrak/senior-fullstack-developer1.git (push)
 
 
