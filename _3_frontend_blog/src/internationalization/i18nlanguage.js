@@ -31,7 +31,8 @@ i18n.use(initReactI18next).init({
                     'blog_category_create': 'Blog Category Create',
 
                     'id':'id',
-                    'blog_category_name':'Blog Category Name'
+                    'blog_category_name':'Blog Category Name',
+                    'is_read':" are you is read requirement sözleşme ?"
                 }
             },
         tr:
@@ -57,7 +58,8 @@ i18n.use(initReactI18next).init({
                     'blog_category_view': 'Blog Kategori Göster',
                     'blog_category_create': 'Blog Kategori Oluştur',
                     'id':'id',
-                    'blog_category_name':'Blog Kategori Adı'
+                    'blog_category_name':'Blog Kategori Adı',
+                    'is_read':"Gerekli Sözleşmeyi okunuz mu ?"
                 }
             }
     },

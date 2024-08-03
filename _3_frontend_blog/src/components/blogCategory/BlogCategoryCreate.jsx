@@ -7,6 +7,9 @@ import { withTranslation } from "react-i18next";
 // NAVIGATE
 import { useNavigate } from "react-router-dom";
 
+// API CALLS (asyn-await)
+import BlogCategoryApi from "../../services/BlogCategoryApi";
+
 // FUNCTION
 function BlogCategoryCreate({ t, i18n, props }) {
   // REDIRECT
@@ -35,19 +38,19 @@ function BlogCategoryCreate({ t, i18n, props }) {
     setIsRead(event.target.checked);
     // 1 kere okuduktan sonra okuma checkboz'ı görünmesin
     localStorage.setItem("is_read", "true");
-  };
+  }; //end onChangeIsRead
 
   // Form input Clear
   const clearForm = () => {
     setCategoryName(undefined);
-  };
+  }; //end clearForm
 
   // OnChange
-  function categoryNameOnChange(event) {
+  function onChangecategoryName(event) {
     const { name, value } = event.target;
     console.log(name + " => " + value);
     setCategoryName(value);
-  }
+  } // end categoryNameOnChange
 
   // onSubmit PreventDefault
   const onSubmitForm = (event) => {
@@ -57,18 +60,53 @@ function BlogCategoryCreate({ t, i18n, props }) {
     // Varsayılan davranışları engellemek için preventDefault() fonksiyonunu kullanırız.
     // Browser sen dur bir yere birşey gönder ben istersem gönderirim.
     event.preventDefault();
-  };
+  }; //end onSubmitForm
 
   // Submit
-  const submitBlogCategory = async () => {
+  const submitBlogCategory = async (event) => {
+    // Blog Category Create Object
+    const blogCategoryCreateObject = {
+      categoryName,
+    };
+    console.log(blogCategoryCreateObject);
+
+    // Hataları Göstermek
+    setError(null);
+
+    // Spinner'ı Açıyoruz(Aktif ediyoruz)
+    setSpinner(true);
+
+    // Multiple Request'ı Başlangıçta açıyoruz(Aktif ediyoruz)
+    setMultipleRequest(true);
+
+    // API İLE İLGİLİ İŞLEMLERİ YAPIYORUZ
     try {
-      // BÜTÜN Object Almak
-      // const blogCategory = { name: categoryName };
-      // BENİN LOCAL STORAGE İLE KAYDETMEK İÇİN
-      // localStorage.setItem("category_name", categoryName);
-      // REDIRECT
-      // navigate("/blog-categories", { replace: true });
+      //const response = await fetch("https://api.example.com/blog/category", {});
+      const response = await BlogCategoryApi.categoryApiCreate(
+        blogCategoryCreateObject
+      );
+      if (response.status === 200) {
+        //Spinner'ı Kapıyoruz(Pasif ediyoruz)
+        setSpinner(false);
+
+        // Multiple Request'ı Başlangıçta kapatıyoruz(Pasif ediyoruz)
+        setMultipleRequest(false);
+
+        // Yeni Kayıt başarılıysa
+        window.alert("Blog kategori başarıyla oluşturuldu.");
+        navigate("/blog/category/list");
+      } else {
+        window.alert("Blog kategori oluşmadı!!!");
+      }
     } catch (error) {
+      // Hataları Gösteriyoruz
+      setError(error.response.data.validationErrors);
+
+      // Hata varsa Spinner'ı Açıyoruz(Aktif ediyoruz)
+      setSpinner(true);
+
+      // Multiple Request'ı Başlangıçta kapatıyoruz(Pasif ediyoruz)
+      setMultipleRequest(false);
     } finally {
     }
   };
@@ -84,7 +122,7 @@ function BlogCategoryCreate({ t, i18n, props }) {
           <span className="sr-only">Loading...</span>
         </div>
       );
-    }else{
+    } else {
       return "";
     }
   };
@@ -99,7 +137,7 @@ function BlogCategoryCreate({ t, i18n, props }) {
   // Return
   return (
     <React.Fragment>
-      <div className="container">
+      <div className="container mt-5 mb-5">
         <div className="row">
           <div className="col-md-2"></div>
           <div className="col-md-8">
@@ -107,11 +145,80 @@ function BlogCategoryCreate({ t, i18n, props }) {
               {t("blog_category_create")}
             </h1>
             <p className="text-muted text-center">Blog Category</p>
-          </div>
+            {/* FORM */}
+            {/* event.preventDefault(); */}
+            <form onSubmit={onSubmitForm}>
+              <div className="d-grid gap-4">
+                {/* FORM GROUP */}
+                <div className="form-group">
+                  {/* LABEL */}
+                  <label htmlFor="categoryName">
+                    {t("blog_category_create")}
+                  </label>
+
+                  {/* INPUT */}
+                  <input
+                    type="text"
+                    className={classNameData}
+                    id="categoryName"
+                    name="categoryName"
+                    placeholder={t("blog_category_create")}
+                    autoFocus={true}
+                    required={true}
+                    onChange={onChangecategoryName}
+                  />
+                  {/* input end */}
+
+                  {/* ALERT ERROR */}
+                  {error ? (
+                    <div className="invalid-feedback">{error.categoryName}</div>
+                  ) : (
+                    ""
+                  )}
+                </div>
+                {/* EĞER OKUNMUŞSA BİR KERE DAHA GÖSTERME */}
+                {localStorage.getItem("is_read") === "true" ? (
+                  ""
+                ) : (
+                  <span style={{ display: "inline" }}>
+                    <input
+                      type="checkbox"
+                      className="form-check-input"
+                      onChange={onChangeIsRead}
+                      name="isRead"
+                      id="isRead"
+                    />
+                    <abbr title={t("is_read")} htmlFor="isRead">
+                      {t("is_read")}
+                    </abbr>
+                  </span>
+                )}{" "}
+                {/* checkbox end */}
+
+                {/* RESET BUTTON */}
+                <button
+                  type="reset"
+                  onClick={clearForm}
+                  className="btn btn-danger mt-5 me-2"
+                >
+                  t('cleaner_form')
+                </button>
+
+{/* SUBMIT BUTTON */}
+
+
+              </div>{" "}
+              {/* d-grid gap-4 end */}
+            </form>{" "}
+            {/* form end */}
+          </div>{" "}
+          {/* col-md-8 end */}
           <div className="col-md-2"></div>
           <div className="card"></div>
-        </div>
-      </div>
+        </div>{" "}
+        {/* row end */}
+      </div>{" "}
+      {/* container end */}
     </React.Fragment>
   );
 }
