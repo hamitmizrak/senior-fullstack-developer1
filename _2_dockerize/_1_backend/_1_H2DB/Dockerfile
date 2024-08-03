@@ -3,7 +3,7 @@ FROM openjdk:21
 
 # ARG
 #ARG JAR_FILE=*.jar
-ARG JAR_FILE=SeniorFullStack1.jar
+ARG JAR_FILE=h2db_spring.jar
 
 # ADD
 ADD ${JAR_FILE} blog.jar

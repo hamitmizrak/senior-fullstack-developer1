@@ -1,68 +1,48 @@
 package com.hamitmizrak.seniorfullstack1.error;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.*;
-import lombok.extern.log4j.Log4j2;
-import java.text.SimpleDateFormat;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+
 import java.util.Date;
-import java.util.Locale;
 import java.util.Map;
 
 // LOMBOK
-
 @Data
-/*
-@Getter
-@Setter
-@ToString
-@NoArgsConstructor
-@AllArgsConstructor
 @Builder
-@Log4j2
-*/
+@AllArgsConstructor
 
-// jackson: Objeyi json'a çevirmek
-// Eğer aşağıdaki datalardan null değer varsa frontent'te gösterme
+// spring Frameworkta gelen Error'ları kendimize göre yakalamak
+// (Jackson: objeyi json'a çevirir)
+// Eğer sistemde null değer varsa backentte gönderme
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ApiResult {
 
-    // Field: s e m  p v c
-    private Integer status;
-    private String error;
-    private String message;
+    // Pırasa Vali MESC
     private String path;
-    private Map<String, String> validationErrors;
-    //private Date createdDate = new Date(System.currentTimeMillis());
-    private String createdDate = nowDate();
+    private String message;
+    private String error;
+    private int status;
+    private Date createdDate=new Date(System.currentTimeMillis());
+    private Map<String,String> validationErrors;
 
-
-    // Constructor (Parametresiz)
+    // parametresiz constructor
     public ApiResult() {
-
     }
 
-    // Constructor (Parametreli) => s  m  p
-    public ApiResult(Integer status, String message, String path) {
-        this.status = status;
-        this.message = message;
+    // parametreli constructor
+    public ApiResult(String path, String message,  int status) {
         this.path = path;
-        //createdDate = new Date(System.currentTimeMillis());
+        this.message = message;
+        this.status = status;
     }
 
-    // Constructor (Parametreli) => s e m  p
-    public ApiResult(Integer status, String error, String message, String path) {
-        this.status = status;
+    // parametreli constructor
+    public ApiResult(String path, String message, String error, int status) {
+        this.path = path;
+        this.message = message;
         this.error = error;
-        this.message = message;
-        this.path = path;
-        //createdDate = new Date(System.currentTimeMillis());
+        this.status = status;
     }
-
-    // Now Date
-    private String nowDate() {
-        Locale locale=new Locale("tr","TR");
-        SimpleDateFormat dateFormat=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", locale);
-        Date date=new Date();
-        return  dateFormat.format(date);
-    } //end nowDate() method
-
 } //end class
