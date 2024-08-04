@@ -42,6 +42,7 @@ spring.command.line.rules.superadmin.roles=SUPER_ADMIN
 package com.hamitmizrak.seniorfullstack1.security;
 
 
+import com.hamitmizrak.seniorfullstack1.bean.PasswordEncoderBean;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -69,6 +70,9 @@ import org.springframework.web.servlet.handler.HandlerMappingIntrospector;
 @EnableWebSecurity // Spring Security aktifleştirmek içindir
 public class SecurityConfig {
 
+    // Injection
+    private final PasswordEncoderBean passwordEncoder;
+
     // username: hamitmizrak@gmail.com
     // password: root
 
@@ -87,10 +91,10 @@ public class SecurityConfig {
     private String roles;
 
     // PASSWORD ENCODER
-    @Bean
+  /*  @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
-    } //end PasswordEncoder
+    } //end PasswordEncoder*/
 
     // WEB DOSYALARINA ERİŞİM (CS,JS,IMAGE)
     // http://localhost:4444/swagger-ui/index.html
@@ -168,3 +172,23 @@ public class SecurityConfig {
     } //end SecurityFilterChain
 
 } //end SecurityConfig
+
+/*
+ConfigServletWebServerApplicationContext : Exception encountered during context initialization -
+cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException:
+
+
+Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration':
+Unsatisfied dependency expressed through field 'httpSecurity':
+
+Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration.httpSecurity'
+defined in class path resource [org/springframework/security/config/annotation/web/configuration/HttpSecurityConfiguration.class]:
+
+Failed to instantiate [org.springframework.security.config.annotation.web.builders.HttpSecurity]:
+Factory method 'httpSecurity' threw exception with message: Error creating bean with name 'inMemoryUserDetailsManager'
+
+defined in class path resource [com/hamitmizrak/seniorfullstack1/security/SecurityConfig.class]:
+Unsatisfied dependency expressed through method 'inMemoryUserDetailsManager'
+parameter 0: No qualifying bean of type 'org.springframework.security.crypto.password.PasswordEncoder'
+available: expected single matching bean but found 2: getPasswordEncoderMethod,passwordEncoder
+*/

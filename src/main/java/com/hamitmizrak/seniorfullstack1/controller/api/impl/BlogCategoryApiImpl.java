@@ -20,7 +20,7 @@ import java.util.List;
 
 // API
 @RestController
-@CrossOrigin(origins = ReactFrontend.REACT_FRONTEND_PORT_URL) // http://localhost:3000
+@CrossOrigin(origins = ReactFrontend.PRODUCTION_REACT_FRONTEND_PORT_URL) // http://localhost:3000
 @RequestMapping("/blog/category/api/v1")
 public class BlogCategoryApiImpl implements IBlogCategoryApi<BlogCategoryDto> {
 

@@ -12,7 +12,7 @@ UFW="Uncomplicated Firewall Ggüvenlik duvarı Yöentim Araçı"
 LOGOUT="Sistemi Tekrar Başlatmak"
 CHECK="Yüklenecek Paket bağımlılıkları"
 TECH="Diğer Teknolojiler"
-MAVEN="Backend projesi için Jar veya War dosyasının maven ile oluşturmak"
+MAVEN="Jar veya War dosyasının maven ile oluşturmak"
 BACKEND="Backend Kurulumu Başlıyor"
 FRONTEND="Frontend Kurulumu Başlıyor"
 SONARQUBE="SonarQube Kurulumu Başlıyor"
@@ -77,6 +77,9 @@ maven() {
         # Bash scriptlere izin vermek
          #chmod +x countdown.sh
          #chmod +x reboot.sh
+
+        # mvn clean package
+        mvn clean
 
          # Geriye Say
          ./countdown.sh

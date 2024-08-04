@@ -26,7 +26,7 @@ import java.util.Map;
 
 // Spring Boot defaulttan gelen error'ı kendimize göre customise yapıyoruz.
 @RestController
-@CrossOrigin(origins = ReactFrontend.REACT_FRONTEND_PORT_URL) //localhost:3000 portunu backentte kullanabiliriz.
+@CrossOrigin(origins = ReactFrontend.PRODUCTION_REACT_FRONTEND_PORT_URL) //localhost:3000 portunu backentte kullanabiliriz.
 public class CustomErrorHandleWebRequest implements ErrorController {
 
     // 1.YOL (Field Injection)
