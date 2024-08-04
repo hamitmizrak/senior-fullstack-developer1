@@ -1,14 +1,8 @@
 package com.hamitmizrak.seniorfullstack1;
 
-import jakarta.annotation.PostConstruct;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-
-import java.util.TimeZone;
 
 // Mongo aktif etmek ici
 // @EnableMongoRepositories
@@ -20,9 +14,9 @@ import java.util.TimeZone;
 // @EnableAsync
 
 // SCAN
- //@EntityScan(basePackages = "com.hamitmizrak.seniorfullstack1.data.entity") //Entity bulamadığı zaman
- //@EnableJpaRepositories(basePackages = "com.hamitmizrak.seniorfullstack1.data.repository") //Repository bulamadığı zaman
- //@ComponentScan("com")
+//@EntityScan(basePackages = "com.hamitmizrak.seniorfullstack1.data.entity") //Entity bulamadığı zaman
+//@EnableJpaRepositories(basePackages = "com.hamitmizrak.seniorfullstack1.data.repository") //Repository bulamadığı zaman
+//@ComponentScan("com")
 
 // Spring Cache aktif etmek gerekiyor.
 // @EnableCaching
@@ -30,28 +24,27 @@ import java.util.TimeZone;
 // Auditing Aktif etmek
 @EnableJpaAuditing(auditorAwareRef = "auditorAwareBeanMethod")
 
-// Spring Security: Şimdilik dahil etme ancak Spring security için gerekli kütüphaneleri dahil
-@SpringBootApplication(exclude = {
+// Spring Security: Şimdilik dahil etme, çünkü Bcrypted kullancağım ancak Spring security için gerekli kütüphaneleri dahil
+// Buradaki exclude ne zaman kapatmam gerekiyor ? cevap: Spring Security ile çalıştığımız zaman kapat
+/*@SpringBootApplication(exclude = {
         //SecurityAutoConfiguration.class,
         org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration.class,
-        org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration.class
-}
-)
-// @SpringBootApplication
-//public class FullStackDeveloper12Application {
+        org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration.class}
+)*/
 
 // Apache Tomcat için: extends SpringBootServletInitializer
-
-//@SpringBootApplication
+@SpringBootApplication
 public class SeniorFullStack1Application {
 
- /*   @PostConstruct
+ /*
+ @PostConstruct
     public void init() {
         TimeZone.setDefault(TimeZone.getTimeZone("IST"));
-    }*/
+    }
+ */
 
+    // PSVM
     public static void main(String[] args) {
-
         // devtools active isActive
         // System.setProperty("spring.devtools.restart.enabled","true");
 

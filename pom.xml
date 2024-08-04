@@ -24,12 +24,12 @@
     <developers>
         <developer/>
     </developers>
-   <!-- <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
-    </scm>-->
+    <!-- <scm>
+         <connection/>
+         <developerConnection/>
+         <tag/>
+         <url/>
+     </scm>-->
 
     <!--
    war: java EE için kullanalım. JSP,servlet,html,css3
@@ -90,11 +90,11 @@
         </dependency>
 
         <!-- JSON işlemleri için gson-->
-       <!-- <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>${gson.version}</version>
-        </dependency>-->
+        <!-- <dependency>
+             <groupId>com.google.code.gson</groupId>
+             <artifactId>gson</artifactId>
+             <version>${gson.version}</version>
+         </dependency>-->
 
         <!-- jackson: JSON donusturmelerinde XML -->
         <!--
@@ -140,7 +140,6 @@
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
-
         <!--Swagger For Spring Boot 3+ :-->
         <dependency>
             <groupId>org.springdoc</groupId>
@@ -148,7 +147,7 @@
             <version>${swagger.version}</version>
         </dependency>
 
-       <!-- For Spring Boot 2+:-->
+        <!-- For Spring Boot 2+:-->
         <!--<dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
@@ -200,11 +199,11 @@
             <version>8.0.28</version>
         </dependency>
 
-       <!-- <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
-            <scope>runtime</scope>
-        </dependency>-->
+        <!-- <dependency>
+             <groupId>com.mysql</groupId>
+             <artifactId>mysql-connector-j</artifactId>
+             <scope>runtime</scope>
+         </dependency>-->
 
         <!--postgresql-->
         <dependency>
@@ -267,15 +266,17 @@
              <scope>runtime</scope>
          </dependency>-->
 
+        <!--devtools: otomatik sistemi compiler etmek içindir-->
+        <!--devtools: ancak Spring security kapatabilirsin-->
+        <!-- <dependency>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-devtools</artifactId>
+             <optional>true</optional>
+             <scope>runtime</scope>
+         </dependency>-->
+
         <!-- Monitoring Prometheus -->
         <!-- Monitoring Grafana -->
-        <!--devtools:otomatik compiler icin-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <optional>true</optional>
-            <scope>runtime</scope>
-        </dependency>
 
         <!--application.properties ==> application.yml-->
         <dependency>
@@ -300,11 +301,11 @@
             <scope>provided</scope>
         </dependency>
 
-       <!-- <dependency>
-            <groupId>commons-digester</groupId>
-            <artifactId>commons-digester</artifactId>
-            <version>2.1</version>
-        </dependency>-->
+        <!-- <dependency>
+             <groupId>commons-digester</groupId>
+             <artifactId>commons-digester</artifactId>
+             <version>2.1</version>
+         </dependency>-->
 
         <!-- Prometheus -->
         <dependency>
@@ -367,12 +368,12 @@
             <scope>test</scope>
         </dependency>
 
-     <!-- <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.11.0-M2</version>
-            <scope>test</scope>
-        </dependency>-->
+        <!-- <dependency>
+               <groupId>org.junit.jupiter</groupId>
+               <artifactId>junit-jupiter-engine</artifactId>
+               <version>5.11.0-M2</version>
+               <scope>test</scope>
+           </dependency>-->
     </dependencies>
     <!--end dependencies-->
 
