@@ -195,8 +195,10 @@ sonarQube() {
          # Geriye Say
          ./countdown.sh
 
+         # Path
+         cd ../_2_dockerize/_3_sonarqube
+
         # Dockerize dosya path
-        cd ./_2_dockerize/_3_sonarqube
          chmod +x sonar_deployment.sh
          ./sonar_deployment.sh
     else

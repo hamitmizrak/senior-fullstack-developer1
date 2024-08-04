@@ -159,11 +159,11 @@ public class SecurityConfig {
                                 .anyRequest().authenticated()) //end httpSecurity
 
                 // Http Form İzin Ver
-                .httpBasic(Customizer.withDefaults())
+                //.httpBasic(Customizer.withDefaults())
 
-                        // Page Form İzin Ver
-                        // Not: Eğer formLogin seçerseniz Postman uygulamasında Authentication, Authorization işlemlerinde sıkıntı çaıkartacak
-                        //.formLogin(Customizer.withDefaults());
+            // Page Form İzin Ver
+            // Not: Eğer formLogin seçerseniz Postman uygulamasında Authentication, Authorization işlemlerinde sıkıntı çaıkartacak
+            .formLogin(Customizer.withDefaults())
 
                 // Session
                 // Eğer session olmuş bir kullanıcı varsa logout sonunda güvenli çıkış yapılsın

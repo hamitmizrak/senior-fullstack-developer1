@@ -1,0 +1,121 @@
+
+# VARIABLES (1)
+variables:
+  global_variables: "Genel Kullanım"
+  maven_target_variable: "Maven Spring Boot Target Build"
+  bash_script_variable: "Bash Script Çalışıyor"
+  version_variable: "Version Çalışıyor"
+  nginx_variable: "Nginx Çalışıyor"
+  docker_compose_variable: "Docker Compose çalışıyor"
+  # maven Repository
+  MAVEN_OPTS: -Dmaven.repo.local=.m2/repository
+  # Docker
+  DOCKER_DRIVER: overlay
+
+# MAVEN TARGET (2)
+cache:
+  paths:
+    - .m2/repository
+    - target
+
+# DOCKER (3)
+# Docker Image
+image: maven:latest
+
+# STAGES (4)
+stages:
+  - maven_script
+  - docker_stage
+  - bash_script
+  - nginx_stage
+
+
+# SCRIPT (5)
+
+# Hazırlık Script
+before_script:
+  - echo "script başladı"
+
+# JOBS
+
+# JOB(1) Maven Target
+maven_job:
+  stage: maven_script
+  script:
+    - echo "$maven_target_variable"
+    - ls -lab
+    - maven clean
+    - maven clean package -DskipTests
+  artifacts:
+    paths:
+      - documentation/api/dist
+  when: on_success
+
+
+# JOB(2) Version
+docker_job:
+  stage: docker_stage
+  image: docker:latest
+  services:
+    - docker:dind
+  variables:
+    DOCKER_DRIVER: overlay2
+    DOCER_TLS_CERTDIR: "/certs"
+  script:
+    - echo "$docker_compose_variable"
+    - docker info
+    - apt-get update -y
+    - docker-compose --version
+    - docker-compose up -d
+    - docker ps
+  artifacts:
+    untracked: false
+    expire_in: 30 days
+    paths: ["${CI_PROJECT_DIR}/*.html"]
+
+
+# JOB(3) Bash Script
+bash_script_job:
+  stage: bash_script
+  script:
+    - echo "$bash_script_variable"
+    - ls -lab
+    - chmod +x  all_project.sh
+    - chmod 755 all_project.sh
+    - ./all_project.sh
+
+
+# JOB(3) Version
+version_job:
+  stage: bash_script
+  script:
+    - echo "$version_variable"
+    - ls -lab
+    - mvn -v
+    - java --version
+    - mvn --version
+    - docker-compose --version
+    - curl ifconfig.me
+
+# JOB(4) Version
+nginx_job:
+  stage: nginx_stage
+  script:
+    - echo "$nginx_variable"
+    - ls -lab
+    - apt-get update
+    - apt-get upgrade -y
+    - service nginx start
+    - pwd
+    - curl localhost:80
+    #- cp -r nginx.conf  /usr/share/nginx/html
+    - cp -r nginx.conf  /etc/nginx/nginx.conf
+  artifacts:
+    untracked: false
+    expire_in: 30 days
+    paths: ["${CI_PROJECT_DIR}/*.html"]
+
+
+
+
+
