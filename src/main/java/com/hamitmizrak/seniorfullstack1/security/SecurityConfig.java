@@ -69,6 +69,9 @@ import org.springframework.web.servlet.handler.HandlerMappingIntrospector;
 @EnableWebSecurity // Spring Security aktifleştirmek içindir
 public class SecurityConfig {
 
+    // username: hamitmizrak@gmail.com
+    // password: root
+
     // VALUE(application.properties)
     // Super Admin (application.properties veri almak için)
     // import org.springframework.beans.factory.annotation.Value;
@@ -163,6 +166,5 @@ public class SecurityConfig {
                 .logout().logoutUrl("/logout").invalidateHttpSession(true);
         return httpSecurity.build();
     } //end SecurityFilterChain
-
 
 } //end SecurityConfig
