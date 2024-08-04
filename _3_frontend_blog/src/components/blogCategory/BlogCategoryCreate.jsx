@@ -12,7 +12,7 @@ import { withTranslation } from 'react-i18next';
 // BLOG CATEGORY API
 import BlogCategoryApi from "../../services/BlogCategoryApi";
 
-// FUNcTION REGISTER
+// FUNcTION BLOG CATEGORY CREATE
 function BlogCategoryCreate({ t, i18n, props }) {
 
     // REDIRECT
@@ -185,7 +185,6 @@ function BlogCategoryCreate({ t, i18n, props }) {
                     </button>
                 </form>
             </div>
-            <br /><br /><br /><br /><br /> <br /><br /><br /><br />
         </React.Fragment>
     ) // end return
 }// end functıon

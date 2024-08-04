@@ -1647,3 +1647,384 @@ Caused by: java.lang.NullPointerException: Cannot invoke "org.springframework.we
 2024-08-04T00:45:20.975+03:00  WARN 17900 --- [SeniorFullStack1] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2024-08-04T00:45:21.012+03:00  INFO 17900 --- [SeniorFullStack1] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
 2024-08-04T00:45:21.133+03:00 DEBUG 17900 --- [SeniorFullStack1] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2024-08-04T09:13:37.989+03:00  INFO 19624 --- [SeniorFullStack1] [restartedMain] c.h.s.SeniorFullStack1Application        : Starting SeniorFullStack1Application using Java 17.0.11 with PID 19624 (F:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes started by Hamit-Mizrak in F:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-08-04T09:13:38.003+03:00  INFO 19624 --- [SeniorFullStack1] [restartedMain] c.h.s.SeniorFullStack1Application        : The following 1 profile is active: "frontend"
+2024-08-04T09:13:38.063+03:00  INFO 19624 --- [SeniorFullStack1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-04T09:13:38.063+03:00  INFO 19624 --- [SeniorFullStack1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-04T09:13:39.974+03:00  INFO 19624 --- [SeniorFullStack1] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-04T09:13:40.059+03:00  INFO 19624 --- [SeniorFullStack1] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 2 JPA repository interfaces.
+2024-08-04T09:13:41.273+03:00  INFO 19624 --- [SeniorFullStack1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4444 (http)
+2024-08-04T09:13:41.289+03:00  INFO 19624 --- [SeniorFullStack1] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-04T09:13:41.289+03:00  INFO 19624 --- [SeniorFullStack1] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-04T09:13:41.366+03:00  INFO 19624 --- [SeniorFullStack1] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-04T09:13:41.366+03:00  INFO 19624 --- [SeniorFullStack1] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3301 ms
+2024-08-04T09:13:41.547+03:00  INFO 19624 --- [SeniorFullStack1] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-04T09:13:41.834+03:00  INFO 19624 --- [SeniorFullStack1] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@68a6dfb6
+2024-08-04T09:13:41.837+03:00  INFO 19624 --- [SeniorFullStack1] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-04T09:13:41.851+03:00  INFO 19624 --- [SeniorFullStack1] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/blog'
+2024-08-04T09:13:41.968+03:00 DEBUG 19624 --- [SeniorFullStack1] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2024-08-04T09:13:41.968+03:00 DEBUG 19624 --- [SeniorFullStack1] [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2024-08-04T09:13:42.682+03:00  INFO 19624 --- [SeniorFullStack1] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-04T09:13:44.318+03:00  INFO 19624 --- [SeniorFullStack1] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-04T09:13:45.081+03:00  WARN 19624 --- [SeniorFullStack1] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-04T09:13:45.124+03:00  INFO 19624 --- [SeniorFullStack1] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-04T09:13:45.244+03:00 DEBUG 19624 --- [SeniorFullStack1] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2024-08-04T09:13:45.951+03:00 DEBUG 19624 --- [SeniorFullStack1] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-08-04T09:13:46.009+03:00 DEBUG 19624 --- [SeniorFullStack1] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-08-04T09:13:46.056+03:00 DEBUG 19624 --- [SeniorFullStack1] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-08-04T09:13:46.736+03:00  INFO 19624 --- [SeniorFullStack1] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-04T09:13:46.745+03:00  INFO 19624 --- [SeniorFullStack1] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoints beneath base path '/actuator'
+2024-08-04T09:13:46.862+03:00  INFO 19624 --- [SeniorFullStack1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 4444 (http) with context path '/'
+2024-08-04T09:13:46.882+03:00  INFO 19624 --- [SeniorFullStack1] [restartedMain] c.h.s.SeniorFullStack1Application        : Started SeniorFullStack1Application in 9.57 seconds (process running for 10.698)
+2024-08-04T09:13:46.891+03:00  INFO 19624 --- [SeniorFullStack1] [restartedMain] c.h.s.u.commandlinerunner.MainRunner     : Blog Categories
+2024-08-04T09:13:47.609+03:00  INFO 19624 --- [SeniorFullStack1] [RMI TCP Connection(3)-192.168.1.7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-04T09:13:47.610+03:00  INFO 19624 --- [SeniorFullStack1] [RMI TCP Connection(3)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-04T09:13:47.610+03:00 DEBUG 19624 --- [SeniorFullStack1] [RMI TCP Connection(3)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-08-04T09:13:47.611+03:00 DEBUG 19624 --- [SeniorFullStack1] [RMI TCP Connection(3)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-08-04T09:13:47.611+03:00 DEBUG 19624 --- [SeniorFullStack1] [RMI TCP Connection(3)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-08-04T09:13:47.612+03:00 DEBUG 19624 --- [SeniorFullStack1] [RMI TCP Connection(3)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7bd2fb36
+2024-08-04T09:13:47.613+03:00 DEBUG 19624 --- [SeniorFullStack1] [RMI TCP Connection(3)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@57c6372b
+2024-08-04T09:13:47.614+03:00 DEBUG 19624 --- [SeniorFullStack1] [RMI TCP Connection(3)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-08-04T09:13:47.614+03:00  INFO 19624 --- [SeniorFullStack1] [RMI TCP Connection(3)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2024-08-04T09:15:52.221+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2024-08-04T09:15:52.252+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-08-04T09:15:52.653+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:15:52.755+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/js/template.js", parameters={}
+2024-08-04T09:15:52.755+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/css/style.css", parameters={}
+2024-08-04T09:15:52.766+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-08-04T09:15:52.767+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-08-04T09:15:52.782+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:15:52.782+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:15:53.637+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/favicon.ico", parameters={}
+2024-08-04T09:15:53.639+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-08-04T09:15:53.641+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-5] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-08-04T09:15:53.646+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-08-04T09:15:53.646+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2024-08-04T09:15:53.654+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2024-08-04T09:15:53.656+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.seniorfullstack1.error.CustomErrorHandleWebRequest#handleErrorMethod(WebRequest)
+2024-08-04T09:15:53.688+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+2024-08-04T09:15:53.691+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Writing [ApiResult(path=null, message=No static resource favicon.ico., error=null, status=null, createdDate=S (truncated)...]
+2024-08-04T09:15:53.715+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2024-08-04T09:15:56.094+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2024-08-04T09:15:56.097+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-08-04T09:15:56.105+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:15:56.147+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/js/template.js", parameters={}
+2024-08-04T09:15:56.147+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/css/style.css", parameters={}
+2024-08-04T09:15:56.147+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-08-04T09:15:56.148+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-08-04T09:15:56.151+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:15:56.153+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:16:06.666+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2024-08-04T09:16:06.668+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-9] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-08-04T09:16:06.677+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:16:06.705+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/css/style.css", parameters={}
+2024-08-04T09:16:06.706+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/js/template.js", parameters={}
+2024-08-04T09:16:06.707+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-08-04T09:16:06.707+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-08-04T09:16:06.710+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:16:06.710+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:16:22.852+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2024-08-04T09:16:22.855+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-08-04T09:16:22.862+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:16:22.893+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/css/style.css", parameters={}
+2024-08-04T09:16:22.893+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/js/template.js", parameters={}
+2024-08-04T09:16:22.894+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-08-04T09:16:22.894+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-08-04T09:16:22.896+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:16:22.896+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:16:27.808+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/swagger", parameters={}
+2024-08-04T09:16:27.808+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-08-04T09:16:27.811+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-7] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-08-04T09:16:27.811+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource swagger.]
+2024-08-04T09:16:27.812+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2024-08-04T09:16:27.813+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2024-08-04T09:16:27.813+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.seniorfullstack1.error.CustomErrorHandleWebRequest#handleErrorMethod(WebRequest)
+2024-08-04T09:16:27.815+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2024-08-04T09:16:27.815+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [ApiResult(path=null, message=No static resource swagger., error=null, status=null, createdDate=Sun A (truncated)...]
+2024-08-04T09:16:27.817+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2024-08-04T09:16:31.865+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui", parameters={}
+2024-08-04T09:16:31.867+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-08-04T09:16:31.868+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-10] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-08-04T09:16:31.868+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource swagger-ui.]
+2024-08-04T09:16:31.869+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2024-08-04T09:16:31.869+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2024-08-04T09:16:31.871+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.hamitmizrak.seniorfullstack1.error.CustomErrorHandleWebRequest#handleErrorMethod(WebRequest)
+2024-08-04T09:16:31.872+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2024-08-04T09:16:31.872+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [ApiResult(path=null, message=No static resource swagger-ui., error=null, status=null, createdDate=Su (truncated)...]
+2024-08-04T09:16:31.873+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2024-08-04T09:16:38.529+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui.html", parameters={}
+2024-08-04T09:16:38.531+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.ui.SwaggerWelcomeWebMvc#redirectToUi(HttpServletRequest)
+2024-08-04T09:16:38.565+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2024-08-04T09:16:38.565+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2024-08-04T09:16:38.566+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2024-08-04T09:16:38.572+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/index.html", parameters={}
+2024-08-04T09:16:38.573+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-08-04T09:16:38.578+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:16:38.608+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui.css", parameters={}
+2024-08-04T09:16:38.609+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/index.css", parameters={}
+2024-08-04T09:16:38.609+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-08-04T09:16:38.610+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-08-04T09:16:38.610+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui-bundle.js", parameters={}
+2024-08-04T09:16:38.610+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-initializer.js", parameters={}
+2024-08-04T09:16:38.610+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui-standalone-preset.js", parameters={}
+2024-08-04T09:16:38.611+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-08-04T09:16:38.611+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-08-04T09:16:38.611+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-08-04T09:16:38.614+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:16:38.616+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:16:38.626+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:16:38.630+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:16:38.645+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:16:38.920+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs/swagger-config", parameters={}
+2024-08-04T09:16:38.921+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2024-08-04T09:16:38.922+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+2024-08-04T09:16:38.923+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:4444/swagger-ui/oauth2-re (truncated)...]
+2024-08-04T09:16:38.924+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:16:38.932+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/favicon-32x32.png", parameters={}
+2024-08-04T09:16:38.934+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-08-04T09:16:38.937+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:16:38.956+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs", parameters={}
+2024-08-04T09:16:38.957+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2024-08-04T09:16:39.434+03:00  INFO 19624 --- [SeniorFullStack1] [http-nio-4444-exec-10] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 455 ms
+2024-08-04T09:16:39.474+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, */*] and supported [application/json]
+2024-08-04T09:16:39.476+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 48, 46, 49, 34, 44, 34, 105, 110, 10 (truncated)...]
+2024-08-04T09:16:39.477+03:00 DEBUG 19624 --- [SeniorFullStack1] [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:19:00.935+03:00  INFO 19624 --- [SeniorFullStack1] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-04T09:19:00.949+03:00  INFO 19624 --- [SeniorFullStack1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-04T09:19:00.955+03:00  INFO 19624 --- [SeniorFullStack1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-04T09:20:58.356+03:00  INFO 21252 --- [SeniorFullStack1] [restartedMain] c.h.s.SeniorFullStack1Application        : Starting SeniorFullStack1Application using Java 17.0.11 with PID 21252 (F:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes started by Hamit-Mizrak in F:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-08-04T09:20:58.359+03:00  INFO 21252 --- [SeniorFullStack1] [restartedMain] c.h.s.SeniorFullStack1Application        : The following 1 profile is active: "frontend"
+2024-08-04T09:20:58.420+03:00  INFO 21252 --- [SeniorFullStack1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-04T09:20:58.421+03:00  INFO 21252 --- [SeniorFullStack1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-04T09:20:59.883+03:00  INFO 21252 --- [SeniorFullStack1] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-04T09:20:59.951+03:00  INFO 21252 --- [SeniorFullStack1] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 2 JPA repository interfaces.
+2024-08-04T09:21:01.021+03:00  INFO 21252 --- [SeniorFullStack1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4444 (http)
+2024-08-04T09:21:01.043+03:00  INFO 21252 --- [SeniorFullStack1] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-04T09:21:01.051+03:00  INFO 21252 --- [SeniorFullStack1] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-04T09:21:01.127+03:00  INFO 21252 --- [SeniorFullStack1] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-04T09:21:01.127+03:00  INFO 21252 --- [SeniorFullStack1] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2705 ms
+2024-08-04T09:21:01.349+03:00  INFO 21252 --- [SeniorFullStack1] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-04T09:21:01.539+03:00  INFO 21252 --- [SeniorFullStack1] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@68a6dfb6
+2024-08-04T09:21:01.541+03:00  INFO 21252 --- [SeniorFullStack1] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-04T09:21:01.554+03:00  INFO 21252 --- [SeniorFullStack1] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/blog'
+2024-08-04T09:21:01.663+03:00 DEBUG 21252 --- [SeniorFullStack1] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2024-08-04T09:21:01.663+03:00 DEBUG 21252 --- [SeniorFullStack1] [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2024-08-04T09:21:02.241+03:00  INFO 21252 --- [SeniorFullStack1] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-04T09:21:03.740+03:00  INFO 21252 --- [SeniorFullStack1] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-04T09:21:04.452+03:00  WARN 21252 --- [SeniorFullStack1] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-04T09:21:04.500+03:00  INFO 21252 --- [SeniorFullStack1] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-04T09:21:04.641+03:00 DEBUG 21252 --- [SeniorFullStack1] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2024-08-04T09:21:05.350+03:00 DEBUG 21252 --- [SeniorFullStack1] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-08-04T09:21:05.420+03:00 DEBUG 21252 --- [SeniorFullStack1] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-08-04T09:21:05.470+03:00 DEBUG 21252 --- [SeniorFullStack1] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-08-04T09:21:06.191+03:00  INFO 21252 --- [SeniorFullStack1] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-04T09:21:06.200+03:00  INFO 21252 --- [SeniorFullStack1] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoints beneath base path '/actuator'
+2024-08-04T09:21:06.309+03:00  INFO 21252 --- [SeniorFullStack1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 4444 (http) with context path '/'
+2024-08-04T09:21:06.330+03:00  INFO 21252 --- [SeniorFullStack1] [restartedMain] c.h.s.SeniorFullStack1Application        : Started SeniorFullStack1Application in 8.518 seconds (process running for 9.45)
+2024-08-04T09:21:06.339+03:00  INFO 21252 --- [SeniorFullStack1] [restartedMain] c.h.s.u.commandlinerunner.MainRunner     : Blog Categories
+2024-08-04T09:21:06.881+03:00  INFO 21252 --- [SeniorFullStack1] [RMI TCP Connection(1)-192.168.1.7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-04T09:21:06.881+03:00  INFO 21252 --- [SeniorFullStack1] [RMI TCP Connection(1)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-04T09:21:06.882+03:00 DEBUG 21252 --- [SeniorFullStack1] [RMI TCP Connection(1)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-08-04T09:21:06.882+03:00 DEBUG 21252 --- [SeniorFullStack1] [RMI TCP Connection(1)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-08-04T09:21:06.882+03:00 DEBUG 21252 --- [SeniorFullStack1] [RMI TCP Connection(1)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-08-04T09:21:06.883+03:00 DEBUG 21252 --- [SeniorFullStack1] [RMI TCP Connection(1)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1390b931
+2024-08-04T09:21:06.884+03:00 DEBUG 21252 --- [SeniorFullStack1] [RMI TCP Connection(1)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@6c98d42c
+2024-08-04T09:21:06.885+03:00 DEBUG 21252 --- [SeniorFullStack1] [RMI TCP Connection(1)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-08-04T09:21:06.885+03:00  INFO 21252 --- [SeniorFullStack1] [RMI TCP Connection(1)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2024-08-04T09:21:12.064+03:00 DEBUG 21252 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2024-08-04T09:21:12.090+03:00 DEBUG 21252 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-08-04T09:21:12.356+03:00 DEBUG 21252 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:21:12.394+03:00 DEBUG 21252 --- [SeniorFullStack1] [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/css/style.css", parameters={}
+2024-08-04T09:21:12.395+03:00 DEBUG 21252 --- [SeniorFullStack1] [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/js/template.js", parameters={}
+2024-08-04T09:21:12.403+03:00 DEBUG 21252 --- [SeniorFullStack1] [http-nio-4444-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-08-04T09:21:12.403+03:00 DEBUG 21252 --- [SeniorFullStack1] [http-nio-4444-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-08-04T09:21:12.412+03:00 DEBUG 21252 --- [SeniorFullStack1] [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:21:12.413+03:00 DEBUG 21252 --- [SeniorFullStack1] [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:21:35.746+03:00  INFO 21252 --- [SeniorFullStack1] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-04T09:21:35.770+03:00  INFO 21252 --- [SeniorFullStack1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-04T09:21:35.777+03:00  INFO 21252 --- [SeniorFullStack1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-04T09:21:44.257+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] c.h.s.SeniorFullStack1Application        : Starting SeniorFullStack1Application using Java 17.0.11 with PID 34704 (F:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes started by Hamit-Mizrak in F:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-08-04T09:21:44.260+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] c.h.s.SeniorFullStack1Application        : The following 1 profile is active: "frontend"
+2024-08-04T09:21:44.311+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-04T09:21:44.311+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-04T09:21:45.696+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-04T09:21:45.768+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
+2024-08-04T09:21:46.826+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4444 (http)
+2024-08-04T09:21:46.843+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-04T09:21:46.843+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-04T09:21:46.935+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-04T09:21:46.935+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2623 ms
+2024-08-04T09:21:47.139+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-04T09:21:47.337+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@68a6dfb6
+2024-08-04T09:21:47.339+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-04T09:21:47.351+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/blog'
+2024-08-04T09:21:47.468+03:00 DEBUG 34704 --- [SeniorFullStack1] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2024-08-04T09:21:47.469+03:00 DEBUG 34704 --- [SeniorFullStack1] [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2024-08-04T09:21:48.069+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-04T09:21:49.432+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-04T09:21:50.169+03:00  WARN 34704 --- [SeniorFullStack1] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-04T09:21:50.207+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-04T09:21:50.318+03:00 DEBUG 34704 --- [SeniorFullStack1] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2024-08-04T09:21:50.938+03:00 DEBUG 34704 --- [SeniorFullStack1] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-08-04T09:21:51.005+03:00 DEBUG 34704 --- [SeniorFullStack1] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-08-04T09:21:51.062+03:00 DEBUG 34704 --- [SeniorFullStack1] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-08-04T09:21:51.806+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-04T09:21:51.819+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoints beneath base path '/actuator'
+2024-08-04T09:21:51.951+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 4444 (http) with context path '/'
+2024-08-04T09:21:51.974+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] c.h.s.SeniorFullStack1Application        : Started SeniorFullStack1Application in 8.243 seconds (process running for 9.162)
+2024-08-04T09:21:51.986+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] c.h.s.u.commandlinerunner.MainRunner     : Blog Categories
+2024-08-04T09:21:52.858+03:00  INFO 34704 --- [SeniorFullStack1] [RMI TCP Connection(2)-192.168.1.7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-04T09:21:52.858+03:00  INFO 34704 --- [SeniorFullStack1] [RMI TCP Connection(2)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-04T09:21:52.859+03:00 DEBUG 34704 --- [SeniorFullStack1] [RMI TCP Connection(2)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-08-04T09:21:52.859+03:00 DEBUG 34704 --- [SeniorFullStack1] [RMI TCP Connection(2)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-08-04T09:21:52.859+03:00 DEBUG 34704 --- [SeniorFullStack1] [RMI TCP Connection(2)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-08-04T09:21:52.861+03:00 DEBUG 34704 --- [SeniorFullStack1] [RMI TCP Connection(2)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@59e86738
+2024-08-04T09:21:52.861+03:00 DEBUG 34704 --- [SeniorFullStack1] [RMI TCP Connection(2)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@6c98d42c
+2024-08-04T09:21:52.862+03:00 DEBUG 34704 --- [SeniorFullStack1] [RMI TCP Connection(2)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-08-04T09:21:52.862+03:00  INFO 34704 --- [SeniorFullStack1] [RMI TCP Connection(2)-192.168.1.7] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2024-08-04T09:22:35.962+03:00  INFO 34704 --- [SeniorFullStack1] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 49 class path changes (0 additions, 48 deletions, 1 modification)
+2024-08-04T09:22:37.283+03:00  INFO 34704 --- [SeniorFullStack1] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-04T09:22:37.296+03:00  INFO 34704 --- [SeniorFullStack1] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-04T09:22:37.299+03:00  INFO 34704 --- [SeniorFullStack1] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-04T09:22:37.409+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] c.h.s.SeniorFullStack1Application        : Starting SeniorFullStack1Application using Java 17.0.11 with PID 34704 (F:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes started by Hamit-Mizrak in F:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-08-04T09:22:37.410+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] c.h.s.SeniorFullStack1Application        : The following 1 profile is active: "frontend"
+2024-08-04T09:22:37.837+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-04T09:22:37.839+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2024-08-04T09:22:38.032+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4444 (http)
+2024-08-04T09:22:38.033+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-04T09:22:38.033+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-04T09:22:38.067+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-04T09:22:38.076+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 664 ms
+2024-08-04T09:22:38.161+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2024-08-04T09:22:38.239+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@1e248aa7
+2024-08-04T09:22:38.239+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2024-08-04T09:22:38.240+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/blog'
+2024-08-04T09:22:38.276+03:00 DEBUG 34704 --- [SeniorFullStack1] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2024-08-04T09:22:38.276+03:00 DEBUG 34704 --- [SeniorFullStack1] [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2024-08-04T09:22:38.323+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-04T09:22:38.361+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-04T09:22:38.390+03:00  WARN 34704 --- [SeniorFullStack1] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaAuditingHandler': Cannot create inner bean '(inner bean)#4009d01d' of type [org.springframework.aop.framework.ProxyFactoryBean] while setting bean property 'auditorAware'
+2024-08-04T09:22:38.390+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-04T09:22:38.391+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2024-08-04T09:22:38.466+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2024-08-04T09:22:38.467+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-08-04T09:22:38.481+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-04T09:22:38.508+03:00 ERROR 34704 --- [SeniorFullStack1] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean named 'auditorAwareBeanMethod' that could not be found.
+
+
+Action:
+
+Consider defining a bean named 'auditorAwareBeanMethod' in your configuration.
+
+2024-08-04T09:22:43.064+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] c.h.s.SeniorFullStack1Application        : Starting SeniorFullStack1Application using Java 17.0.11 with PID 34704 (F:\8-) Projeler Doküman\spring\SeniorFullStack1\target\classes started by Hamit-Mizrak in F:\8-) Projeler Doküman\spring\SeniorFullStack1)
+2024-08-04T09:22:43.065+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] c.h.s.SeniorFullStack1Application        : The following 1 profile is active: "frontend"
+2024-08-04T09:22:43.425+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-04T09:22:43.439+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 2 JPA repository interfaces.
+2024-08-04T09:22:43.621+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 4444 (http)
+2024-08-04T09:22:43.622+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-04T09:22:43.622+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.25]
+2024-08-04T09:22:43.650+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2024-08-04T09:22:43.650+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 583 ms
+2024-08-04T09:22:43.724+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2024-08-04T09:22:43.787+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@1487c819
+2024-08-04T09:22:43.787+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2024-08-04T09:22:43.787+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/blog'
+2024-08-04T09:22:43.827+03:00 DEBUG 34704 --- [SeniorFullStack1] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2024-08-04T09:22:43.827+03:00 DEBUG 34704 --- [SeniorFullStack1] [restartedMain] o.s.w.s.r.ResourceUrlEncodingFilter      : Filter 'resourceUrlEncodingFilter' configured for use
+2024-08-04T09:22:43.869+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-04T09:22:44.016+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-04T09:22:44.260+03:00  WARN 34704 --- [SeniorFullStack1] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-04T09:22:44.284+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-08-04T09:22:44.322+03:00 DEBUG 34704 --- [SeniorFullStack1] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2024-08-04T09:22:44.717+03:00 DEBUG 34704 --- [SeniorFullStack1] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-08-04T09:22:44.740+03:00 DEBUG 34704 --- [SeniorFullStack1] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-08-04T09:22:44.754+03:00 DEBUG 34704 --- [SeniorFullStack1] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-08-04T09:22:45.115+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-08-04T09:22:45.126+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoints beneath base path '/actuator'
+2024-08-04T09:22:45.171+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 4444 (http) with context path '/'
+2024-08-04T09:22:45.184+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] c.h.s.SeniorFullStack1Application        : Started SeniorFullStack1Application in 2.156 seconds (process running for 62.372)
+2024-08-04T09:22:45.185+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] c.h.s.u.commandlinerunner.MainRunner     : Blog Categories
+2024-08-04T09:22:45.217+03:00  INFO 34704 --- [SeniorFullStack1] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-08-04T09:22:55.936+03:00  INFO 34704 --- [SeniorFullStack1] [http-nio-4444-exec-6] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-04T09:22:55.937+03:00  INFO 34704 --- [SeniorFullStack1] [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-04T09:22:55.937+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-08-04T09:22:55.937+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-08-04T09:22:55.937+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-08-04T09:22:55.938+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@732af094
+2024-08-04T09:22:55.939+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@48b25ef9
+2024-08-04T09:22:55.939+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-08-04T09:22:55.939+03:00  INFO 34704 --- [SeniorFullStack1] [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-08-04T09:22:55.943+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2024-08-04T09:22:55.964+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-08-04T09:22:56.306+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:22:56.337+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/js/template.js", parameters={}
+2024-08-04T09:22:56.337+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/css/style.css", parameters={}
+2024-08-04T09:22:56.342+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-08-04T09:22:56.343+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-08-04T09:22:56.354+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:22:56.355+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:22:59.001+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2024-08-04T09:22:59.004+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-8] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-08-04T09:22:59.010+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:22:59.052+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/css/style.css", parameters={}
+2024-08-04T09:22:59.052+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/js/template.js", parameters={}
+2024-08-04T09:22:59.053+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-08-04T09:22:59.053+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-08-04T09:22:59.055+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:22:59.056+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:23:08.030+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2024-08-04T09:23:08.032+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-2] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-08-04T09:23:08.039+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:23:08.064+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/js/template.js", parameters={}
+2024-08-04T09:23:08.064+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/css/style.css", parameters={}
+2024-08-04T09:23:08.065+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-08-04T09:23:08.065+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-08-04T09:23:08.068+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:23:08.069+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:23:28.980+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui.html", parameters={}
+2024-08-04T09:23:28.984+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.ui.SwaggerWelcomeWebMvc#redirectToUi(HttpServletRequest)
+2024-08-04T09:23:29.036+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2024-08-04T09:23:29.036+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Nothing to write: null body
+2024-08-04T09:23:29.037+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND
+2024-08-04T09:23:29.044+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/index.html", parameters={}
+2024-08-04T09:23:29.045+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-08-04T09:23:29.048+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:23:29.091+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui.css", parameters={}
+2024-08-04T09:23:29.092+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-08-04T09:23:29.093+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/index.css", parameters={}
+2024-08-04T09:23:29.094+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-08-04T09:23:29.095+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui-bundle.js", parameters={}
+2024-08-04T09:23:29.095+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui-standalone-preset.js", parameters={}
+2024-08-04T09:23:29.096+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-08-04T09:23:29.096+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-08-04T09:23:29.096+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-initializer.js", parameters={}
+2024-08-04T09:23:29.096+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-08-04T09:23:29.097+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:23:29.098+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:23:29.104+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:23:29.115+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:23:29.123+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:23:29.407+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs/swagger-config", parameters={}
+2024-08-04T09:23:29.407+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2024-08-04T09:23:29.410+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+2024-08-04T09:23:29.412+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:4444/swagger-ui/oauth2-re (truncated)...]
+2024-08-04T09:23:29.421+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/favicon-32x32.png", parameters={}
+2024-08-04T09:23:29.424+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-08-04T09:23:29.426+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:23:29.428+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-08-04T09:23:29.453+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs", parameters={}
+2024-08-04T09:23:29.455+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2024-08-04T09:23:29.926+03:00  INFO 34704 --- [SeniorFullStack1] [http-nio-4444-exec-7] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 454 ms
+2024-08-04T09:23:29.957+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, */*] and supported [application/json]
+2024-08-04T09:23:29.958+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 48, 46, 49, 34, 44, 34, 105, 110, 10 (truncated)...]
+2024-08-04T09:23:29.959+03:00 DEBUG 34704 --- [SeniorFullStack1] [http-nio-4444-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
