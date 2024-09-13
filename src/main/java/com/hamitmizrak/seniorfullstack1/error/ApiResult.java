@@ -19,7 +19,7 @@ import java.util.Map;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ApiResult {
 
-    // Pırasa Vali MESC
+    // sem vpc
     private String path;
     private String message;
     private String error;

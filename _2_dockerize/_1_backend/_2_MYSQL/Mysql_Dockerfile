@@ -73,8 +73,9 @@ HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
 ENTRYPOINT ["java", "-jar","/blog.jar"]
 
 ########################################################
-# docker build -t imageName .
-# docker build -f CustomizeDockerFile -t imageName .
+# docker build -t imageName .  => (Defaultta: Dockerfile yazılmışsa)
+# docker build -f CustomiseDockerFile -t imageName . => (Dockerfile yerine CustomiseDockerFile yazılmışsa)
+
 
 # docker container ls
 # docker container ls -a
